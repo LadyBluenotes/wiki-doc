@@ -13,10 +13,26 @@ const drawerWidth = 240;
 export default function NavBar({ content }: any) {
 
   const [open, setOpen] = useState(false);
+  const [open1, setOpen1] = useState(false);
+  const [open2, setOpen2] = useState(false);
+  const [open3, setOpen3] = useState(false);
 
   const handleClick = () => {
     setOpen(!open);
   };
+
+  const handleClick1 = () => {
+    setOpen1(!open1);
+  };
+
+  const handleClick2 = () => {
+    setOpen2(!open2);
+  };
+
+  const handleClick3 = () => {
+    setOpen3(!open3);
+  };
+
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -55,25 +71,75 @@ export default function NavBar({ content }: any) {
                 <ListItemIcon>
                   <TopicIcon />
                 </ListItemIcon>
-                <ListItemText primary="Projects" />
+                <ListItemText>
+                  Projects
+                </ListItemText>
                 {open ? <ExpandLess /> : <ExpandMore />}
               </ListItemButton>
-                <Collapse in={open} timeout="auto" unmountOnExit>
-                  <List component="div" disablePadding>
-                    <ListItemButton sx={{ pl: 5 }}>
-                      <ListItemText primary="Demo 1" />
+              <Collapse in={open} timeout="auto" unmountOnExit>
+                <List>
+                    <ListItemButton onClick={handleClick1}>
+                      <ListItemText sx={{ pl: 3 }} primary="Front-end" />
+                      {open1 ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
-                    <ListItemButton sx={{ pl: 5 }}>
-                      <ListItemText primary="Demo 2" />
+                      <Collapse in={open1} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                          <ListItemButton sx={{ pl: 7 }}>
+                            <ListItemText primary="Demo 1" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }}>
+                            <ListItemText primary="Demo 2" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }}>
+                            <ListItemText primary="Demo 3" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }}>
+                            <ListItemText primary="Demo 4" />
+                          </ListItemButton>
+                      </List>
+                    </Collapse>
+                    <ListItemButton onClick={handleClick2}>
+                      <ListItemText sx={{ pl: 3 }} primary="Server-side" />
+                        {open2 ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
-                    <ListItemButton sx={{ pl: 5 }}>
-                      <ListItemText primary="Demo 3" />
+                      <Collapse in={open2} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                          <ListItemButton sx={{ pl: 7 }}>
+                            <ListItemText primary="Demo 1" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }}>
+                            <ListItemText primary="Demo 2" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }}>
+                            <ListItemText primary="Demo 3" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }}>
+                            <ListItemText primary="Demo 4" />
+                          </ListItemButton>
+                      </List>
+                    </Collapse>
+                    <ListItemButton onClick={handleClick3}>
+                      <ListItemText sx={{ pl: 3 }} primary="Full-stack" />
+                        {open3 ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
-                    <ListItemButton sx={{ pl: 5 }}>
-                      <ListItemText primary="Demo 4" />
-                    </ListItemButton>
-                </List>
-              </Collapse>
+                      <Collapse in={open3} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                          <ListItemButton sx={{ pl: 7 }}>
+                            <ListItemText primary="Demo 1" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }}>
+                            <ListItemText primary="Demo 2" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }}>
+                            <ListItemText primary="Demo 3" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }}>
+                            <ListItemText primary="Demo 4" />
+                          </ListItemButton>
+                      </List>
+                    </Collapse>
+                  </List>
+                </Collapse>
               <ListItem disablePadding onClick={() => {
                 window.location.href = '/styleguide';
               }}>
