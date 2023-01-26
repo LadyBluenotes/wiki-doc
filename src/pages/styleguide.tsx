@@ -16,7 +16,7 @@ export default function StyleGuide(){
                         component="nav"
                         aria-labelledby="table of contents"
                         subheader={
-                            <ListSubheader component="div" id="nested-list-subheader">
+                            <ListSubheader component="div">
                                 Table of contents
                             </ListSubheader>
                         }
@@ -89,7 +89,7 @@ export default function StyleGuide(){
                         </Typography>
                 <Divider sx={{ my: 2, opacity:0 }} />
                     <Typography variant="h2" id="writing-guidelines" >II. Writing guidelines</Typography>
-                        <Typography variant="h3" className="styleGuide-h3">
+                        <Typography variant="h3" className="stlying-h3">
                             Voice and tone
                         </Typography>
                         <Typography variant="body1">
@@ -106,7 +106,7 @@ export default function StyleGuide(){
                                 <li>Using short, simple words instead of long, complex words. For example, instead of writing "utilize", write "use".</li>
                             </ul>
                         </Typography>
-                        <Typography variant="h3" className="styleGuide-h3">
+                        <Typography variant="h3" className="styling-h3">
                             Personal-specific terms
                         </Typography>
                         <Typography variant="body1">
@@ -114,7 +114,7 @@ export default function StyleGuide(){
                             <br/>
                             <br/>
                         </Typography>
-                        <Typography variant="h3" className="styleGuide-h3">
+                        <Typography variant="h3" className="styling-h3">
                             Grammar and punctuation
                         </Typography>
                         <Typography variant="body1">
@@ -124,7 +124,7 @@ export default function StyleGuide(){
                         </Typography>
                 <Divider sx={{ my: 2, opacity:0 }} />
                     <Typography variant="h2" id="formatting-guidelines" >III. Formatting guidelines</Typography>
-                        <Typography variant="h3" className="styleGuide-h3">
+                        <Typography variant="h3" className="styling-h3">
                             General formatting
                         </Typography>
                         <Typography variant="body1">
@@ -141,7 +141,7 @@ export default function StyleGuide(){
                         </Typography>
                 <Divider sx={{ my: 2, opacity:0 }} />
                     <Typography variant="h2" id="design-guidelines" >IV. Design guidelines</Typography>
-                        <Typography variant="h3" className="styleGuide-h3">
+                        <Typography variant="h3" className="styling-h3">
                             Design principles
                         </Typography>
                         <Typography variant="body1">
@@ -171,7 +171,7 @@ export default function StyleGuide(){
                         </Typography>
                 <Divider sx={{ my: 2, opacity:0 }} />
                     <Typography variant="h2" id="appendices" >VI. Appendices</Typography>
-                        <Typography variant="h3" className="styleGuide-h3">
+                        <Typography variant="h3" className="styling-h3">
                             Glossary of terms
                         </Typography>
                         <Typography variant="body1">
@@ -186,7 +186,7 @@ export default function StyleGuide(){
                                 <li><strong>Typography</strong>: The art and technique of arranging type to make written language legible, readable, and appealing when displayed.</li>
                             </ul>
                         </Typography>
-                        <Typography variant="h3" className="styleGuide-h3">
+                        <Typography variant="h3" className="styling-h3">
                             Any feedback?
                         </Typography>
                         <Typography variant="body1">

@@ -168,7 +168,9 @@ export default function NavBar({ content }: any) {
           <Divider />
           <List>
             <ListItem disablePadding>
-              <ListItemButton>
+              <ListItemButton onClick={() =>{
+                window.location.href = '/about';
+              }}>
                 <ListItemIcon>
                   <InfoIcon />
                 </ListItemIcon>
