@@ -105,17 +105,10 @@ export default function NavBar({ content }: any) {
                     </ListItemButton>
                       <Collapse in={open2} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 1" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 2" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 3" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 4" />
+                          <ListItemButton sx={{ pl: 7 }} onClick={()=>{
+                            window.location.href = '/frontend/poke-dex';
+                          }}>
+                            <ListItemText primary="The Poke-Dex" />
                           </ListItemButton>
                       </List>
                     </Collapse>
@@ -128,15 +121,6 @@ export default function NavBar({ content }: any) {
                           <ListItemButton sx={{ pl: 7 }}>
                             <ListItemText primary="Demo 1" />
                           </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 2" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 3" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 4" />
-                          </ListItemButton>
                       </List>
                     </Collapse>
                     <ListItemButton onClick={handleClick4}>
@@ -147,15 +131,6 @@ export default function NavBar({ content }: any) {
                         <List component="div" disablePadding>
                           <ListItemButton sx={{ pl: 7 }}>
                             <ListItemText primary="Demo 1" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 2" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 3" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 4" />
                           </ListItemButton>
                       </List>
                     </Collapse>
