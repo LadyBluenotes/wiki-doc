@@ -99,6 +99,28 @@ export default function NavBar({ content }: any) {
               </ListItemButton>
               <Collapse in={open1} timeout="auto" unmountOnExit>
                 <List>
+                    <ListItemButton onClick={handleClick1}>
+                      <ListItemText sx={{ pl: 3 }} primary="Front-end" />
+                      {open1 ? <ExpandLess /> : <ExpandMore />}
+                    </ListItemButton>
+                      <Collapse in={open1} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                          <ListItemButton sx={{ pl: 7 }}>
+                            <ListItemText primary="Demo 1" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }}>
+                            <ListItemText primary="Demo 2" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }}>
+                            <ListItemText primary="Demo 3" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }} onClick={()=>{
+                            window.location.href = '/front-end/space';
+                          }}>
+                            <ListItemText primary="Welcome to Space" />
+                          </ListItemButton>
+                      </List>
+                    </Collapse>
                     <ListItemButton onClick={handleClick2}>
                       <ListItemText sx={{ pl: 3 }} primary="Front-end" />
                       {open2 ? <ExpandLess /> : <ExpandMore />}
