@@ -8,6 +8,7 @@ import StyleIcon from '@mui/icons-material/Style';
 import ArticleIcon from '@mui/icons-material/Article';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
+import GroupsIcon from '@mui/icons-material/Groups';
 
 const drawerWidth = 240;
 export default function NavBar({ content }: any) {
@@ -16,6 +17,7 @@ export default function NavBar({ content }: any) {
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);
+  const [open4, setOpen4] = useState(false);
 
   const handleClick = () => {
     setOpen(!open);
@@ -33,6 +35,9 @@ export default function NavBar({ content }: any) {
     setOpen3(!open3);
   };
 
+  const handleClick4 = () => {
+    setOpen4(!open4);
+  };
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -68,60 +73,52 @@ export default function NavBar({ content }: any) {
                 </ListItemButton>
               </ListItem>
               <ListItemButton onClick={handleClick}>
+                  <ListItemIcon>
+                    <GroupsIcon />
+                  </ListItemIcon>
+                      <ListItemText primary="Open Source" />
+                        {open ? <ExpandLess /> : <ExpandMore />}
+                    </ListItemButton>
+                      <Collapse in={open} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                          <ListItemButton sx={{ pl: 7 }} onClick={() => {
+                            window.location.href = '/opensource/mui';
+                          }}>
+                            <ListItemText primary="Material UI" />
+                          </ListItemButton>
+                      </List>
+                    </Collapse>
+              <ListItemButton onClick={handleClick1}>
                 <ListItemIcon>
                   <TopicIcon />
                 </ListItemIcon>
                 <ListItemText>
                   Projects
                 </ListItemText>
-                {open ? <ExpandLess /> : <ExpandMore />}
+                {open1 ? <ExpandLess /> : <ExpandMore />}
               </ListItemButton>
-              <Collapse in={open} timeout="auto" unmountOnExit>
+              <Collapse in={open1} timeout="auto" unmountOnExit>
                 <List>
-                    <ListItemButton onClick={handleClick1}>
-                      <ListItemText sx={{ pl: 3 }} primary="Front-end" />
-                      {open1 ? <ExpandLess /> : <ExpandMore />}
-                    </ListItemButton>
-                      <Collapse in={open1} timeout="auto" unmountOnExit>
-                        <List component="div" disablePadding>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 1" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 2" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 3" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }} onClick={()=>{
-                            window.location.href = '/front-end/space';
-                          }}>
-                            <ListItemText primary="Welcome to Space" />
-                          </ListItemButton>
-                      </List>
-                    </Collapse>
                     <ListItemButton onClick={handleClick2}>
-                      <ListItemText sx={{ pl: 3 }} primary="Server-side" />
-                        {open2 ? <ExpandLess /> : <ExpandMore />}
+                      <ListItemText sx={{ pl: 3 }} primary="Client Side" />
+                      {open2 ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
                       <Collapse in={open2} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 1" />
+                          <ListItemButton sx={{ pl: 7 }} onClick={()=>{
+                            window.location.href = '/client-side/poke-dex';
+                          }}>
+                            <ListItemText primary="The Poke-Dex" />
                           </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 2" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 3" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 4" />
+                          <ListItemButton sx={{ pl: 7 }} onClick={()=>{
+                            window.location.href = '/client-side/space';
+                          }}>
+                            <ListItemText primary="Space" />
                           </ListItemButton>
                       </List>
                     </Collapse>
                     <ListItemButton onClick={handleClick3}>
-                      <ListItemText sx={{ pl: 3 }} primary="Full-stack" />
+                      <ListItemText sx={{ pl: 3 }} primary="Full Stack" />
                         {open3 ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
                       <Collapse in={open3} timeout="auto" unmountOnExit>
@@ -129,14 +126,16 @@ export default function NavBar({ content }: any) {
                           <ListItemButton sx={{ pl: 7 }}>
                             <ListItemText primary="Demo 1" />
                           </ListItemButton>
+                      </List>
+                    </Collapse>
+                    <ListItemButton onClick={handleClick4}>
+                      <ListItemText sx={{ pl: 3 }} primary="Server Side" />
+                        {open4 ? <ExpandLess /> : <ExpandMore />}
+                    </ListItemButton>
+                      <Collapse in={open4} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
                           <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 2" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 3" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 4" />
+                            <ListItemText primary="Demo 1" />
                           </ListItemButton>
                       </List>
                     </Collapse>

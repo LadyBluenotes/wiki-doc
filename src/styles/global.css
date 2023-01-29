@@ -1,4 +1,4 @@
-.MuiTypography-h1, .MuiTypography-h2, .MuiTypography-h3, .MuiTypography-h4, .MuiTypography-h5, .MuiTypography-h6 {
+.MuiTypography-h1, .MuiTypography-h2, .MuiTypography-h3 {
     margin-bottom: 20px;
 }
 
@@ -7,5 +7,5 @@
 }
 
 .styling-h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }

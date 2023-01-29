@@ -3,9 +3,7 @@ import { Container, Divider, Typography, List, ListSubheader , ListItemButton, L
 export default function Nasa() {
     return (
         <> 
-        {/* <Container maxWidth="lg">
-            // add image here
-        </Container> */}
+            <Container sx={{ padding: '10px' }}>
                 <Typography variant="h1">Welcome to Space</Typography>
                     <Typography variant="body1">This is a web application built using the NASA Astronomy Picture of the Day API. By default, it will show the media selected for that day or it can render the media that the user has selected from a date in the past.</Typography>
                 <Divider sx={{margin: '2rem 0'}} />
@@ -192,6 +190,7 @@ export default function Nasa() {
                             <Typography variant="body1">
                                 List of references used to build the project.
                             </Typography>
+            </Container>
         </>
     )
 }
