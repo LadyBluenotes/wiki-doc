@@ -93,8 +93,10 @@ export default function NavBar({ content }: any) {
                           <ListItemButton sx={{ pl: 7 }}>
                             <ListItemText primary="Demo 3" />
                           </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 4" />
+                          <ListItemButton sx={{ pl: 7 }} onClick={()=>{
+                            window.location.href = '/front-end/space';
+                          }}>
+                            <ListItemText primary="Welcome to Space" />
                           </ListItemButton>
                       </List>
                     </Collapse>
