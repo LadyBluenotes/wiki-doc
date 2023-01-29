@@ -36,7 +36,7 @@ export default function NavBar({ content }: any) {
   };
 
   const handleClick4 = () => {
-    setOpen3(!open3);
+    setOpen4(!open4);
   };
 
   return (
@@ -99,43 +99,26 @@ export default function NavBar({ content }: any) {
               </ListItemButton>
               <Collapse in={open1} timeout="auto" unmountOnExit>
                 <List>
-                    <ListItemButton onClick={handleClick1}>
-                      <ListItemText sx={{ pl: 3 }} primary="Front-end" />
-                      {open1 ? <ExpandLess /> : <ExpandMore />}
-                    </ListItemButton>
-                      <Collapse in={open1} timeout="auto" unmountOnExit>
-                        <List component="div" disablePadding>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 1" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 2" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 3" />
-                          </ListItemButton>
-                          <ListItemButton sx={{ pl: 7 }} onClick={()=>{
-                            window.location.href = '/front-end/space';
-                          }}>
-                            <ListItemText primary="Welcome to Space" />
-                          </ListItemButton>
-                      </List>
-                    </Collapse>
                     <ListItemButton onClick={handleClick2}>
-                      <ListItemText sx={{ pl: 3 }} primary="Front-end" />
+                      <ListItemText sx={{ pl: 3 }} primary="Client Side" />
                       {open2 ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
                       <Collapse in={open2} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
                           <ListItemButton sx={{ pl: 7 }} onClick={()=>{
-                            window.location.href = '/frontend/poke-dex';
+                            window.location.href = '/client-side/poke-dex';
                           }}>
                             <ListItemText primary="The Poke-Dex" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }} onClick={()=>{
+                            window.location.href = '/client-side/space';
+                          }}>
+                            <ListItemText primary="Space" />
                           </ListItemButton>
                       </List>
                     </Collapse>
                     <ListItemButton onClick={handleClick3}>
-                      <ListItemText sx={{ pl: 3 }} primary="Server-side" />
+                      <ListItemText sx={{ pl: 3 }} primary="Full Stack" />
                         {open3 ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
                       <Collapse in={open3} timeout="auto" unmountOnExit>
@@ -146,7 +129,7 @@ export default function NavBar({ content }: any) {
                       </List>
                     </Collapse>
                     <ListItemButton onClick={handleClick4}>
-                      <ListItemText sx={{ pl: 3 }} primary="Full-stack" />
+                      <ListItemText sx={{ pl: 3 }} primary="Server Side" />
                         {open4 ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
                       <Collapse in={open4} timeout="auto" unmountOnExit>
