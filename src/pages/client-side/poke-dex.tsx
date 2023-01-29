@@ -282,12 +282,6 @@ export default function PokeDex() {
                                             <ListItemIcon>
                                                 <CheckBoxOutlineBlankIcon />
                                             </ListItemIcon>
-                                            <ListItemText primary="Pokemon images are not rendering." />
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListItemIcon>
-                                                <CheckBoxOutlineBlankIcon />
-                                            </ListItemIcon>
                                             <ListItemText primary="Can not search when on a pokemon page." />
                                         </ListItem>
                                     </List>
