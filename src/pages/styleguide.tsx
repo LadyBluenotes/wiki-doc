@@ -182,6 +182,7 @@ export default function StyleGuide(){
                                 <li><strong>Design principles</strong>: A set of rules or guidelines that inform the design of a product or system.</li>
                                 <li><strong>Formatting guidelines</strong>: A set of rules or guidelines that inform the formatting of a product or system.</li>
                                 <li><strong>High contrast</strong>: A color scheme that uses colors that are very different from each other, allowing for better visibility and readability for users with visual impairments or low vision.</li>
+                                <li><strong>KISS:</strong> A design principle that states that most systems work best if they are kept simple rather than made complicated; therefore simplicity should be a key goal in design and unnecessary complexity should be avoided. Stands for keep it simple, stupid.</li>
                                 <li><strong>Style guide</strong>: A set of rules or guidelines that inform the writing and design of a product or system.</li>
                                 <li><strong>Typography</strong>: The art and technique of arranging type to make written language legible, readable, and appealing when displayed.</li>
                             </ul>
