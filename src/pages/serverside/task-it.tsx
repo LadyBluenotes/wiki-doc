@@ -9,8 +9,8 @@ export default function TaskIt() {
 
     return (
         <>
-            <Container sx={{ padding: '10px' }}>
-                <Typography variant="h1">Task-It API</Typography>
+            <Container maxWidth="lg">
+                <Typography variant="h2" component="h1" sx={{ fontWeight:500 }}>Task-It API</Typography>
                         <Stack direction="row" spacing={2} sx={{margin: '1rem 0'}}>
                             <Link href="https://github.com/LadyBluenotes/task-it"><GitHubIcon /></Link>
                         </Stack>

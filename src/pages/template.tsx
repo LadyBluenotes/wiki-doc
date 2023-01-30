@@ -9,11 +9,11 @@ export default function Template() {
 
     return (
         <>
-            <Typography variant="h1">Template</Typography>
+            <Typography variant="h2" component="h1" sx={{ fontWeight:500 }}>Template</Typography>
                 <Typography variant="body1">This is a template for creating new project pages.</Typography>
             <Divider sx={{margin: '2rem 0'}} />
             <Card sx={{ padding:'20px', margin:'20px' }}>
-                <Typography variant="h1">Project Name</Typography>
+                <Typography variant="h2" component="h1" sx={{ fontWeight:500 }}>Project Name</Typography>
                         <Stack direction="row" spacing={2} sx={{margin: '1rem 0'}}>
                             <Link href="#"><GitHubIcon /></Link>
                             <Link href="#"><LanguageIcon /></Link>
