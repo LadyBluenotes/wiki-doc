@@ -111,11 +111,6 @@ export default function Nasa() {
                         }}>
                                     <ListItemText primary="Future improvements" />
                                 </ListItemButton>
-                                <ListItemButton sx={{ pl: 14 }} onClick={() =>{
-                            window.location.href = '#template-ref';
-                        }}>
-                                    <ListItemText primary="References" />
-                                </ListItemButton>
                             </List>
                     </List>
                 <Divider sx={{margin: '2rem 0'}} />
@@ -185,10 +180,6 @@ export default function Nasa() {
                                 List of future improvements to the project.
                                 <br />
                                 <br />
-                            </Typography>
-                        <Typography variant="h3" id="template-ref" className="styling-h3" >References</Typography>
-                            <Typography variant="body1">
-                                List of references used to build the project.
                             </Typography>
             </Container>
         </>

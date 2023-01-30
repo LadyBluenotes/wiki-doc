@@ -106,12 +106,12 @@ export default function NavBar({ content }: any) {
                       <Collapse in={open2} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
                           <ListItemButton sx={{ pl: 7 }} onClick={()=>{
-                            window.location.href = '/client-side/poke-dex';
+                            window.location.href = '/clientside/poke-dex';
                           }}>
                             <ListItemText primary="The Poke-Dex" />
                           </ListItemButton>
                           <ListItemButton sx={{ pl: 7 }} onClick={()=>{
-                            window.location.href = '/client-side/space';
+                            window.location.href = '/clientside/space';
                           }}>
                             <ListItemText primary="Space" />
                           </ListItemButton>
@@ -134,8 +134,10 @@ export default function NavBar({ content }: any) {
                     </ListItemButton>
                       <Collapse in={open4} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
-                          <ListItemButton sx={{ pl: 7 }}>
-                            <ListItemText primary="Demo 1" />
+                        <ListItemButton sx={{ pl: 7 }} onClick={()=>{
+                            window.location.href = '/serverside/task-it';
+                          }}>
+                            <ListItemText primary="Task-It API" />
                           </ListItemButton>
                       </List>
                     </Collapse>

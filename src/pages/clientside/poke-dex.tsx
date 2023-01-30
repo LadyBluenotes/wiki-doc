@@ -15,7 +15,9 @@ export default function PokeDex() {
                         <Link href="https://github.com/LadyBluenotes/the-poke-dex"><GitHubIcon /></Link>
                         <Link href="https://pokedex.sarahgerrard.me/"><LanguageIcon /></Link>
                     </Stack>
-                            <Typography variant="body1">The Poke-Dex is a web application used to display information about all known Pokemon from the popular franchise. The application utilizes the Poke API, a publicly available API, that provides information on Pokemon such as their names, abilities, and statistics.</Typography>
+                            <Typography variant="body1">
+                                The Poke-Dex is a React web application used to display information about all known Pokemon from the popular franchise. This application uses the Poke API, a publically available and reliable source for Pokemon data, React, React Router, and Material UI.
+                            </Typography>
                         <Divider sx={{margin: '2rem 0'}} />
                             <List
                                 sx={{ 
@@ -121,17 +123,12 @@ export default function PokeDex() {
                                 }}>
                                             <ListItemText primary="Future improvements" />
                                         </ListItemButton>
-                                        <ListItemButton sx={{ pl: 14 }} onClick={() =>{
-                                    window.location.href = '#ref';
-                                }}>
-                                            <ListItemText primary="References" />
-                                        </ListItemButton>
                                     </List>
                             </List>
                         <Divider sx={{margin: '2rem 0'}} />
                             <Typography variant="h3" component="h2" id="overview">I. Overview</Typography>
                                 <Typography variant="body1">
-                                    As a fan of Pokemon, I wanted to use my developer skills to create a web application that would display information about the pokemon in the franchise. I decided to use the Poke API, a publicly available and reliable source for Pokemon data, to gather relevant information such as names, abilities, and statistics. Using my skills in React, React Router, and Material UI, I was able to create this visually appealing web application that displays information about all known Pokemon.
+                                    As a fan of Pokemon, I wanted to use my developer skills to create a web application that would display information about the pokemon in the franchise. I chose to use the Poke API as it is a reliable source of information about Pokemon and is free to use. I also chose to use React as it is a popular and powerful JavaScript library that is easy to use and learn. This application is a single page application that uses React Router to display different components based on the URL. Design was done using Material UI, a popular React UI framework, with inspiration from what a Poke Dex would look like in the Pokemon universe.
                                 </Typography>
                         <Divider sx={{margin: '2rem 0'}} />
                             <Typography variant="h3" component="h2" id="gettingStarted">II. Getting started</Typography>
@@ -139,10 +136,14 @@ export default function PokeDex() {
                                     <Typography variant="body1">
                                         <br />
                                         The following must be installed on your machine:
-                                            <ul>
-                                                <li>Node.js</li>
-                                                <li>npm</li>
-                                            </ul>
+                                        <List>
+                                            <ListItem>
+                                                <ListItemIcon>
+                                                    <ArrowRightIcon />
+                                                </ListItemIcon>
+                                                <ListItemText primary="Node.js" />
+                                            </ListItem>
+                                        </List>
                                     </Typography>
                                 <Typography variant="h4" component="h3" id="install" className="styling-h3" >Installation</Typography>
                                     <Typography variant="body1">
@@ -257,13 +258,18 @@ export default function PokeDex() {
                             <Typography variant="h3" component="h2" id="acknowledge">VI. Acknowledgements</Typography>
                                 <Typography variant="body1">
                                     This project was inspired by a tutorial done by Anthony Sistilli on Youtube, with design inspired by the Pokemon color palette.
-                                    <ul>
-                                        <li>
-                                            Anthony Sistilli's Tutorial - <a href="https://www.youtube.com/watch?v=gGcLQ2sZFeg" target="_blank" rel="noreferrer">Part one</a> & <a href="https://www.youtube.com/watch?v=XmTCeWbVjpM" target="_blank" rel="noreferrer">part two</a>
-                                        </li>
-                                    </ul>
                                 </Typography>
-                        <Divider sx={{margin: '2rem 0'}} />
+                                    <List>
+                                        <ListItem>
+                                            <ListItemIcon>
+                                                <ArrowRightIcon />
+                                            </ListItemIcon>
+                                            <ListItemText>
+                                                Anthony Sistilli's Tutorial - <a href="https://www.youtube.com/watch?v=gGcLQ2sZFeg" target="_blank" rel="noreferrer">Part one</a> & <a href="https://www.youtube.com/watch?v=XmTCeWbVjpM" target="_blank" rel="noreferrer">part two</a>
+                                            </ListItemText>
+                                        </ListItem>
+                                    </List>
+                        <Divider sx={{marginBottom: '2rem', marginTop: '1rem'}} />
                             <Typography variant="h3" component="h2" id="addInfo">VII. Additional Information</Typography>
                                 <Typography variant="body1">
                                     While this project is mostly complete, there are still some known issues that I am working to resolve. I am also planning to add additional features in the future to further enhance the user experience.
