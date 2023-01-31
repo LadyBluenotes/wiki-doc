@@ -16,9 +16,11 @@ export default function Home() {
           <Typography variant="h1" component="h1" gutterBottom>
             Hi, I'm Sarah!
           </Typography>
-
           <Typography variant="h2" component="h2" gutterBottom align='center'>
             Welcome to my project documentation site.
+          </Typography>
+          <Typography variant="body1" component="p" sx={{ marginBottom:'1rem' }}>
+            This site is still a work in progress, but feel free to look around.
           </Typography>
           <Button 
             onClick={() => {

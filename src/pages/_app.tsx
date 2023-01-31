@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <HeadComponent title="Sarah Gerrard - Personal Wiki" description="A personal wiki for Sarah Gerrard containing information about her software development work." />
+      <HeadComponent title="Sarah's Documentation Site" description="A personal site to display project documentation." />
       <NavBar content={<Component {...pageProps} />} />
     </>
   )
