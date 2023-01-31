@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Collapse, Drawer, AppBar, CssBaseline, Toolbar, List, Typography, Divider, ListItem, ListItemButton, ListItemIcon, ListItemText, Link } from '@mui/material';
+import { Box, Collapse, Drawer, AppBar, CssBaseline, Toolbar, List, Typography, Divider, ListItem, ListItemButton, ListItemIcon, ListItemText, Link, Menu } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 import ConnectWithoutContact from '@mui/icons-material/ConnectWithoutContact';
@@ -9,6 +9,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import GroupsIcon from '@mui/icons-material/Groups';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const drawerWidth = 240;
 export default function NavBar({ content }: any) {
@@ -47,14 +48,27 @@ export default function NavBar({ content }: any) {
           <Typography variant="h6" noWrap component="div" className='navBar-title'>
             Sarah Gerrard's Personal Wiki
           </Typography>
+          <Box sx={{ 
+              display: { sm: 'block', md: 'none' },
+              position: 'absolute',
+              right: '15px',
+              top: '50%',
+              transform: 'translateY(-50%)'
+              }}
+              >
+            <MenuIcon />
+          </Box>
         </Toolbar>
       </AppBar>
       <Drawer
-        variant="permanent"
+        variant='permanent'
         sx={{
           width: drawerWidth,
           flexShrink: 0,
-          [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
+          '& .MuiDrawer-paper': {
+            width: drawerWidth,
+            boxSizing: 'border-box',
+          },
         }}
       >
         <Toolbar />
@@ -178,7 +192,7 @@ export default function NavBar({ content }: any) {
                   <InfoIcon />
                 </ListItemIcon>
                 <ListItemText>
-                  About
+                  About Me
                 </ListItemText>
               </ListItemButton>
             </ListItem>

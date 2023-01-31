@@ -1,26 +1,32 @@
-import { Typography, Container, Divider } from '@mui/material';
+import { Typography, Container, Link, Divider, Stack, Button } from '@mui/material';
 
 export default function Home() {
   return (
       <Container maxWidth="lg">
-        <Container sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}>
-          <Typography variant="h2" component="h1" sx={{ fontWeight:500 }}>My Project Portfolio</Typography>
-          <Typography variant="h3" component="h2">A comprehensive guide to my work.</Typography>
-        </Container>
-        <Divider sx={{ my: 2 }} />
-          <Typography variant="h4" component="h5">
-            
+        <Stack
+          sx={{
+            height: '80vh',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Typography variant="h1" component="h1" gutterBottom>
+            Hi, I'm Sarah!
           </Typography>
-          <Typography variant="body1">
-            <br />
-            <br />
-            This is a project portfolio website that I built to showcase my work. It is a work in progress, and I will be adding more projects to it as I complete them.
-
+          <Typography variant="h2" component="h2" gutterBottom align='center'>
+            Welcome to my project documentation site.
           </Typography>
+          <Button 
+            onClick={() => {
+              window.location.href = '/about'
+            }}
+            variant="contained"
+            size="large"
+            >
+            Learn about me
+          </Button>
+        </Stack>
       </Container>
   )
 }
