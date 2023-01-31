@@ -24,15 +24,12 @@ export default function OpenSource() {
                 <Typography variant="h4" component="h3">Role:</Typography>
                     <Typography variant="body1">Contributor</Typography>
                 </Stack>
-                <br />
                 <Stack spacing={2} direction={"row"} alignItems={"baseline"}>
                 <Typography variant="h4" component="h3">Duration:</Typography>
                     <Typography variant="body1">January 2023 - Present</Typography>
                 </Stack>
-                <br />
                 <Typography variant="h4" component="h3">Responsibilities:</Typography>
                     <Typography variant="body1">
-                        <br />
                         As a contributor to Material UI, I played a role in enhancing the project's documentation. My responsibilities included:
                     </Typography>
                         <List>

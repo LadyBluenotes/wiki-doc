@@ -182,7 +182,7 @@ export default function Nasa() {
                                     <br/>
                                     </Typography>
                                     <Typography variant="h3" id="builtwith" className="styling-h3" >Built with</Typography>
-                                        <List>
+                                        <List disablePadding>
                                             <ListItem>
                                                 <ListItemIcon>
                                                     <ArrowRightIcon />

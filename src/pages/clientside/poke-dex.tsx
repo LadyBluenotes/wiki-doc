@@ -131,11 +131,10 @@ export default function PokeDex() {
                             </Typography>
                     <Divider sx={{margin: '2rem 0'}} />
                         <Typography variant="h3" component="h2" id="gettingStarted">II. Getting started</Typography>
-                            <Typography variant="h4" component="h3" id="prereq" >Prerequisites</Typography>
+                            <Typography variant="h4" component="h3" id="prereq" sx={{ paddingBottom:'1rem'}}>Prerequisites</Typography>
                                 <Typography variant="body1">
-                                    <br />
                                     The following must be installed on your machine:
-                                    <List>
+                                    <List disablePadding>
                                         <ListItem>
                                             <ListItemIcon>
                                                 <ArrowRightIcon />
@@ -189,8 +188,8 @@ export default function PokeDex() {
                                 <br/>
                                 <br/>
                             </Typography>
-                            <Typography variant="h3" id="builtwith" className="styling-h3" >Built with</Typography>
-                                <List>
+                            <Typography variant="h4" component="h3">Built with</Typography>
+                                <List disablePadding>
                                     <ListItem>
                                         <ListItemIcon>
                                             <ArrowRightIcon />
@@ -258,7 +257,7 @@ export default function PokeDex() {
                             <Typography variant="body1">
                                 This project was inspired by a tutorial done by Anthony Sistilli on Youtube, with design inspired by the Pokemon color palette.
                             </Typography>
-                                <List>
+                                <List disablePadding>
                                     <ListItem>
                                         <ListItemIcon>
                                             <ArrowRightIcon />
@@ -275,7 +274,7 @@ export default function PokeDex() {
                                 <br />
                                 <br />
                             </Typography>
-                            <Typography variant="h4" component="h3" id="issues" className="styling-h3" >Known issues</Typography>
+                            <Typography variant="h4" component="h3" id="issues">Known issues</Typography>
                                 <List>
                                     <ListItem>
                                         <ListItemIcon>

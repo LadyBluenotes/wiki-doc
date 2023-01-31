@@ -127,7 +127,6 @@ export default function TaskIt() {
                             <Divider sx={{margin: '2rem 0'}} />
                                 <Typography variant="h3" component="h2" id="overview">I. Overview</Typography>
                                     <Typography variant="body1">
-                                        <br />
                                         Task-It is an API that was built to help users manage their tasks. With each task created, users can input a title, description, dictate whether the task is complete or not, and set a due date. In addition, users can also assign a task to another user. There are some defaults set in place to ensure the data is valid. For example, the due date is set to when the task is created, if no due date is provided, the status is set to false, and it is assigned to the user who created it, if no user is provided. 
                                         <br />
                                         <br />
@@ -139,7 +138,7 @@ export default function TaskIt() {
                                         <Typography variant="body1">
                                             <br />
                                             What is needed to install and run the application.
-                                            <List>
+                                            <List disablePadding>
                                                 <ListItem>
                                                     <ListItemIcon>
                                                         <ArrowRightIcon />
@@ -212,7 +211,7 @@ export default function TaskIt() {
                                         <br />
                                     </Typography>
                                     <Typography variant="h3" id="builtwith" className="styling-h3" >Built with</Typography>
-                                        <List>
+                                        <List disablePadding>
                                             <ListItem>
                                                 <ListItemIcon>
                                                     <ArrowRightIcon />
