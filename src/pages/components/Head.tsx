@@ -1,12 +1,11 @@
 import Head from 'next/head';
-import { HeadComponentProps } from '../types/types';
 
-export default function HeadComponent({ title, description }: HeadComponentProps) {
+export default function HeadComponent({ title, description }: any) {
 
     return (
         <Head>
-            <title>{title}</title>
-            <meta name="description" content={description} />
+            <title>Sarah's Documentation Site</title>
+            <meta name="description" content={'A personal site to display project documentation.'} />
             <link href="/dist/output.css" rel="stylesheet" />
             <link rel="icon" href="/favicon.ico" />
         </Head>

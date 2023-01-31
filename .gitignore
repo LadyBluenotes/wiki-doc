@@ -37,3 +37,6 @@ next-env.d.ts
 template-eg.tsx
 
 template-mac.tsx
+
+# Local Netlify folder
+.netlify
