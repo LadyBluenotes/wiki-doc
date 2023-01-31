@@ -17,7 +17,7 @@ export default function PokeDex() {
                         <Typography variant="body1">
                             The Poke-Dex is a React web application used to display information about all known Pokemon from the popular franchise. This application uses the Poke API, a publically available and reliable source for Pokemon data, React, React Router, and Material UI.
                         </Typography>
-                    <Divider sx={{margin: '2rem 0'}} />
+                    <Divider sx={{marginTop: '2rem', marginBottom:'1rem' }} />
                         <List
                             sx={{ 
                                 width: '100%', 
@@ -222,7 +222,7 @@ export default function PokeDex() {
                                         <ListItemText primary="Material UI" />
                                     </ListItem>
                                 </List>
-                    <Divider sx={{margin: '2rem 0'}} />
+                    <Divider sx={{marginTop: '1rem', marginBottom:'2rem' }} />
                         <Typography variant="h3" component="h2" id="motivation">IV. Motivation</Typography>
                             <Typography variant="body1">
                                 This project was an exciting opportunity for me to delve deeper into the world of React. As one of my more involved front-end projects, it provided hands-on learning that allowed me to gain a better understanding of the library's capabilities and best practices.

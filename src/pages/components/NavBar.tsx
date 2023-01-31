@@ -46,7 +46,7 @@ export default function NavBar({ content }: any) {
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
           <Typography variant="h6" noWrap component="div" className='navBar-title'>
-            Sarah Gerrard's Personal Wiki
+            Sarah's Project Documentation
           </Typography>
           <Box sx={{ 
               display: { sm: 'block', md: 'none' },

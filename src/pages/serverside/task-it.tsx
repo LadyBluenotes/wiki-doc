@@ -17,7 +17,7 @@ export default function TaskIt() {
                                 <Typography variant="body1">
                                     Task-It is a simple task management API that allows users to create, read, update, and delete tasks. It is built with Node.js, Express, and MongoDB.
                                 </Typography>
-                            <Divider sx={{margin: '2rem 0'}} />
+                            <Divider sx={{marginTop: '2rem', marginBottom:'1rem' }} />
                                 <List
                                     sx={{ 
                                         width: '100%', 

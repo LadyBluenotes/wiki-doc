@@ -19,7 +19,7 @@ export default function Template() {
                             <Link href="#"><LanguageIcon /></Link>
                         </Stack>
                                 <Typography variant="body1">Project description.</Typography>
-                            <Divider sx={{margin: '2rem 0'}} />
+                            <Divider sx={{marginTop: '2rem', marginBottom:'1rem' }} />
                                 <List
                                     sx={{ 
                                         width: '100%', 
@@ -126,7 +126,7 @@ export default function Template() {
                                             </ListItemButton>
                                         </List>
                                 </List>
-                            <Divider sx={{margin: '2rem 0'}} />
+                            <Divider sx={{marginTop: '1rem', marginBottom:'2rem' }} />
                                 <Typography variant="h3" component="h2" id="overview">I. Overview</Typography>
                                     <Typography variant="body1">
                                         Where I will talk about a general overview of the project.
@@ -205,7 +205,7 @@ export default function Template() {
                                                 <ListItemText primary="Tech 2" />
                                             </ListItem> 
                                         </List>
-                            <Divider sx={{margin: '2rem 0'}} />
+                            <Divider sx={{marginTop: '1rem', marginBottom:'2rem' }} />
                                 <Typography variant="h3" component="h2" id="motivation">IV. Motivation</Typography>
                                     <Typography variant="body1">
                                         The reason I wanted to create this application.
