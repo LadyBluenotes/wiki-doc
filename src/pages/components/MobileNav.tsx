@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Collapse, Drawer, AppBar, CssBaseline, Toolbar, List, Typography, Divider, ListItem, ListItemButton, ListItemIcon, ListItemText, Link, Menu } from '@mui/material';
+import { Box, Collapse, Drawer, AppBar, CssBaseline, Toolbar, List, Typography, Divider, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 import ConnectWithoutContact from '@mui/icons-material/ConnectWithoutContact';
@@ -9,6 +9,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import GroupsIcon from '@mui/icons-material/Groups';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const drawerWidth = 240;
 export default function NavBar({ content }: any) {
@@ -18,6 +19,7 @@ export default function NavBar({ content }: any) {
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);
   const [open4, setOpen4] = useState(false);
+  const [openDrawer, setOpenDrawer] = useState(false);
 
   const handleClick = () => {
     setOpen(!open);
@@ -39,18 +41,35 @@ export default function NavBar({ content }: any) {
     setOpen4(!open4);
   };
 
+  const handleDrawer = () => {
+    setOpenDrawer(!openDrawer);
+    };
+
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
-          <Typography variant="h6" noWrap component="div" className='navBar-title'>
-            Sarah's Documentation Site
-          </Typography>
+            <Stack direction={'row'} spacing={0}>
+                <Typography variant="h6" noWrap component="div" className='navBar-title' sx={{
+                    flexGrow: 1,
+                }}>
+                    Sarah's Documentation Site
+                </Typography>
+                <Box sx={{
+                    position: 'absolute',
+                    right: 0,
+                    marginRight: 2,
+                    marginTop: 0.5,
+                }}
+                    >
+                    <MenuIcon onClick={handleDrawer} />
+                </Box>
+            </Stack>
         </Toolbar>
       </AppBar>
       <Drawer
-        variant='permanent'
+        variant='temporary'
         sx={{
           width: drawerWidth,
           flexShrink: 0,
@@ -59,6 +78,7 @@ export default function NavBar({ content }: any) {
             boxSizing: 'border-box',
           },
         }}
+        open={openDrawer}
       >
         <Toolbar />
         <Box sx={{ overflow: 'auto' }}>

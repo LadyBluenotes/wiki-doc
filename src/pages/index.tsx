@@ -13,7 +13,7 @@ export default function Home() {
             margin: 'auto',
           }}
         >
-          <Typography variant="h1" component="h1" gutterBottom>
+          <Typography variant="h1" component="h1" gutterBottom align='center'>
             Hi, I'm Sarah!
           </Typography>
           <Typography variant="h2" component="h2" gutterBottom align='center'>
