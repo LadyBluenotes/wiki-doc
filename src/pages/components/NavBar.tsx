@@ -44,7 +44,17 @@ export default function NavBar({ content }: any) {
       <CssBaseline />
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
-          <Typography variant="h6" noWrap component="div" className='navBar-title'>
+          <Typography 
+            variant="h6" 
+            noWrap 
+            component="div" 
+            className='navBar-title'
+            onClick={()=>{
+                window.location.href = '/';
+            }}
+            sx={{
+                cursor: 'pointer'
+            }}>
             Sarah's Documentation Site
           </Typography>
         </Toolbar>
