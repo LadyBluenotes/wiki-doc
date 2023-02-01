@@ -217,12 +217,14 @@ export default function NavBar({ content }: any) {
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton>
+              <ListItemButton onClick={() =>{
+                window.location.href = '/connect';
+              }}>
                 <ListItemIcon>
                   <ConnectWithoutContact />
                 </ListItemIcon>
                 <ListItemText>
-                    Connect
+                  Connect with me!
                 </ListItemText>
               </ListItemButton>
             </ListItem>
