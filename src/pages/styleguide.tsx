@@ -6,7 +6,7 @@ export default function StyleGuide(){
         <Container maxWidth="lg">
             <Typography variant="h1">Style Guide</Typography>
             <Divider sx={{ my: 2 }} />
-            <List
+            <List dense
                         sx={{ 
                             width: '100%', 
                             maxWidth: '100%', 
