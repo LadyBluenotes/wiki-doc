@@ -20,19 +20,24 @@ export default function OpenSource() {
                     </Stack>
             <Divider sx={{ my: 2 }} />
             <Typography variant="h3" component="h2">Contribution summary</Typography>
-                <Stack spacing={2} direction={"row"} alignItems={"baseline"}>
-                <Typography variant="h4" component="h3">Role:</Typography>
-                    <Typography variant="body1">Contributor</Typography>
-                </Stack>
-                <Stack spacing={2} direction={"row"} alignItems={"baseline"}>
-                <Typography variant="h4" component="h3">Duration:</Typography>
-                    <Typography variant="body1">January 2023 - Present</Typography>
-                </Stack>
-                <Typography variant="h4" component="h3">Responsibilities:</Typography>
+                <Stack spacing={2}>
+                    <Stack spacing={2} direction={"row"} alignItems={"baseline"} >
+                        <Typography variant="h4" component="h3">Role:</Typography>
+                        <Typography variant="body1">Contributor</Typography>
+                    </Stack>
+                    <Stack spacing={2} direction={"row"} alignItems={"baseline"}>
+                        <Typography variant="h4" component="h3">Duration:</Typography>
+                        <Typography variant="body1">January 2023 - Present</Typography>
+                    </Stack>
+                </Stack>   
+                <Typography variant="h4" component="h3" sx={{
+                    paddingTop: 2,
+                    paddingBottom: 2
+                }}>Responsibilities:</Typography>
                     <Typography variant="body1">
                         As a contributor to Material UI, I played a role in enhancing the project's documentation. My responsibilities included:
                     </Typography>
-                        <List>
+                        <List dense>
                             <ListItem>
                                 <ListItemIcon>
                                     <ArrowRightIcon />
@@ -60,7 +65,7 @@ export default function OpenSource() {
                         </List>
                     <Typography variant="h3" component="h2">Technologies</Typography>
                     <Typography variant="body1">The following technologies were used while contributing:</Typography>
-                    <List>
+                    <List dense>
                         <ListItem>
                             <ListItemIcon>
                                 <ArrowRightIcon />

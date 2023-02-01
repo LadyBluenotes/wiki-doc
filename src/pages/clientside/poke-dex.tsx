@@ -18,7 +18,7 @@ export default function PokeDex() {
                             The Poke-Dex is a React web application used to display information about all known Pokemon from the popular franchise. This application uses the Poke API, a publically available and reliable source for Pokemon data, React, React Router, and Material UI.
                         </Typography>
                     <Divider sx={{marginTop: '2rem', marginBottom:'1rem' }} />
-                        <List
+                        <List dense
                             sx={{ 
                                 width: '100%', 
                                 maxWidth: '100%', 
@@ -52,7 +52,7 @@ export default function PokeDex() {
                                 </ListItemIcon>
                                 <ListItemText primary="Getting started" />
                             </ListItemButton>
-                                <List component="div" disablePadding>
+                                <List dense component="div" disablePadding>
                                     <ListItemButton sx={{ pl: 14 }} onClick={() =>{
                                 window.location.href = '#preq';
                             }}>
@@ -72,7 +72,7 @@ export default function PokeDex() {
                                 </ListItemIcon>
                                 <ListItemText primary="About" />
                             </ListItemButton>
-                                <List component="div" disablePadding>
+                                <List dense component="div" disablePadding>
                                     <ListItemButton sx={{ pl: 14 }} onClick={() =>{
                                 window.location.href = '#about';
                             }}>
@@ -111,7 +111,7 @@ export default function PokeDex() {
                                 </ListItemIcon>
                                 <ListItemText primary="Additional Information" />
                             </ListItemButton>
-                            <List component="div" disablePadding>
+                            <List dense component="div" disablePadding>
                                     <ListItemButton sx={{ pl: 14 }} onClick={() =>{
                                 window.location.href = '#issues';
                             }}>
@@ -189,7 +189,7 @@ export default function PokeDex() {
                                 <br/>
                             </Typography>
                             <Typography variant="h4" component="h3">Built with</Typography>
-                                <List disablePadding>
+                                <List dense>
                                     <ListItem>
                                         <ListItemIcon>
                                             <ArrowRightIcon />
