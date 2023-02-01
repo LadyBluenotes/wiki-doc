@@ -7,7 +7,6 @@ import '../styles/global.css';
 
 export default function App({ Component, pageProps }: AppProps) {
 
-  // if browser window is resized, update width
   const [width, setWidth] = useState<number | undefined>(undefined);
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);

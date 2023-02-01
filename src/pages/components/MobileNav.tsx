@@ -51,9 +51,18 @@ export default function NavBar({ content }: any) {
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
             <Stack direction={'row'} spacing={0}>
-                <Typography variant="h6" noWrap component="div" className='navBar-title' sx={{
-                    flexGrow: 1,
-                }}>
+                <Typography 
+                    variant="h6" 
+                    noWrap 
+                    component="div" 
+                    className='navBar-title'
+                    onClick={()=>{
+                        window.location.href = '/';
+                    }}
+                    sx={{
+                        flexGrow: 1,
+                        cursor: 'pointer'
+                    }}>
                     Sarah's Documentation Site
                 </Typography>
                 <Box sx={{
@@ -63,7 +72,9 @@ export default function NavBar({ content }: any) {
                     marginTop: 0.5,
                 }}
                     >
-                    <MenuIcon onClick={handleDrawer} />
+                    <MenuIcon onClick={handleDrawer} sx={{
+                        cursor: 'pointer',
+                    }}/>
                 </Box>
             </Stack>
         </Toolbar>
