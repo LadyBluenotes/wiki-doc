@@ -31,7 +31,7 @@ export default function Connect() {
                     }}>
                         <Button 
                             size="large" 
-                            href="https://www.linkedin.com/in/sarahgerrard/" 
+                            href="https://www.twitter.com/ladybluenotes"
                             target="_blank">
                                 <Paper sx={{
                                     padding: "20px",
@@ -60,7 +60,7 @@ export default function Connect() {
                                     }}/>
                             </Paper>
                         </Button>
-                        <Button size="large" href="https://www.twitter.com/ladybluenotes" target="_blank">
+                        <Button size="large" href="https://www.linkedin.com/in/sarahgerrard/" target="_blank">
                             <Paper sx={{
                                     padding: "20px",
                                     display: "flex",
