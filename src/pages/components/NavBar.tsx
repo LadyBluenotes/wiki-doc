@@ -9,6 +9,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import GroupsIcon from '@mui/icons-material/Groups';
+import CreateIcon from '@mui/icons-material/Create';
 
 const drawerWidth = 240;
 export default function NavBar({ content }: any) {
@@ -85,6 +86,16 @@ export default function NavBar({ content }: any) {
                   </ListItemText>
                 </ListItemButton>
               </ListItem>
+              <ListItemButton onClick={() =>{
+                window.location.href = 'https://blog.sarahgerrard.me';
+              }}>
+                  <ListItemIcon>
+                    <CreateIcon />
+                  </ListItemIcon>
+                  <ListItemText>
+                      Blog
+                  </ListItemText>
+                </ListItemButton>
               <ListItemButton onClick={handleClick}>
                   <ListItemIcon>
                     <GroupsIcon />
