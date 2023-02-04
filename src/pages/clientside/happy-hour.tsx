@@ -143,7 +143,7 @@ export default function HappyHour() {
                                         <Typography variant="body1">
                                             <br />
                                             How to install and run the application.
-                                            <br />
+                                        </Typography>
                                             <ol>
                                                 <li>
                                                     Clone the repository
@@ -162,8 +162,7 @@ export default function HappyHour() {
                                                 </li>
                                                 <br />
                                             </ol>
-                                        </Typography>
-                            <Divider sx={{margin: '2rem 0'}} />
+                            <Divider sx={{marginBottom: '2rem', marginTop: '1rem' }} />
                                 <Typography variant="h3" component="h2" id="about">III. About</Typography>
                                     <Typography variant="body1">
                                         The Happy Hour Guide was built on web development fundamentals.
@@ -239,7 +238,7 @@ export default function HappyHour() {
                                     <Typography variant="body1">
                                         With this being my first modal attempt, I followed a tutorial from Brad Traversy of the Traversy Media Youtube channel to help me get started.
                                     </Typography>
-                                    <List>
+                                    <List disablePadding>
                                         <ListItem>
                                             <ListItemIcon>
                                                 <ArrowRightIcon />
@@ -257,7 +256,7 @@ export default function HappyHour() {
                                         <br />
                                     </Typography>
                                     <Typography variant="h4" component="h3" id="issues" className="styling-h3" >Known issues</Typography>
-                                        <List disablePadding>
+                                        <List dense>
                                             <ListItem>
                                                 <ListItemIcon>
                                                     <CheckBoxOutlineBlankIcon />
@@ -296,7 +295,7 @@ export default function HappyHour() {
                                             </ListItem>
                                         </List>
                                     <Typography variant="h4" component="h3" id="future" className="styling-h3" >Future improvements</Typography>
-                                        <List disablePadding>
+                                        <List dense>
                                             <ListItem>
                                                 <ListItemIcon>
                                                     <CheckBoxOutlineBlankIcon />
