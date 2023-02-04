@@ -182,7 +182,7 @@ export default function Nasa() {
                                     <br/>
                                     </Typography>
                                     <Typography variant="h3" id="builtwith" className="styling-h3" >Built with</Typography>
-                                        <List disablePadding>
+                                        <List dense disablePadding>
                                             <ListItem>
                                                 <ListItemIcon>
                                                     <ArrowRightIcon />
@@ -243,7 +243,7 @@ export default function Nasa() {
                                         <br />
                                     </Typography>
                                     <Typography variant="h4" component="h3" id="issues" className="styling-h3" >Known issues</Typography>
-                                        <List>
+                                        <List dense>
                                             <ListItem>
                                                 <ListItemIcon>
                                                     <CheckBoxOutlineBlankIcon />
@@ -252,7 +252,7 @@ export default function Nasa() {
                                             </ListItem>
                                         </List>
                                     <Typography variant="h4" component="h3" id="future" className="styling-h3" >Future improvements</Typography>
-                                        <List>
+                                        <List dense>
                                             <ListItem>
                                                 <ListItemIcon>
                                                     <CheckBoxOutlineBlankIcon />

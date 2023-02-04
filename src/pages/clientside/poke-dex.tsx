@@ -275,7 +275,7 @@ export default function PokeDex() {
                                 <br />
                             </Typography>
                             <Typography variant="h4" component="h3" id="issues">Known issues</Typography>
-                                <List>
+                                <List dense>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckBoxOutlineBlankIcon />
@@ -290,7 +290,7 @@ export default function PokeDex() {
                                     </ListItem>
                                 </List>
                             <Typography variant="h4" component="h3" id="future" className="styling-h3" >Future improvements</Typography>
-                                <List>
+                                <List dense>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckBoxOutlineBlankIcon />

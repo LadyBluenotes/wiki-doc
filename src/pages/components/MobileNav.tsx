@@ -150,6 +150,16 @@ export default function NavBar({ content }: any) {
                     </ListItemButton>
                       <Collapse in={open2} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
+                        <ListItemButton sx={{ pl: 7 }} onClick={()=>{
+                            window.location.href = '/clientside/happy-hour';
+                          }}>
+                            <ListItemText primary="Happy Hour Guide" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }} onClick={()=>{
+                              window.location.href = '/clientside/portfolio';
+                            }}>
+                            <ListItemText primary="Personal Portfolio" />
+                          </ListItemButton>
                           <ListItemButton sx={{ pl: 7 }} onClick={()=>{
                             window.location.href = '/clientside/poke-dex';
                           }}>
