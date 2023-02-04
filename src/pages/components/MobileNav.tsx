@@ -166,6 +166,11 @@ export default function NavBar({ content }: any) {
                             <ListItemText primary="The Poke-Dex" />
                           </ListItemButton>
                           <ListItemButton sx={{ pl: 7 }} onClick={()=>{
+                            window.location.href = '/clientside/projects';
+                          }}>
+                            <ListItemText primary="Project Site" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }} onClick={()=>{
                             window.location.href = '/clientside/space';
                           }}>
                             <ListItemText primary="Space" />
