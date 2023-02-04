@@ -286,6 +286,12 @@ export default function Portfolio() {
                                             </ListItemIcon>
                                             <ListItemText primary="Migrate projects from this website to their own and replace project cards with a referral to new site." />
                                         </ListItem>
+                                        <ListItem>
+                                            <ListItemIcon>
+                                                <CheckBoxOutlineBlankIcon />
+                                            </ListItemIcon>
+                                            <ListItemText primary="Replace blog link with project portfolio link." />
+                                        </ListItem>
                                     </List>
         </Container>
     )
