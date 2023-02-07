@@ -8,7 +8,7 @@ export default function Current() {
             <Typography variant="h2" component="h1" sx={{ fontWeight:500 }}>My Current Projects</Typography>
             <Typography variant="body1">
                 This page is intended to show the projects that I'm currently working on. 
-                The features on this page are ones that are going to be added to the project or are currently being worked on, and is not comprehensive of the entire project. 
+                The features on the project cards are ones that will be added or are currently being worked on, not a comprehensive list.
                 Once these projects have been been published, they will be migrated to their own pages, where you can find more information about them.
             </Typography>
             <Divider sx={{ my: 2 }} />
