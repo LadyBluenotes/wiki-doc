@@ -13,14 +13,11 @@ export default function Current() {
             </Typography>
             <Divider sx={{ my: 2 }} />
             <Stack 
-                sx={{ width: '100%' }}
                 direction="column"
-                justifyContent="center"
-                alignItems="center"
                 flexWrap="wrap"
                 spacing={2}
             >
-                <Card sx={{ p: 3, width: '70%' }} >
+                <Card sx={{ p: 3 }} >
                     <Typography variant="h4" component="h2" sx={{ fontWeight:500, mb: 1 }}>
                         This Documentation Site
                         <Link 
@@ -141,7 +138,7 @@ export default function Current() {
                         </Grid>
                     </Grid>
                 </Card>
-                <Card sx={{ p: 3, width: '70%' }} >
+                <Card sx={{ p: 3 }} >
                     <Typography variant="h4" component="h2" sx={{ fontWeight:500, mb: 1 }}>
                         Track My Funds
                         <Link 
@@ -152,7 +149,7 @@ export default function Current() {
                             </Link>
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ pb:2, pt: 1 }}>
-                        This is a personal project I'm working on to help me keep track of my finances.
+                        This is a personal project I'm working on to help me keep track of finances. It's going to be a full stack app that will allow users to add expenses and income, and then display the data in a way that's easy to understand.
                     </Typography>
                     <Grid 
                         container 
