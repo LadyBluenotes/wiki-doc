@@ -20,7 +20,7 @@ export default function About() {
             <Divider sx={{ my:2 }} />
             <Grid container spacing={2}>
                 <Grid item xs={12}>
-                    <Container sx={{ padding:'20px' }}>
+                    <Container sx={{ p:2 }}>
                         <Typography variant='body1' component='p'>
                             With over a decade of experience in the healthcare industry, I made the decision to transition to a career in software development over a year ago.
                             My passion for technology and experience with computers made the transition an easy and natural choice. 
@@ -36,9 +36,9 @@ export default function About() {
                         </Typography>
                     </Container>
                 </Grid>
-                <Grid item xs={6}>
-                    <Container sx={{padding:'20px' }}>
-                        <Typography variant='h6' component='h3' align='center' sx={{ paddingBottom:'10px' }}>
+                <Grid item xs={12} lg={6} >
+                    <Container sx={{ p:2 }}>
+                        <Typography variant='h6' component='h3' align='center' sx={{ pb:1 }}>
                             Tech Skills
                         </Typography>
                         <Typography variant='body1' component='p'>
@@ -61,20 +61,15 @@ export default function About() {
                         </List>
                     </Container>
                 </Grid>
-                <Grid item xs={6}>
-                    <Container sx={{padding:'20px' }}>
-                        <Typography variant='h6' component='h3' align='center' sx={{ paddingBottom:'10px' }}>
+                <Grid item xs={12} lg={6}>
+                    <Container sx={{ p:2 }}>
+                        <Typography variant='h6' component='h3' align='center' sx={{ pb:1 }}>
                             Soft Skills
                         </Typography>
                         <Typography variant='body1' component='p'>
                             My work in healthcare has helped me develop the following skills:
                         </Typography>
-                        <List dense sx={{
-                            // columnCount: [1, 2],
-                            // columnGap: '20px',
-                            // columnRule: '1px solid #ccc',
-                            // columnFill: 'auto',
-                        }}>
+                        <List dense >
                             {softSkills.map((skill, index) => (
                                 <ListItem key={index}>
                                     <ListItemIcon>
