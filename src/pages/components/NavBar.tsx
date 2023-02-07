@@ -10,6 +10,7 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import GroupsIcon from '@mui/icons-material/Groups';
 import CreateIcon from '@mui/icons-material/Create';
+import ComputerIcon from '@mui/icons-material/Computer';
 
 const drawerWidth = 240;
 export default function NavBar({ content }: any) {
@@ -94,6 +95,16 @@ export default function NavBar({ content }: any) {
                   </ListItemIcon>
                   <ListItemText>
                       Blog
+                  </ListItemText>
+                </ListItemButton>
+                <ListItemButton onClick={() =>{
+                window.location.href = '/current';
+              }}>
+                  <ListItemIcon>
+                    <ComputerIcon />
+                  </ListItemIcon>
+                  <ListItemText>
+                      Current Projects
                   </ListItemText>
                 </ListItemButton>
               <ListItemButton onClick={handleClick}>

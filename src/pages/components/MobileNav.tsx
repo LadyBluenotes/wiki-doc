@@ -117,6 +117,16 @@ export default function NavBar({ content }: any) {
                       Blog
                   </ListItemText>
                 </ListItemButton>
+                <ListItemButton onClick={() =>{
+                window.location.href = '/current';
+              }}>
+                  <ListItemIcon>
+                    <CreateIcon />
+                  </ListItemIcon>
+                  <ListItemText>
+                      Current Projects
+                  </ListItemText>
+                </ListItemButton>
               <ListItemButton onClick={handleClick}>
                   <ListItemIcon>
                     <GroupsIcon />
