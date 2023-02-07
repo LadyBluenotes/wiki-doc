@@ -6,6 +6,11 @@ export default function Current() {
   return (
         <Container maxWidth="lg">
             <Typography variant="h2" component="h1" sx={{ fontWeight:500 }}>My Current Projects</Typography>
+            <Typography variant="body1">
+                This page is intended to show the projects that I'm currently working on. 
+                The features on this page are ones that are going to be added to the project or are currently being worked on, and is not comprehensive of the entire project. 
+                Once these projects have been been published, they will be migrated to their own pages, where you can find more information about them.
+            </Typography>
             <Divider sx={{ my: 2 }} />
             <Stack 
                 sx={{ width: '100%' }}
