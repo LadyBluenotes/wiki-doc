@@ -11,6 +11,7 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import GroupsIcon from '@mui/icons-material/Groups';
 import MenuIcon from '@mui/icons-material/Menu';
 import CreateIcon from '@mui/icons-material/Create';
+import ComputerIcon from '@mui/icons-material/Computer';
 
 const drawerWidth = 240;
 export default function NavBar({ content }: any) {
@@ -49,7 +50,10 @@ export default function NavBar({ content }: any) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+      <AppBar position="fixed" sx={{ 
+        zIndex: (theme) => theme.zIndex.drawer + 1,
+        mb: 3
+         }}>
         <Toolbar>
             <Stack direction={'row'} spacing={0}>
                 <Typography 
@@ -121,7 +125,7 @@ export default function NavBar({ content }: any) {
                 window.location.href = '/current';
               }}>
                   <ListItemIcon>
-                    <CreateIcon />
+                    <ComputerIcon />
                   </ListItemIcon>
                   <ListItemText>
                       Current Projects
