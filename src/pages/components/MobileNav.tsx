@@ -141,6 +141,16 @@ export default function NavBar({ content }: any) {
                       <Collapse in={open} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
                           <ListItemButton sx={{ pl: 7 }} onClick={() => {
+                              window.location.href = '/opensource/accessibleforall';
+                            }}>
+                              <ListItemText primary="Accessible for All" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }} onClick={() => {
+                              window.location.href = '/opensource/globalchem';
+                            }}>
+                              <ListItemText primary="Global Chem" />
+                          </ListItemButton>
+                          <ListItemButton sx={{ pl: 7 }} onClick={() => {
                             window.location.href = '/opensource/mui';
                           }}>
                             <ListItemText primary="Material UI" />
