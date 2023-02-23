@@ -36,7 +36,7 @@ export default function OpenSource() {
                     paddingBottom: 2
                 }}>Responsibilities:</Typography>
                     <Typography variant="body1">
-                        As a contributor to the Global Chem project, I mostly play a role in the front end development. My responsibilities include:
+                        As a contributor to the Global Chem project, I have been responsible for the following:
                     </Typography>
                         <List dense>
                             <ListItem>
@@ -44,7 +44,7 @@ export default function OpenSource() {
                                     <ArrowRightIcon />
                                 </ListItemIcon>
                                 <ListItemText>
-                                    Assist with presenting the chemical data of interest in a user friendly manner.
+                                    Developing a dashboard to present principle component analysis (PCA) visualizations of the data.
                                 </ListItemText>
                             </ListItem>
                             <ListItem>
@@ -52,7 +52,7 @@ export default function OpenSource() {
                                     <ArrowRightIcon />
                                 </ListItemIcon>
                                 <ListItemText>
-                                    Working closely with the other contributors to ensure everything is moving in the right direction and is being developed in the most efficient manner.
+                                    Assist in development of open source cheminformatic software and knowledge graphs of common chemical names and their SMILES.
                                 </ListItemText>
                             </ListItem>
                         </List>

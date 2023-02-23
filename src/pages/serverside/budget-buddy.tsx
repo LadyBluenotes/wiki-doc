@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Container, Typography, Divider, List, ListItemButton, ListItemIcon, ListItemText, ListSubheader, Link, ListItem, Stack } from '@mui/material';
+import Link from 'next/link';
+import { Container, Typography, Divider, List, ListItemButton, ListItemIcon, ListItemText, ListSubheader, ListItem, Stack } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
@@ -9,12 +10,12 @@ export default function TaskIt() {
     return (
         <>
             <Container maxWidth="lg">
-                <Typography variant="h2" component="h1" sx={{ fontWeight:500 }}>Task-It API</Typography>
+                <Typography variant="h2" component="h1" sx={{ fontWeight:500 }}>Budget Buddy API</Typography>
                         <Stack direction="row" spacing={2} sx={{margin: '1rem 0'}}>
-                            <Link href="https://github.com/LadyBluenotes/task-it"><GitHubIcon /></Link>
+                            <Link href="https://github.com/LadyBluenotes/budget-buddy"><GitHubIcon /></Link>
                         </Stack>
                                 <Typography variant="body1">
-                                    Task-It is a simple task management API that allows users to create, read, update, and delete tasks. It is built with Node.js, Express, and MongoDB.
+                                    Budget Buddy is a simple budgeting API that allows users to track their expenses and income.
                                 </Typography>
                             <Divider sx={{marginTop: '2rem', marginBottom:'1rem' }} />
                             <List dense
@@ -126,10 +127,14 @@ export default function TaskIt() {
                             <Divider sx={{margin: '2rem 0'}} />
                                 <Typography variant="h3" component="h2" id="overview">I. Overview</Typography>
                                     <Typography variant="body1">
-                                        Task-It is an API that was built to help users manage their tasks. With each task created, users can input a title, description, dictate whether the task is complete or not, and set a due date. In addition, users can also assign a task to another user. There are some defaults set in place to ensure the data is valid. For example, the due date is set to when the task is created, if no due date is provided, the status is set to false, and it is assigned to the user who created it, if no user is provided. 
+                                        Budget Buddy is a RESTful API that allows users to track their expenses and income. 
+                                        Users can create an account, login, and create, read, update, and delete transactions. 
                                         <br />
                                         <br />
-                                        The API is built using Node.js, Express, and MongoDB with Mongoose to model the data. Mongoose is used to validate the data and ensure it is valid. During testing of the API, I had used Postman to test the API endpoints. Additionally, I introduced Nodemon to help with development because it automatically restarts the server when changes are made.
+                                        The API is built with Node.js, Express, and MongoDB. 
+                                        In order to protect end points, the API uses JSON Web Tokens (JWT) for authentication.
+                                        If a user is logged in, they can create, read, update, and delete transactions, however, if they try and access an end point that requires authentication, they will be denied access.
+                                        To protect user data, the API uses bcryptjs to hash passwords and salt them.
                                     </Typography>
                             <Divider sx={{margin: '2rem 0'}} />
                                 <Typography variant="h3" component="h2" id="gettingStarted">II. Getting started</Typography>
@@ -162,7 +167,7 @@ export default function TaskIt() {
                                                     Clone the repository
                                                     <br />
                                                     <code>
-                                                        git clone https://github.com/LadyBluenotes/task-it
+                                                        git clone https://github.com/LadyBluenotes/budget-buddy
                                                     </code>
                                                 </li>
                                                 <br />
@@ -172,6 +177,10 @@ export default function TaskIt() {
                                                     <code>
                                                         npm install
                                                     </code>
+                                                </li>
+                                                <br />
+                                                <li>
+                                                    Copy the contents of the .env.example file into a new file called .env and add the appropriate values.
                                                 </li>
                                                 <br />
                                                 <li>
@@ -186,31 +195,40 @@ export default function TaskIt() {
                             <Divider sx={{margin: '2rem 0'}} />
                                 <Typography variant="h3" component="h2" id="about">III. About</Typography>
                                     <Typography variant="body1">
-                                        The aim of this project was to build an API with the basic CRUD operations. 
-                                        In addition to the basic CRUD operations, I also wanted to add some additional features to the API, such as assigning a task to another user and setting a due date. 
-                                        Using Node.js, Express, and MongoDB, I was able to build the API and add the additional features.
+                                        Building on the knowledge gained from <Link href="/serverside/task-it" style={{
+                                            textDecoration: "none",
+                                            color: "blue"
+                                        }}>Task It</Link>, I created this API to assist in learning how to add user authentication to an API. 
+                                        Rather than creating a to-do list application, I decided to create an API that allows users to track their expenses and income.
+                                        While to-do list applications are useful, I wanted to create an application that would be more useful in the real world, especially something that I could use myself.
+                                        Keeping this API relatively simple allowed me to focus on the main goal of adding user authentication, but to add some complexity to the API, I decided to also protect end points that require authentication.
                                         <br/>
                                         <br/>
-                                        Node is a JavaScript runtime built on Chrome's V8 JavaScript engine which allows developers to write server-side code using JavaScript. 
-                                        Express is a web application framework for Node.js that is designed for building web applications and APIs. These two technologies work together well to build an efficient and effective REST API. 
-                                        Nodemon was also used to help with development because it automatically restarts the server when changes are made. 
-                                        This allowed me to focus on building the API and not have to worry about restarting the server every time I made a change.
-                                        In addition to Express, Body Parser was used to parse incoming request bodies in a middleware before the handlers, which is needed to access the data in the request body.
-                                        <br/>
-                                        <br/>
-                                        MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need. 
-                                        Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. 
-                                        It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB. 
-                                        Between these two technologies, the data was able to be stored and retrieved from the database.
+                                        Similar to Task It, this API is built with Node.js, Express, and MongoDB.
+                                        To get an in-depth run down of the technologies used, check out Task It's <Link href="/serverside/task-it/#about" style={{
+                                            textDecoration: "none",
+                                            color: "blue"
+                                        }}>About Section</Link>.
                                         <br />
                                         <br />
-                                        I chose these technologies to get a better understanding of how they work together. 
-                                        With Postman to test the API endpoints, I was able to build the API and test it to ensure it was working as expected.
+                                        In addition to these technologies, I used JSON Web Tokens (JWT) to protect end points.
+                                        JWT is a standard for creating access tokens for an application, which is used to authenticate users.
+                                        The use of JWT is considered best practice when it comes to user authentication, since it is stateless and does not require cookies in addition to creating a token that expires after a certain amount of time.
+                                        The benefits to using JWT is that it is easy to implement, it is scalable, and it is secure.
+                                        In order to protect user data, I used bcryptjs to hash passwords and salt them.
+                                        Bcrypt is a password hashing function that protects hackers from gaining access to user data.
+                                        Bcrypt, like JWT, is considered best practice when it comes to protecting user data and it is easy to implement, scalable, and secure.
                                         <br />
                                         <br />
                                     </Typography>
                                     <Typography variant="h3" id="builtwith" className="styling-h3" >Built with</Typography>
                                         <List disablePadding>
+                                        <ListItem>
+                                                <ListItemIcon>
+                                                    <ArrowRightIcon />
+                                                </ListItemIcon>
+                                                <ListItemText primary="Bcrypt.js" />
+                                            </ListItem> 
                                             <ListItem>
                                                 <ListItemIcon>
                                                     <ArrowRightIcon />
@@ -222,6 +240,12 @@ export default function TaskIt() {
                                                     <ArrowRightIcon />
                                                 </ListItemIcon>
                                                 <ListItemText primary="Express.js" />
+                                            </ListItem> 
+                                            <ListItem>
+                                                <ListItemIcon>
+                                                    <ArrowRightIcon />
+                                                </ListItemIcon>
+                                                <ListItemText primary="JSON Web Token" />
                                             </ListItem> 
                                             <ListItem>
                                                 <ListItemIcon>
@@ -247,61 +271,57 @@ export default function TaskIt() {
                                                 </ListItemIcon>
                                                 <ListItemText primary="Nodemon" />
                                             </ListItem>
+                                            <ListItem>
+                                                <ListItemIcon>
+                                                    <ArrowRightIcon />
+                                                </ListItemIcon>
+                                                <ListItemText primary="Validator" />
+                                            </ListItem>
                                         </List>
                             <Divider sx={{marginBottom: '2rem', marginTop:'1rem' }} />
                                 <Typography variant="h3" component="h2" id="motivation">IV. Motivation</Typography>
                                     <Typography variant="body1">
-                                        After using many different APIs, I wanted to build my own.
-                                        Knowing the basics of how APIs work, I wanted to build one from scratch to get an idea of the development process.
-                                        Being familiar with Node.js, it was an easy choice to incorporate it into the project alongside Express and MongoDB. 
+                                        The motivation behind this project was to learn how to add user authentication to an API.
+                                        When I had worked on Task It, I had learned how to create an API and how to use HTTP methods to perform CRUD operations.
+                                        Where I could've added user authentication to Task It, I wanted to create a new project that would also be of use to me.
+                                        Where I had previously used Google Sheets to track my expenses and income, I wanted to create an API that would allow me to do the same thing in addition to being consumed by a front-end application down the road.
                                         <br />
                                         <br />
-                                        REST APIs require the use of HTTP methods to perform CRUD operations.
-                                        In developing my own API, I wanted to make sure I understood how to use each of the HTTP methods and how they are used to perform the create, read, update, and delete operations.
-                                        While making an API call to the endpoints seemed simple enough, I wanted to challenge myself to put the data sent in the request body into a database and retrieve it when needed.
+                                        As someone who best learns by doing, I believe that the best way to do this is to build something. 
+                                        While I know there are tools that can assist in user authentication, I aimed to learn the authentication process on its own.
+                                        Seeing how things work under the hood is a valuable skill to have and I believe that it is important to understand how things work before using them.
+                                        This API provided me the ability to practice these skills and to further enhance my understanding of how to build an API.
                                     </Typography>
                             <Divider sx={{margin: '2rem 0'}} />
                                 <Typography variant="h3" component="h2" id="learned">V. What I learned</Typography>
                                     <Typography variant="body1">
-                                        This project really challenged me to think outside the box and to think about how I would solve a problem.
-                                        I learned how to not only use HTTP methods to perform CRUD operations, but how to handle errors that may occur.
-                                        I became more familiar with the developer tools in the browser and how using them can be beneficial in debugging.
-                                        Understanding that sometimes you have to start smaller and work your way up to the bigger picture was a valuable lesson.
-                                        For example, rather than trying to build a function right out of the gate, I would send a simple response to the client to make sure the endpoint was working as expected.
+                                        While the majority of this project was a review of the technologies I had previously used, I did still learn a few valuable lessons.
                                         <br />
                                         <br />
-                                        Postman was also a valuable tool I learned more about. 
-                                        It allowed me to test the API endpoints and see the responses from the server to make sure the data was being sent and received as expected.
+                                        For one, understanding more about how to pass user data to the API in a secure manner was a valuable lesson. 
+                                        Security is a major concern when it comes to building an API and I wanted to make sure that I was doing everything I could to protect user data.
+                                        In addition to protecting user data, I utilized JWT to protect end points that required authentication.
+                                        JWT was interesting to work with, especially because it is stateless and does not require cookies.
+                                        With that being said, I look forward to learning more about how JWT works with front end architectures.
                                         <br />
                                         <br />
-                                        Creating schemas was also a new concept for me.
-                                        Schemas introduced a way to validate the data being sent to the server in a structured way that was easy to understand.
-                                        Seeing how these were created helped me to understand how they make data more manageable which is important when working with large amounts of data.
-                                        With going back and forth between MongoDB and Mongoose, I was able to see how the data was being stored and retrieved from the database.
-                                        This was a great way to see how NoSql databases work and how they are different from relational databases.
-                                        Additionally, I learned ways I needed to improve my schemas to make them more efficient based on what I was seeing on the MongoDB side of things.
+                                        Postman continued to be a valuable tool in testing APIs. 
+                                        It provided many ways for me to assess the API and to test different scenarios.
+                                        The ability to test the authentication was especially useful, because I did not want to require front end development to test the API.
                                         <br />
                                         <br />
-                                        Express introduced a way to create routes and handle requests.
-                                        I learned how to use the different HTTP methods to perform CRUD operations and how to handle errors that may occur.
-                                        Middlewares were also introduced which allowed me to add functionality to the routes.
-                                        I learned how to use middlewares to validate the data being sent to the server and to handle errors that may occur.
-                                        With this part, I also had to learn how to develop a server that was well structured and easy to navigate.
-                                        I separated the routes, controllers, and models into different files to make it easier to find what I was looking for.
-                                        I can see how this would be beneficial when working with larger projects where there are many different routes and models required.
-                                        <br />
-                                        <br />
-                                        This project was a great introduction to server side development and how to build an API from scratch. I appreciated the challenge and the opportunity to learn more about the development process.
+                                        All in all, this project was a great way to review the technologies I had previously used and to learn more about how to protect user data.
                                     </Typography>
                             <Divider sx={{margin: '2rem 0'}} />
                                 <Typography variant="h3" component="h2" id="acknowledge">VI. Acknowledgements</Typography>
                                     <Typography variant="body1">
-                                        While I didn't use any tutorials or guides to build this project, I did go back and forth between the documentation for the different technologies used.
+                                        This project was not possible without the documentation written by the creators of the technologies used.
+                                        I believe that without their clear and concise examples and explanations, I would not have been able to complete this project as efficiently as I did. 
                                     </Typography>
                             <Divider sx={{margin: '2rem 0'}} />
                                 <Typography variant="h3" component="h2" id="addInfo">VII. Additional Information</Typography>
                                     <Typography variant="body1">
-                                        This project was intended to be a simple API that would allow users to create, read, update, and delete data. 
+                                        This project had aimed to be a review of the technologies I had previously used, in addition to adding user authentication and endpoint protection.
                                         <br />
                                         <br />
                                     </Typography>
@@ -320,7 +340,7 @@ export default function TaskIt() {
                                                 <ListItemIcon>
                                                     <CheckBoxOutlineBlankIcon />
                                                 </ListItemIcon>
-                                                <ListItemText primary="Protect endpoints using auth" />
+                                                <ListItemText primary="Convert from JavaScript to TypeScript to determine how the two languages differ in this circumstance." />
                                             </ListItem>
                                         </List>
             </Container>
