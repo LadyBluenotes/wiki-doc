@@ -217,6 +217,13 @@ export default function NavBar({ content }: any) {
                         {open4 ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
                       <Collapse in={open4} timeout="auto" unmountOnExit>
+                      <List component="div" disablePadding>
+                        <ListItemButton sx={{ pl: 7 }} onClick={()=>{
+                            window.location.href = '/serverside/budget-buddy';
+                          }}>
+                            <ListItemText primary="Budget Buddy API" />
+                          </ListItemButton>
+                      </List>
                         <List component="div" disablePadding>
                         <ListItemButton sx={{ pl: 7 }} onClick={()=>{
                             window.location.href = '/serverside/task-it';
