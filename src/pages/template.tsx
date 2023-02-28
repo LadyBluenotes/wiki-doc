@@ -1,248 +1,194 @@
-import { Card, Divider, Typography, List, ListSubheader , ListItemButton, ListItem, ListItemIcon, ListItemText, Stack, Link } from '@mui/material';
+import { Divider, Card, Stack, Link } from '@mui/material';
+import { Typography, List, ListItem, ListItemDecorator, ListItemContent, ListSubheader } from '@mui/joy'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
-
+import TableOfContents from '@/components/TableOfContents';
 
 export default function Template() {
 
     return (
         <>
-            <Typography variant="h2" component="h1" sx={{ fontWeight:500 }}>Template</Typography>
-                <Typography variant="body1">This is a template for creating new project pages.</Typography>
-            <Divider sx={{margin: '2rem 0'}} />
+            <Typography level="display1" component="h1" fontSize="xl" fontWeight="lg">Template</Typography>
+                <Typography level="body1">This is a template for creating new project pages.</Typography>
+            <Divider sx={{ my:2 }} />
             <Card sx={{ padding:'20px', margin:'20px' }}>
-                <Typography variant="h2" component="h1" sx={{ fontWeight:500 }}>Project Name</Typography>
+                <Typography level="display1" component="h1" fontSize="xl" fontWeight="lg">Project Name</Typography>
                         <Stack direction="row" spacing={2} sx={{margin: '1rem 0'}}>
                             <Link href="#"><GitHubIcon /></Link>
                             <Link href="#"><LanguageIcon /></Link>
                         </Stack>
-                                <Typography variant="body1">Project description.</Typography>
-                            <Divider sx={{marginTop: '2rem', marginBottom:'1rem' }} />
-                            <List dense
-                                sx={{ 
-                                    width: '100%', 
-                                    maxWidth: '100%', 
-                                    bgcolor: 'background.paper',
-                                    position: 'relative',
-                                    overflow: 'auto',
-                                    maxHeight: 320,
-
-                                }}
-                                component="nav"
-                                aria-labelledby="table of contents"
-                                subheader={
-                                    <ListSubheader component="div" id="nested-list-subheader">
-                                    Table of contents
-                                    </ListSubheader>
-                                }
-                                >
-                                <ListItemButton onClick={() =>{
-                                    window.location.href = '#overview';
-                                }}>
-                                    <ListItemIcon>
-                                        I.
-                                    </ListItemIcon>
-                                    <ListItemText primary="Overview" />
-                                </ListItemButton>
-                                <ListItemButton onClick={() =>{
-                                    window.location.href = '#gettingStarted';
-                                }}>
-                                    <ListItemIcon>
-                                        II.
-                                    </ListItemIcon>
-                                    <ListItemText primary="Getting started" />
-                                </ListItemButton>
-                                    <List dense component="div" disablePadding>
-                                        <ListItemButton sx={{ pl: 14 }} onClick={() =>{
-                                    window.location.href = '#preq';
-                                }}>
-                                            <ListItemText primary="Prerequisites" />
-                                        </ListItemButton>
-                                        <ListItemButton sx={{ pl: 14 }} onClick={() =>{
-                                    window.location.href = '#install';
-                                }}>
-                                            <ListItemText primary="Installation" />
-                                        </ListItemButton>
-                                    </List>
-                                <ListItemButton onClick={() =>{
-                                    window.location.href = '#about';
-                                }}>
-                                    <ListItemIcon>
-                                        III.
-                                    </ListItemIcon>
-                                    <ListItemText primary="About" />
-                                </ListItemButton>
-                                    <List dense component="div" disablePadding>
-                                        <ListItemButton sx={{ pl: 14 }} onClick={() =>{
-                                    window.location.href = '#about';
-                                }}>
-                                            <ListItemText primary="Built with" />
-                                        </ListItemButton>
-                                    </List>
-                                <ListItemButton onClick={() =>{
-                                    window.location.href = '#motivation';
-                                }}>
-                                    <ListItemIcon>
-                                        IV.
-                                    </ListItemIcon>
-                                    <ListItemText primary="Motivation" />
-                                </ListItemButton>
-                                <ListItemButton onClick={() =>{
-                                    window.location.href = '#learned';
-                                }}>
-                                    <ListItemIcon>
-                                        V.
-                                    </ListItemIcon>
-                                    <ListItemText primary="What I learned" />
-                                </ListItemButton>
-                                <ListItemButton onClick={() =>{
-                                    window.location.href = '#acknowledge';
-                                }}>
-                                    <ListItemIcon>
-                                        VI.
-                                    </ListItemIcon>
-                                    <ListItemText primary="Acknowledgements" />
-                                </ListItemButton>
-                                <ListItemButton onClick={() =>{
-                                    window.location.href = '#addInfo';
-                                }}>
-                                    <ListItemIcon>
-                                        VII.
-                                    </ListItemIcon>
-                                    <ListItemText primary="Additional Information" />
-                                </ListItemButton>
-                                <List dense component="div" disablePadding>
-                                        <ListItemButton sx={{ pl: 14 }} onClick={() =>{
-                                    window.location.href = '#issues';
-                                }}>
-                                            <ListItemText primary="Known issues" />
-                                        </ListItemButton>
-                                        <ListItemButton sx={{ pl: 14 }} onClick={() =>{
-                                    window.location.href = '#future';
-                                }}>
-                                            <ListItemText primary="Future improvements" />
-                                        </ListItemButton>
-                                    </List>
-                                </List>
-                            <Divider sx={{marginTop: '1rem', marginBottom:'2rem' }} />
-                                <Typography variant="h3" component="h2" id="overview">I. Overview</Typography>
-                                    <Typography variant="body1">
+                                <Typography level="body1">Project description.</Typography>
+                            <Divider sx={{ my:2 }} />
+                            <TableOfContents />
+                            <Divider sx={{ my:2 }} />
+                                <Typography level="h3" component="h2" fontSize="lg" fontWeight="lg" id="overview">I. Overview</Typography>
+                                    <Typography level="body1">
                                         Where I will talk about a general overview of the project.
                                     </Typography>
-                            <Divider sx={{margin: '2rem 0'}} />
-                                <Typography variant="h3" component="h2" id="gettingStarted">II. Getting started</Typography>
-                                    <Typography variant="h4" component="h3" id="prereq" >Prerequisites</Typography>
-                                        <Typography variant="body1">
-                                            <br />
+                                    <Divider sx={{ my:2 }} />
+                                <Typography level="h3" component="h2" fontSize="lg" fontWeight="lg" id="gettingStarted" sx={{ mb:1 }}>II. Getting started</Typography>
+                                    <Typography level="h4" component="h3" fontSize="md" fontWeight="md" id="prereq" sx={{ mb:1 }}>Prerequisites</Typography>
+                                        <Typography level="body1">
                                             The following must be installed on your machine:
+                                        </Typography>
                                             <List>
                                                 <ListItem>
-                                                    <ListItemIcon>
+                                                    <ListItemDecorator>
                                                         <ArrowRightIcon />
-                                                    </ListItemIcon>
-                                                    <ListItemText primary="Prereq 1" />
+                                                    </ListItemDecorator>
+                                                    <ListItemContent>
+                                                    <Typography level="body1">
+                                                        Prereq 1
+                                                    </Typography>
+                                                </ListItemContent>
                                                 </ListItem>
                                                 <ListItem>
-                                                    <ListItemIcon>
+                                                    <ListItemDecorator>
                                                         <ArrowRightIcon />
-                                                    </ListItemIcon>
-                                                    <ListItemText primary="Prereq 2" />
+                                                    </ListItemDecorator>
+                                                    <ListItemContent>
+                                                    <Typography level="body1">
+                                                        Prereq 2
+                                                    </Typography>
+                                                </ListItemContent>
                                                 </ListItem> 
                                             </List>
+                                        <Typography level="h4" component="h3" fontSize="lg" fontWeight="md" id="prereq" sx={{ mb:1 }}>
+                                            Installation
                                         </Typography>
-                                    <Typography variant="h4" component="h3" id="install" className="styling-h3" >Installation</Typography>
-                                        <Typography variant="body1">
-                                            <br />
-                                            How to install and run the application.
-                                            <br />
-                                            <ol>
-                                                <li>
-                                                    Clone the repository
-                                                    <br />
-                                                    <code>
-                                                        git clone www.github.com/username/repo
-                                                    </code>
-                                                </li>
-                                                <br />
-                                                <li>
-                                                    Install NPM packages
-                                                    <br />
-                                                    <code>
-                                                        npm install
-                                                    </code>
-                                                </li>
-                                                <br />
-                                                <li>
-                                                    Run the application
-                                                    <br />
-                                                    <code>
-                                                        npm start
-                                                    </code>
-                                                </li>
-                                            </ol>
+                                        <Typography level="body1">
+                                            The following must be installed on your machine:
                                         </Typography>
-                            <Divider sx={{margin: '2rem 0'}} />
-                                <Typography variant="h3" component="h2" id="about">III. About</Typography>
-                                    <Typography variant="body1">
-                                        A section about the project and its purpose.
-                                        <br/>
-                                        <br/>
-                                    </Typography>
-                                    <Typography variant="h3" id="builtwith" className="styling-h3" >Built with</Typography>
-                                        <List>
+                                        <List component="ol">
                                             <ListItem>
-                                                <ListItemIcon>
-                                                    <ArrowRightIcon />
-                                                </ListItemIcon>
-                                                <ListItemText primary="Tech 1" />
+                                                <ListItemDecorator>
+                                                    1.
+                                                </ListItemDecorator>
+                                                <ListItemContent sx={{ display:'block'}}>
+                                                    <Typography level="body1">
+                                                        Clone the repository
+                                                        <br />
+                                                    </Typography>
+                                                    <Typography level="body1" sx={{ fontStyle:'italic' }}>
+                                                            git clone www.github.com/username/repo
+                                                    </Typography>
+                                                </ListItemContent>
                                             </ListItem>
                                             <ListItem>
-                                                <ListItemIcon>
+                                                <ListItemDecorator>
+                                                    2.
+                                                </ListItemDecorator>
+                                                <ListItemContent sx={{ display:'block'}}>
+                                                    <Typography level="body1">
+                                                        Install NPM packages
+                                                        <br />
+                                                    </Typography>
+                                                    <Typography level="body1" sx={{ fontStyle:'italic' }}>
+                                                            npm install
+                                                    </Typography>
+                                                </ListItemContent>
+                                            </ListItem>
+                                            <ListItem>
+                                                <ListItemDecorator>
+                                                    3.
+                                                </ListItemDecorator>
+                                                <ListItemContent sx={{ display:'block'}}>
+                                                    <Typography level="body1">
+                                                        Run the application
+                                                        <br />
+                                                    </Typography>
+                                                    <Typography level="body1" sx={{ fontStyle:'italic' }}>
+                                                        npm start
+                                                    </Typography>
+                                                </ListItemContent>
+                                            </ListItem>
+                                        </List>
+                                <Divider sx={{ my:2 }} />
+                                <Typography level="h3" component="h2" fontSize="lg" fontWeight="lg" id="about">III. About</Typography>
+                                    <Typography level="body1">
+                                        A section about the project and its purpose.
+                                    </Typography>
+                                        <List sx={{ mt:1 }}>
+                                            <ListSubheader>
+                                                <Typography level="body1">
+                                                    Built with
+                                                </Typography>
+                                            </ListSubheader>
+                                            <ListItem>
+                                                <ListItemDecorator>
                                                     <ArrowRightIcon />
-                                                </ListItemIcon>
-                                                <ListItemText primary="Tech 2" />
+                                                </ListItemDecorator>
+                                                <ListItemContent>
+                                                    <Typography level="body1">
+                                                        Tech 1
+                                                    </Typography>
+                                                </ListItemContent>
+                                            </ListItem>
+                                            <ListItem>
+                                                <ListItemDecorator>
+                                                    <ArrowRightIcon />
+                                                </ListItemDecorator>
+                                                <ListItemContent>
+                                                    <Typography level="body1">
+                                                        Tech 2
+                                                    </Typography>
+                                                </ListItemContent>
                                             </ListItem> 
                                         </List>
-                            <Divider sx={{marginTop: '1rem', marginBottom:'2rem' }} />
-                                <Typography variant="h3" component="h2" id="motivation">IV. Motivation</Typography>
-                                    <Typography variant="body1">
+                            <Divider sx={{ my:2 }} />
+                                <Typography level="h3" component="h2" fontSize="lg" fontWeight="lg" id="motivation">IV. Motivation</Typography>
+                                    <Typography level="body1">
                                         The reason I wanted to create this application.
                                     </Typography>
-                            <Divider sx={{margin: '2rem 0'}} />
-                                <Typography variant="h3" component="h2" id="learned">V. What I learned</Typography>
-                                    <Typography variant="body1">
+                            <Divider sx={{ my:2 }} />
+                                <Typography level="h3" component="h2" fontSize="lg" fontWeight="lg" id="learned">V. What I learned</Typography>
+                                    <Typography level="body1">
                                     Where I can talk about what I learned from the project.
                                     </Typography>
-                            <Divider sx={{margin: '2rem 0'}} />
-                                <Typography variant="h3" component="h2" id="acknowledge">VI. Acknowledgements</Typography>
-                                    <Typography variant="body1">
+                            <Divider sx={{ my:2 }} />
+                                <Typography level="h3" component="h2" fontSize="lg" fontWeight="lg" id="acknowledge">VI. Acknowledgements</Typography>
+                                    <Typography level="body1">
                                         Where I can acknowledge the people who helped me with the project or inspired me to create it.
                                     </Typography>
-                            <Divider sx={{margin: '2rem 0'}} />
-                                <Typography variant="h3" component="h2" id="addInfo">VII. Additional Information</Typography>
-                                    <Typography variant="body1">
+                            <Divider sx={{ my:2 }} />
+                                <Typography level="h3" component="h2" fontSize="lg" fontWeight="lg" id="addInfo">VII. Additional Information</Typography>
+                                    <Typography level="body1" sx={{ mb: 2 }}>
                                         This is where you may add any additional information about the project.
-                                        <br />
-                                        <br />
                                     </Typography>
-                                    <Typography variant="h4" component="h3" id="issues" className="styling-h3" >Known issues</Typography>
                                         <List>
+                                            <ListSubheader>
+                                                <Typography level="body1">
+                                                   Known issues
+                                                </Typography>
+                                            </ListSubheader>
                                             <ListItem>
-                                                <ListItemIcon>
+                                                <ListItemDecorator>
                                                     <CheckBoxOutlineBlankIcon />
-                                                </ListItemIcon>
-                                                <ListItemText primary="Issue 1" />
+                                                </ListItemDecorator>
+                                                <ListItemContent>
+                                                    <Typography level="body1">
+                                                        Known issue 1
+                                                    </Typography>
+                                                </ListItemContent>
                                             </ListItem>
                                         </List>
-                                    <Typography variant="h4" component="h3" id="future" className="styling-h3" >Future improvements</Typography>
                                         <List>
+                                            <ListSubheader>
+                                                <Typography level="body1">
+                                                    Future improvements
+                                                </Typography>
+                                            </ListSubheader>
                                             <ListItem>
-                                                <ListItemIcon>
+                                                <ListItemDecorator>
                                                     <CheckBoxOutlineBlankIcon />
-                                                </ListItemIcon>
-                                                <ListItemText primary="Improvement 1" />
+                                                </ListItemDecorator>
+                                                <ListItemContent>
+                                                    <Typography level="body1">
+                                                        Future improvement 1
+                                                    </Typography>
+                                                </ListItemContent>
                                             </ListItem>
                                         </List>
             </Card>

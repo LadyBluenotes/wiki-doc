@@ -3,6 +3,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
+import TableOfContents from '@/components/TableOfContents';
 
 export default function Nasa() {
     return (
@@ -14,112 +15,7 @@ export default function Nasa() {
                         </Stack>
                                 <Typography variant="body1">This is a web application built using the NASA Astronomy Picture of the Day API. By default, it will show the media selected for that day or it can render information the user has selected from a date in the past.</Typography>
                             <Divider sx={{marginTop: '2rem', marginBottom:'1rem' }} />
-                            <List dense
-                                sx={{ 
-                                    width: '100%', 
-                                    maxWidth: '100%', 
-                                    bgcolor: 'background.paper',
-                                    position: 'relative',
-                                    overflow: 'auto',
-                                    maxHeight: 320,
-
-                                }}
-                                component="nav"
-                                aria-labelledby="table of contents"
-                                subheader={
-                                    <ListSubheader component="div" id="nested-list-subheader">
-                                    Table of contents
-                                    </ListSubheader>
-                                }
-                                >
-                                <ListItemButton onClick={() =>{
-                                    window.location.href = '#overview';
-                                }}>
-                                    <ListItemIcon>
-                                        I.
-                                    </ListItemIcon>
-                                    <ListItemText primary="Overview" />
-                                </ListItemButton>
-                                <ListItemButton onClick={() =>{
-                                    window.location.href = '#gettingStarted';
-                                }}>
-                                    <ListItemIcon>
-                                        II.
-                                    </ListItemIcon>
-                                    <ListItemText primary="Getting started" />
-                                </ListItemButton>
-                                    <List dense component="div" disablePadding>
-                                        <ListItemButton sx={{ pl: 14 }} onClick={() =>{
-                                    window.location.href = '#preq';
-                                }}>
-                                            <ListItemText primary="Prerequisites" />
-                                        </ListItemButton>
-                                        <ListItemButton sx={{ pl: 14 }} onClick={() =>{
-                                    window.location.href = '#install';
-                                }}>
-                                            <ListItemText primary="Installation" />
-                                        </ListItemButton>
-                                    </List>
-                                <ListItemButton onClick={() =>{
-                                    window.location.href = '#about';
-                                }}>
-                                    <ListItemIcon>
-                                        III.
-                                    </ListItemIcon>
-                                    <ListItemText primary="About" />
-                                </ListItemButton>
-                                    <List dense component="div" disablePadding>
-                                        <ListItemButton sx={{ pl: 14 }} onClick={() =>{
-                                    window.location.href = '#about';
-                                }}>
-                                            <ListItemText primary="Built with" />
-                                        </ListItemButton>
-                                    </List>
-                                <ListItemButton onClick={() =>{
-                                    window.location.href = '#motivation';
-                                }}>
-                                    <ListItemIcon>
-                                        IV.
-                                    </ListItemIcon>
-                                    <ListItemText primary="Motivation" />
-                                </ListItemButton>
-                                <ListItemButton onClick={() =>{
-                                    window.location.href = '#learned';
-                                }}>
-                                    <ListItemIcon>
-                                        V.
-                                    </ListItemIcon>
-                                    <ListItemText primary="What I learned" />
-                                </ListItemButton>
-                                <ListItemButton onClick={() =>{
-                                    window.location.href = '#acknowledge';
-                                }}>
-                                    <ListItemIcon>
-                                        VI.
-                                    </ListItemIcon>
-                                    <ListItemText primary="Acknowledgements" />
-                                </ListItemButton>
-                                <ListItemButton onClick={() =>{
-                                    window.location.href = '#addInfo';
-                                }}>
-                                    <ListItemIcon>
-                                        VII.
-                                    </ListItemIcon>
-                                    <ListItemText primary="Additional Information" />
-                                </ListItemButton>
-                                <List dense component="div" disablePadding>
-                                        <ListItemButton sx={{ pl: 14 }} onClick={() =>{
-                                    window.location.href = '#issues';
-                                }}>
-                                            <ListItemText primary="Known issues" />
-                                        </ListItemButton>
-                                        <ListItemButton sx={{ pl: 14 }} onClick={() =>{
-                                    window.location.href = '#future';
-                                }}>
-                                            <ListItemText primary="Future improvements" />
-                                        </ListItemButton>
-                                    </List>
-                            </List>
+                                <TableOfContents />
                             <Divider sx={{margin: '2rem 0'}} />
                                 <Typography variant="h3" component="h2" id="overview">I. Overview</Typography>
                                     <Typography variant="body1">
