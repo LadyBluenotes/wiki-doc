@@ -1,7 +1,6 @@
 import { Container, Divider, Typography, ListSubheader, ListItemButton, ListItemIcon, ListItemText, List } from "@mui/material";
 
 export default function StyleGuide(){
-
     return (
         <Container maxWidth="lg">
             <Typography variant="h1">Style Guide</Typography>
