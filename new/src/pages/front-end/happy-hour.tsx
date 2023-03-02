@@ -5,7 +5,6 @@ import {
   List,
   ListItem,
   ListItemDecorator,
-  Chip,
   Divider,
   IconButton,
 } from "@mui/joy";
