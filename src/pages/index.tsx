@@ -1,4 +1,4 @@
-import { Typography, Container, Link, Divider, Stack, Button } from '@mui/material';
+import { Typography, Container, Stack, Button } from '@mui/material';
 
 export default function Home() {
   return (
