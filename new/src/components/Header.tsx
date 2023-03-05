@@ -567,7 +567,7 @@ export default function Header() {
           variant="outlined"
           size="sm"
           onClick={() => {
-            router.push("/contact");
+            router.push("/about");
           }}
         >
           <ContactPage sx={{

@@ -68,7 +68,7 @@ export default function FrontEnd() {
               bgcolor: "background.level1",
               "&:hover": { cursor: "pointer" },
             }}
-            onClick={() => router.push("/front-end/happy-hour")}
+            onClick={() => router.push("/front-end/documentation-site")}
           >
             <Typography level="h2" fontSize="md" sx={{ mb: 0.5 }}>
               Documentation Site
@@ -109,7 +109,7 @@ export default function FrontEnd() {
             </Typography>
             <AspectRatio minHeight="200px" maxHeight="420px" sx={{ mt: 2 }}>
               <img
-                src="/happy-hour.png"
+                src="/happy-hour.jpg"
                 loading="lazy"
                 alt=""
               />
@@ -138,8 +138,7 @@ export default function FrontEnd() {
             </Typography>
             <AspectRatio minHeight="200px" maxHeight="420px" sx={{ mt: 2 }}>
               <img
-                src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
-                srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+                src="/pokedex.jpg"
                 loading="lazy"
                 alt=""
               />
@@ -168,7 +167,7 @@ export default function FrontEnd() {
             </Typography>
             <AspectRatio minHeight="200px" maxHeight="420px" sx={{ mt: 2 }}>
               <img
-                src="/portfolio.png"
+                src="/portfolio.jpg"
                 loading="lazy"
                 alt=""
               />
@@ -197,7 +196,7 @@ export default function FrontEnd() {
             </Typography>
             <AspectRatio minHeight="200px" maxHeight="420px" sx={{ mt: 2 }}>
               <img
-                src="/space.png"
+                src="/space.jpg"
                 loading="lazy"
                 alt=""
               />
