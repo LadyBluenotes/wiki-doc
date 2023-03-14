@@ -1,87 +1,517 @@
-import { Container, Typography, Divider, List, ListItem, ListItemIcon, ListItemText, Grid } from '@mui/material';
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import {
+  Sheet,
+  Typography,
+  Tabs,
+  TabList,
+  TabPanel,
+  Tab,
+  Divider,
+  Card,
+  CardContent,
+  CardOverflow,
+  AspectRatio,
+  Grid,
+  Container,
+} from "@mui/joy";
+import { useRouter } from "next/router";
+import Timeline from "@/components/Timeline.jsx";
 
 export default function About() {
+  const router = useRouter();
 
-    let techSkills = [ 'HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Express', 'MongoDB', 'Material UI', 'Tailwind', 'TypeScript' ];
-    let softSkills = [ 'Strong communication skills, both written and verbal.', 'Ability to analyze complex problems and make iterative improvements.', 'Team-oriented with focus on accurate documentation.', 'Flexibility and adaptability in a fast-paced work environment.', 'Experience in designing and implementing accessibility-focused solutions.'];
+  const skills = [
+    {
+      name: "CSS",
+      image: "/css.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "Express.js",
+      image: "/express.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "Git",
+      image: "/git.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "GitHub",
+      image: "/github.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "HTML",
+      image: "/html.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "JavaScript",
+      image: "/javascript.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "Markdown",
+      image: "/markdown.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "Material UI",
+      image: "/mui.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "MongoDB",
+      image: "/mongodb.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "Mongoose",
+      image: "/mongoose.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "Next.js",
+      image: "/nextjs.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "Node.js",
+      image: "/nodejs.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "React",
+      image: "/react.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "Tailwind CSS",
+      image: "/tailwind.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "TypeScript",
+      image: "/typescript.jpg",
+      nameColor: "neutral.plainColor",
+    },
+  ];
 
+  const tabNames = [
+    "Background",
+    "Skills",
+    "Hobbies and Interests",
+    "Contact me",
+  ];
 
-    return (
-        <Container maxWidth='lg' >
-            <Typography variant='h6' component='h1' align='center'>
-                About me
+  const hobbiesInterests = [
+    {
+      name: "Camping & Hiking",
+      image: "/camping.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "Destiny 2",
+      image: "/destiny2.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "Powerlifting",
+      image: "/powerlifting.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "Puzzles",
+      image: "/puzzles.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "Reading",
+      image: "/reading.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "Reddit",
+      image: "/reddit.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "Sports",
+      image: "/turf.jpg",
+      nameColor: "neutral.plainColor",
+    },
+    {
+      name: "Writing",
+      image: "/writer.jpg",
+      nameColor: "neutral.plainColor",
+    },
+  ];
+
+  const socialLinks = [
+    {
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/sarahgerrard/",
+      image: "/linkedin.jpg",
+      nameColor: "primary.500",
+    },
+    {
+      name: "GitHub",
+      link: "https://www.github.com/ladybluenotes",
+      image: "/github.jpg",
+      nameColor: "neutral.softHoverColor",
+    },
+    {
+      name: "My Blog",
+      link: "https://blog.sarahgerrard.me/",
+      image: "/hashnode.jpg",
+      nameColor: "primary.plainColor",
+    },
+    {
+      name: "Email",
+      link: "mailto:gerrardsarah@gmail.com",
+      image: "/email.jpg",
+      nameColor: "danger.400",
+    },
+    {
+      name: "Twitter",
+      link: "https://twitter.com/ladybluenotes",
+      image: "/twitter.jpg",
+      nameColor: "primary.300",
+    },
+  ];
+
+  return (
+    <Sheet
+      sx={{
+        py: 4,
+        px: 4,
+        m: 3,
+      }}
+    >
+      <Typography
+        level="display1"
+        sx={{
+          textAlign: "center",
+          mb: 3,
+        }}
+      >
+        Hi, I'm Sarah!
+      </Typography>
+      <Typography
+        level="body1"
+        sx={{
+          textAlign: "center",
+          mb: 3,
+          maxWidth: "80%",
+          mx: "auto",
+        }}
+      >
+        I'm a software developer based out of Canada! I'm currently working as a
+        freelancer and am currently on the lookout for a full-time position. I'm
+        passionate about learning new things and am always looking for new
+        opportunities to grow and improve. Here, you'll find a little bit about
+        me, my skills, my hobbies and interests, and how to get in touch with
+        me!
+      </Typography>
+      <Tabs
+        aria-label="Basic tabs"
+        defaultValue={0}
+        sx={{ borderRadius: "lg" }}
+      >
+        <TabList
+          sx={{
+            width: "70%",
+            mx: "auto",
+          }}
+        >
+          {tabNames.map((tabName, index) => (
+            <Tab key={index}>{tabName}</Tab>
+          ))}
+        </TabList>
+        <TabPanel value={0} sx={{ p: 2 }}>
+          <Sheet
+            sx={{
+              p: 3,
+              borderRadius: "lg",
+              boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
+              bgcolor: "background.backdrop",
+            }}
+          >
+            <Typography
+              level="display2"
+              sx={{
+                textAlign: "center",
+                mb: 3,
+              }}
+            >
+              A little about me
             </Typography>
-            <Container maxWidth='sm' >
-                <Typography variant='h4' component='h2' align='center'>
-                    My name is <span style={{ color: '#3f51b5', fontWeight: 'bold' }}>Sarah Gerrard</span> and I'm a software developer based in <span style={{ color: '#E82042', fontWeight: 'bold' }} >Canada</span>.
-                </Typography>
-            </Container>
-            <Divider sx={{ my:2 }} />
-            <Grid container spacing={2}>
-                <Grid item xs={12}>
-                    <Container sx={{ p:2 }}>
-                        <Typography variant='body1' component='p'>
-                            With over a decade of experience in the healthcare industry, I made the decision to transition to a career in software development over a year ago.
-                            My passion for technology and experience with computers made the transition an easy and natural choice. 
-                            <br />
-                            <br />
-                            Since starting this transition, I have completed several online courses as well as participated in a bootcamp, 100Devs, to help me develop my skills.
-                            In addition to my learning endeavors, I have worked on several personal projects and done freelance work to further build my skills and portfolio.
-                            Taking the leap to change careers has been one of the best decisions I have ever made. 
-                            <br />
-                            <br />
-                            I look to continue to grow my skills and knowledge as a developer, including learning new technologies and languages.
-                            With my interest in creating products that make the lives of others easier, I am excited to see where my career takes me.
-                        </Typography>
-                    </Container>
+            <Typography
+              level="body1"
+              sx={{
+                textAlign: "center",
+                px: 4,
+                mb: 3,
+                maxWidth: "70%",
+                mx: "auto",
+              }}
+            >
+              My journey to becoming a developer was not a conventional one. Below you'll find a timeline of my life and how I got to where I am today.
+            </Typography>
+            <Divider
+              sx={{
+                my: 2,
+              }}
+            />
+            <Timeline />
+          </Sheet>
+        </TabPanel>
+        <TabPanel value={1} sx={{ p: 2 }}>
+          <Sheet
+            sx={{
+              p: 3,
+              borderRadius: "lg",
+              boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
+              bgcolor: "background.backdrop",
+            }}
+          >
+            <Typography
+              level="display2"
+              sx={{
+                textAlign: "center",
+                mb: 3,
+              }}
+            >
+              What I know
+            </Typography>
+            <Typography
+              level="body1"
+              sx={{
+                textAlign: "center",
+                px: 4,
+                mb: 3,
+                maxWidth: "70%",
+                mx: "auto",
+              }}
+            >
+              Throughout my time as a developer, I've had the opportunity to
+              work with a variety of technologies. Below, you'll find some of
+              the ones I'm most familiar with.
+            </Typography>
+            <Divider
+              sx={{
+                my: 2,
+              }}
+            />
+            <Grid
+              container
+              spacing={3}
+              mt={3}
+              mx={3}
+              sx={{
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {skills.map((skill, index) => (
+                <Grid key={index}>
+                  <Card
+                    orientation="horizontal"
+                    variant="outlined"
+                    sx={{
+                      width: 280,
+                      bgcolor: "background.body",
+                    }}
+                  >
+                    <CardOverflow>
+                      <AspectRatio ratio="1" sx={{ width: 90 }}>
+                        <img
+                          src={skill.image}
+                          loading="lazy"
+                          alt={skill.name + " logo"}
+                        />
+                      </AspectRatio>
+                    </CardOverflow>
+                    <CardContent sx={{ pl: 3 }}>
+                      <Typography
+                        fontWeight="md"
+                        textColor={skill.nameColor}
+                        fontSize="1.5rem"
+                        mb={0.5}
+                      >
+                        {skill.name}
+                      </Typography>
+                    </CardContent>
+                  </Card>
                 </Grid>
-                <Grid item xs={12} lg={6} >
-                    <Container sx={{ p:2 }}>
-                        <Typography variant='h6' component='h3' align='center' sx={{ pb:1 }}>
-                            Tech Skills
-                        </Typography>
-                        <Typography variant='body1' component='p'>
-                            I have experience with the following technologies:
-                        </Typography>
-                        <List dense sx={{
-                            columnCount: [1, 2],
-                            columnGap: '20px',
-                            columnRule: '1px solid #ccc',
-                            columnFill: 'auto',
-                        }}>
-                            {techSkills.map((skill, index) => (
-                                <ListItem key={index}>
-                                    <ListItemIcon>
-                                        <ArrowRightIcon />
-                                    </ListItemIcon>
-                                    <ListItemText primary={skill} />
-                                </ListItem>
-                            ))}
-                        </List>
-                    </Container>
-                </Grid>
-                <Grid item xs={12} lg={6}>
-                    <Container sx={{ p:2 }}>
-                        <Typography variant='h6' component='h3' align='center' sx={{ pb:1 }}>
-                            Soft Skills
-                        </Typography>
-                        <Typography variant='body1' component='p'>
-                            My work in healthcare has helped me develop the following skills:
-                        </Typography>
-                        <List dense >
-                            {softSkills.map((skill, index) => (
-                                <ListItem key={index}>
-                                    <ListItemIcon>
-                                        <ArrowRightIcon />
-                                    </ListItemIcon>
-                                    <ListItemText primary={skill} />
-                                </ListItem>
-                            ))}
-                        </List>
-                    </Container>
-                </Grid>
+              ))}
             </Grid>
-        </ Container>
-    )
-};
+          </Sheet>
+        </TabPanel>
+        <TabPanel value={2} sx={{ p: 2 }}>
+          <Sheet
+            sx={{
+              p: 3,
+              borderRadius: "lg",
+              boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
+              bgcolor: "background.backdrop",
+            }}
+          >
+            <Typography
+              level="display2"
+              sx={{
+                textAlign: "center",
+                mb: 3,
+              }}
+            >
+              How I spend my free time
+            </Typography>
+            <Typography
+              level="body1"
+              sx={{
+                textAlign: "center",
+                px: 4,
+                mb: 3,
+                maxWidth: "70%",
+                mx: "auto",
+              }}
+            >
+              As much as I enjoy coding, I'm more than just a developer. Below,
+              you'll find some of the things I enjoy doing in my free time.
+            </Typography>
+            <Divider
+              sx={{
+                my: 2,
+              }}
+            />
+            <Grid
+              container
+              spacing={3}
+              mt={3}
+              mx={3}
+              sx={{
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {hobbiesInterests.map((item, index) => (
+                <Grid key={index}>
+                  <Card
+                    orientation="horizontal"
+                    variant="outlined"
+                    sx={{
+                      width: 280,
+                      bgcolor: "background.body",
+                    }}
+                  >
+                    <CardOverflow>
+                      <AspectRatio ratio="1" sx={{ width: 90 }}>
+                        <img src={item.image} loading="lazy" alt={item.name} />
+                      </AspectRatio>
+                    </CardOverflow>
+                    <CardContent sx={{ pl: 3 }}>
+                      <Typography
+                        fontWeight="md"
+                        textColor={item.nameColor}
+                        fontSize="1.5rem"
+                        mb={0.5}
+                      >
+                        {item.name}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </Sheet>
+        </TabPanel>
+        <TabPanel value={3} sx={{ p: 2 }}>
+          <Sheet
+            sx={{
+              p: 3,
+              borderRadius: "lg",
+              boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
+              bgcolor: "background.backdrop",
+            }}
+          >
+            <Typography
+              level="display2"
+              sx={{
+                textAlign: "center",
+                mb: 3,
+              }}
+            >
+              Get in touch!
+            </Typography>
+            <Typography
+              level="body1"
+              sx={{
+                textAlign: "center",
+                px: 4,
+                mb: 3,
+                maxWidth: "70%",
+                mx: "auto",
+              }}
+            >
+              If you're interested in connecting with me, I'm always on the
+              lookout for new avenues to learn and progress. Please feel free to
+              reach out to me through clicking on the cards below.
+            </Typography>
+            <Divider
+              sx={{
+                my: 2,
+              }}
+            />
+            <Grid
+              container
+              spacing={3}
+              mt={3}
+              mx={3}
+              sx={{
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {socialLinks.map((socialLink, index) => (
+                <Grid key={index}>
+                  <Card
+                    onClick={() => {
+                      router.push(socialLink.link);
+                    }}
+                    orientation="horizontal"
+                    variant="outlined"
+                    sx={{
+                      width: 280,
+                      bgcolor: "background.body",
+                      "&:hover": { cursor: "pointer" },
+                    }}
+                  >
+                    <CardOverflow>
+                      <AspectRatio ratio="1" sx={{ width: 90 }}>
+                        <img
+                          src={socialLink.image}
+                          loading="lazy"
+                          alt={socialLink.name + " logo"}
+                        />
+                      </AspectRatio>
+                    </CardOverflow>
+                    <CardContent sx={{ pl: 3 }}>
+                      <Typography
+                        fontWeight="md"
+                        textColor={socialLink.nameColor}
+                        fontSize="1.5rem"
+                        mb={0.5}
+                      >
+                        {socialLink.name}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </Sheet>
+        </TabPanel>
+      </Tabs>
+    </Sheet>
+  );
+}

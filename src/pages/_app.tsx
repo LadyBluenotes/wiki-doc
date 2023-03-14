@@ -1,27 +1,26 @@
-import { useEffect, useState } from 'react';
-import { AppProps } from 'next/app';
-import NavBar from './components/NavBar';
-import MobileNav from './components/MobileNav';
-import HeadComponent from './components/Head';
-import '@/styles/global.css';
+import * as React from "react";
+import { CssVarsProvider } from "@mui/joy/styles";
+import {
+  CssBaseline,
+} from "@mui/joy";
+import { AppProps } from "next/app";
+
+import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 
 export default function App({ Component, pageProps }: AppProps) {
 
-  const [width, setWidth] = useState<number | undefined>(undefined);
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    handleResize();
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
-    <>
-      <HeadComponent />
-      {width !== undefined && width < 900 ? 
-        <MobileNav content={<Component {...pageProps} />} /> : 
-        <NavBar content={<Component {...pageProps} />} />
-      }
-    </>
-  )
+    <CssVarsProvider disableTransitionOnChange>
+      <CssBaseline />
+      <Layout.Root>
+        <Layout.Header>
+          <Header />
+        </Layout.Header>
+        <Layout.Main>
+          <Component {...pageProps} />
+        </Layout.Main>
+      </Layout.Root>
+    </CssVarsProvider>
+  );
 }
