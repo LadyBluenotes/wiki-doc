@@ -1,7 +1,11 @@
 import { Sheet, Typography, Button } from "@mui/joy";
 import { Container } from "@mui/material";
+import { useRouter } from "next/router";
 
 export default function Home() {
+
+  const router = useRouter();
+
   return (
     <>
       <Container
@@ -39,15 +43,23 @@ export default function Home() {
         >
           Documentation Site
         </Typography>
-        <Button variant="outlined" href="/about" sx={{
+        <Button variant="outlined"  sx={{
           mr: 2,
           mt: 3,
-        }}>
+        }}
+        onClick={() =>{
+          router.push('/in-progress')
+        }}
+        >
           <Typography level="body1">My Current Projects</Typography>
         </Button>
-        <Button color="primary" href="/about" sx={{
+        <Button color="primary" sx={{
           mt: 3,
-        }}>
+        }}
+        onClick={() =>{
+          router.push('/about')
+        }}
+        >
           <Typography level="body1">Learn About Me</Typography>
         </Button>
         </Sheet>
