@@ -304,7 +304,7 @@ export default function BudgetBuddy() {
       >
         Similar to Task It, this API is built with Node.js, Express, and
         MongoDB. To get an in-depth run down of the technologies used, check out
-        Task It's{" "}
+        Task It&apos;s{" "}
         <Link
           href="/back-end/task-it/#about"
           style={{
@@ -422,7 +422,7 @@ export default function BudgetBuddy() {
         The motivation behind this project was to learn how to add user
         authentication to an API. When I had worked on Task It, I had learned
         how to create an API and how to use HTTP methods to perform CRUD
-        operations. Where I could've added user authentication to Task It, I
+        operations. Where I could&apos;ve added user authentication to Task It, I
         wanted to create a new project that would also be of use to me. Where I
         had previously used Google Sheets to track my expenses and income, I
         wanted to create an API that would allow me to do the same thing in

@@ -1,4 +1,5 @@
 import { Card, Divider, Sheet, Typography, AspectRatio, Grid } from "@mui/joy";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function InProgress() {
@@ -29,9 +30,9 @@ export default function InProgress() {
           mb: 2,
         }}
       >
-        If you're interested in seeing what I'm currently working on, you're in
-        the right place. This page is where I'll be posting about my current
-        projects, as well as any updates I make to them.
+        If you&apos;re interested in seeing what I&apos;m currently working on,
+        you&apos;re in the right place. This page is where I&apos;ll be posting
+        about my current projects, as well as any updates I make to them.
       </Typography>
       <Typography
         level="body1"
@@ -40,7 +41,7 @@ export default function InProgress() {
           mb: 2,
         }}
       >
-        When you click on a project, you'll be taken to a page with more
+        When you click on a project, you&apos;ll be taken to a page with more
         information about it, as well as a link to the source code.
       </Typography>
       <Divider
@@ -70,7 +71,13 @@ export default function InProgress() {
               after all bills are paid.
             </Typography>
             <AspectRatio minHeight="200px" maxHeight="420px" sx={{ mt: 2 }}>
-              <img src="/under-construction.jpg" loading="lazy" alt="" />
+              <Image
+                src="/under-construction.jpg"
+                loading="lazy"
+                width={200}
+                height={420}
+                alt="small figurines of a construction workers"
+              />
             </AspectRatio>
           </Card>
         </Grid>
@@ -95,7 +102,13 @@ export default function InProgress() {
               of AI.
             </Typography>
             <AspectRatio minHeight="200px" maxHeight="420px" sx={{ mt: 2 }}>
-              <img src="/under-construction.jpg" loading="lazy" alt="" />
+              <Image
+                src="/under-construction.jpg"
+                loading="lazy"
+                width={200}
+                height={420}
+                alt="small figurines of a construction workers"
+              />
             </AspectRatio>
           </Card>
         </Grid>

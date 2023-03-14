@@ -255,7 +255,7 @@ export default function PortfolioSite() {
         }}
       >
         The routing was what I was hoping to gain more insight to as well as the
-        way that Next handles their styling. I didn't want to introduce any
+        way that Next handles their styling. I didn&apos;t want to introduce any
         other factors while learning this project, so I kept it simple with some
         basic CSS. I did use one other library for some motion effects, but that
         was it.
@@ -311,7 +311,7 @@ export default function PortfolioSite() {
           mb: 2,
         }}
       >
-        In building this site, I didn't want to make it more confusing with
+        In building this site, I didn&apos;t want to make it more confusing with
         adding in other libraries or frameworks, so I kept it simple with just
         Next.js and CSS. Once I had the basics of the site built, I wanted to
         add some motion effects to the site, so I added in the Framer Motion
@@ -341,8 +341,8 @@ export default function PortfolioSite() {
         addition to just adding a file to the pages folder, I learned that you
         can also add a folder to the pages folder and it will create a nested
         route. For example, if I wanted to create a route for a page called
-        "about", I could create a folder called "about" and add an index.js file
-        to that folder. While I didn't use this feature in this project, I can
+        &quot;about&quot;, I could create a folder called &quot;about&quot; and add an index.js file
+        to that folder. While I didn&apos;t use this feature in this project, I can
         see how it would be useful in a larger project.
       </Typography>
       <Typography
@@ -393,12 +393,12 @@ export default function PortfolioSite() {
           mb: 2,
         }}
       >
-        While I didn't have any help with this project, I did use a lot of
+        While I didn&apos;t have any help with this project, I did use a lot of
         resources to help me learn Next.js. I used the Next.js documentation to
         learn about the framework and how to use it. I also used the Framer
         Motion documentation to learn how to use the library. The background
         animation was created from another developer, and I used it as a
-        reference to create my own animation. While I can't remember the exact
+        reference to create my own animation. While I can&apos;t remember the exact
         source at this time, I will update this section with the link once I
         find it.
       </Typography>

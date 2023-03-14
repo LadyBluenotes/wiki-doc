@@ -375,7 +375,7 @@ export default function PokeDex() {
         This project was an exciting opportunity for me to delve deeper into the
         world of React. As one of my more involved front-end projects, it
         provided hands-on learning that allowed me to gain a better
-        understanding of the library's capabilities and best practices.
+        understanding of the library&apos;s capabilities and best practices.
       </Typography>
       <Typography
         level="body1"
@@ -484,7 +484,7 @@ export default function PokeDex() {
         }}
       >
         Finally, I chose to use Material UI as the component library for the
-        design of the web application. The library's popularity, ease of use,
+        design of the web application. The library&apos;s popularity, ease of use,
         and stellar documentation made it a great choice, and I was able to
         quickly customize the components to fit my needs. Overall, I am proud of
         the progress I made in this project and the skills I was able to further
@@ -516,7 +516,7 @@ export default function PokeDex() {
           <ListItemDecorator>
             <ArrowRight />
           </ListItemDecorator>
-          Anthony Sistilli's Tutorial -
+          Anthony Sistilli&apos;s Tutorial -
           <a
             href="https://www.youtube.com/watch?v=gGcLQ2sZFeg"
             target="_blank"

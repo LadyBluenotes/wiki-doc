@@ -100,7 +100,7 @@ export default function MaterialUI() {
       >
         Material UI is popular open source JavaScript library used in building
         user interfaces. It provides a set of pre-built React components that
-        implement Google's Material Design guidelines, making it easier for
+        implement Google&apos;s Material Design guidelines, making it easier for
         developers to create visually consistent and aesthetically pleasing UIs.
       </Typography>
       <Divider
@@ -154,7 +154,7 @@ export default function MaterialUI() {
       </Typography>
       <Typography level="body1" sx={{ ml: 2 }}>
         As a contributor to Material UI, I played a role in enhancing the
-        project's documentation. My responsibilities included:
+        project&apos;s documentation. My responsibilities included:
       </Typography>
       <List sx={{ ml: 5 }} size="sm">
         <ListItem>
@@ -166,7 +166,7 @@ export default function MaterialUI() {
             />
           </ListItemDecorator>
           Enhancing the documentation by revising and updating it to align with
-          the project's style guide and templates, to ensure consistency in
+          the project&apos;s style guide and templates, to ensure consistency in
           grammar, style, tone, and formatting.
         </ListItem>
         <ListItem>

@@ -294,7 +294,7 @@ export default function TaskIt() {
           mb: 2,
         }}
       >
-        Node is a JavaScript runtime built on Chrome's V8 JavaScript engine
+        Node is a JavaScript runtime built on Chrome&apos;s V8 JavaScript engine
         which allows developers to write server-side code using JavaScript.
         Express is a web application framework for Node.js that is designed for
         building web applications and APIs. These two technologies work together
@@ -524,7 +524,7 @@ export default function TaskIt() {
           mb: 2,
         }}
       >
-        While I didn't use any tutorials or guides to build this project, I did
+        While I didn&apos;t use any tutorials or guides to build this project, I did
         go back and forth between the documentation for the different
         technologies used.
       </Typography>

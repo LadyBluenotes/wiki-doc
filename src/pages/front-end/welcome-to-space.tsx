@@ -269,7 +269,7 @@ export default function PokeDex() {
         }}
       >
         The media featured on the APOD can be anything from photographs of
-        distant galaxies and nebulae, to images captured by NASA's own
+        distant galaxies and nebulae, to images captured by NASA&apos;s own
         spacecraft and telescopes. The media can also be videos, such as the
         video of the Perseverance rover landing on Mars. This web application
         was built to provide a way to easily access and view this media, and to
@@ -435,7 +435,7 @@ export default function PokeDex() {
       >
         In creating this site, I originally had a goal of just display the media
         and information that was provided by the API. Looking back, there are
-        things that I should've added to make the site more accessible. These
+        things that I should&apos;ve added to make the site more accessible. These
         things will be added in the future.
       </Typography>
       <Typography

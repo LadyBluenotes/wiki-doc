@@ -198,7 +198,7 @@ export default function StyleGuide() {
           mb: 2,
         }}
       >
-        It's important to establish a consistent voice and tone in all of my
+        It&apos;s important to establish a consistent voice and tone in all of my
         communications and content. This helps to create a unified brand
         identity, and ensures that all of my content is easy to understand. The
         voice and tone of my content should be professional, friendly, and
@@ -233,8 +233,8 @@ export default function StyleGuide() {
           </ListItemDecorator>
           Simple language and explaining any complex concepts in plain terms is
           encouraged to avoid creating barriers. For example, instead of writing
-          "utilize our proprietary algorithm", write "use our special computer
-          program".
+          &quot;utilize our proprietary algorithm&quot;, write &quot;use our special computer
+          program&quot;.
         </ListItem>
         <ListItem sx={{ ml: 2 }}>
           <ListItemDecorator>
@@ -245,7 +245,7 @@ export default function StyleGuide() {
             />
           </ListItemDecorator>
           Using active voice instead of passive. For example, instead of writing
-          "the website was created by me", write "I created the website".
+          &quot;the website was created by me&quot;, write &quot;I created the website&quot;.
         </ListItem>
         <ListItem sx={{ ml: 2 }}>
           <ListItemDecorator>
@@ -256,9 +256,9 @@ export default function StyleGuide() {
             />
           </ListItemDecorator>
           Avoiding the use of long, complex sentences, use short, simple
-          sentences. For example, instead of writing "I created the website in
-          order to provide a platform for me to share my work and ideas", write
-          "I created the website to share my work and ideas".
+          sentences. For example, instead of writing &quot;I created the website in
+          order to provide a platform for me to share my work and ideas&quot;, write
+          &quot;I created the website to share my work and ideas&quot;.
         </ListItem>
         <ListItem sx={{ ml: 2 }}>
           <ListItemDecorator>
@@ -269,9 +269,9 @@ export default function StyleGuide() {
             />
           </ListItemDecorator>
           Instead of using complicated or confusing language, using simple
-          language. For example, instead of writing "the website was created by
+          language. For example, instead of writing &quot;the website was created by
           me, and it is intended to be a platform for me to share my work and
-          ideas", write "I created the website to share my work and ideas".
+          ideas&quot;, write &quot;I created the website to share my work and ideas&quot;.
         </ListItem>
         <ListItem sx={{ ml: 2 }}>
           <ListItemDecorator>
@@ -282,7 +282,7 @@ export default function StyleGuide() {
             />
           </ListItemDecorator>
           Using short, simple words instead of long, complex words. For example,
-          instead of writing "utilize", write "use".
+          instead of writing &quot;utilize&quot;, write &quot;use&quot;.
         </ListItem>
       </List>
       <Typography
@@ -304,10 +304,10 @@ export default function StyleGuide() {
       >
         In order to establish a personal and relatable tone, personal pronouns
         and possessive terms will be used when referring to myself and my
-        website. Specifically, I will use "I" and "me" when referring to myself,
-        instead of more formal or impersonal terms like "one" or "the user."
-        Similarly, I will use "my website" instead of more generic terms like
-        "this website" or "the website." This approach helps to create a more
+        website. Specifically, I will use &quot;I&quot; and &quot;me&quot; when referring to myself,
+        instead of more formal or impersonal terms like &quot;one&quot; or &quot;the user.&quot;
+        Similarly, I will use &quot;my website&quot; instead of more generic terms like
+        &quot;this website&quot; or &quot;the website.&quot; This approach helps to create a more
         personal and approachable tone, and allows for a clearer and more direct
         communication.
       </Typography>
@@ -372,7 +372,7 @@ export default function StyleGuide() {
               />
             </ListItemDecorator>
             Consistent font and font size across all documentation and content.
-            For example, I will use the font "Roboto" for all documentation and
+            For example, I will use the font &quot;Roboto&quot; for all documentation and
             content.
           </ListItem>
           <ListItem sx={{ ml: 2 }}>

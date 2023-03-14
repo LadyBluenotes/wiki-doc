@@ -6,6 +6,7 @@ import {
     AspectRatio,
     Grid,
   } from "@mui/joy";
+import Image from "next/image";
   import { useRouter } from "next/router";
   
   export default function FullStack() {
@@ -36,7 +37,7 @@ import {
             mb: 2,
           }}
         >
-          Included here will be projects that I've worked on that are full stack. The intention with this page is to show off my ability to work on a project from start to finish, including the front end, back end, and database.
+          Included here will be projects that I&apos;ve worked on that are full stack. The intention with this page is to show off my ability to work on a project from start to finish, including the front end, back end, and database.
         </Typography>
         <Typography
           level="body1"
@@ -45,7 +46,7 @@ import {
             mb: 2,
           }}
         >
-          When you click on a project, you'll be taken to a page with more
+          When you click on a project, you&apos;ll be taken to a page with more
           information about it, as well as a link to the source code.
         </Typography>
         <Divider
@@ -71,13 +72,15 @@ import {
                 Coming soon!
               </Typography>
               <Typography level="body2">
-              I'm currently working on a new project, so check back soon!
+              I&apos;m currently working on a new project, so check back soon!
               </Typography>
               <AspectRatio minHeight="200px" maxHeight="420px" sx={{ mt: 2 }}>
-                <img
+                <Image
                   src="/under-construction.jpg"
                   loading="lazy"
-                  alt=""
+                width={200}
+                height={420}
+                alt="small figurines of a construction workers"
                 />
               </AspectRatio>
             </Card>

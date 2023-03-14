@@ -28,7 +28,7 @@ export default function Home() {
             fontSize: "5rem",
           }}
         >
-          Sarah Gerrard's
+          Sarah Gerrard&apos;s
         </Typography>
         <Typography
           level="display1"

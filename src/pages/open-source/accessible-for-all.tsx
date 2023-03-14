@@ -156,7 +156,7 @@ export default function Accessible() {
       </Typography>
       <Typography level="body1" sx={{ ml: 2 }}>
         As a contributor to Accessible for All, I play a role in producing
-        content for the project's website. My responsibilities include:
+        content for the project&apos;s website. My responsibilities include:
       </Typography>
       <List sx={{ ml: 5 }}>
         <ListItem>

@@ -13,6 +13,7 @@ import {
   Grid,
   Container,
 } from "@mui/joy";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import Timeline from "@/components/Timeline.jsx";
 
@@ -195,7 +196,7 @@ export default function About() {
           mb: 3,
         }}
       >
-        Hi, I'm Sarah!
+        Hi, I&apos;m Sarah!
       </Typography>
       <Typography
         level="body1"
@@ -206,10 +207,10 @@ export default function About() {
           mx: "auto",
         }}
       >
-        I'm a software developer based out of Canada! I'm currently working as a
-        freelancer and am currently on the lookout for a full-time position. I'm
+        I&apos;m a software developer based out of Canada! I&apos;m currently working as a
+        freelancer and am currently on the lookout for a full-time position. I&apos;m
         passionate about learning new things and am always looking for new
-        opportunities to grow and improve. Here, you'll find a little bit about
+        opportunities to grow and improve. Here, you&apos;ll find a little bit about
         me, my skills, my hobbies and interests, and how to get in touch with
         me!
       </Typography>
@@ -256,7 +257,7 @@ export default function About() {
                 mx: "auto",
               }}
             >
-              My journey to becoming a developer was not a conventional one. Below you'll find a timeline of my life and how I got to where I am today.
+              My journey to becoming a developer was not a conventional one. Below you&apos;ll find a timeline of my life and how I got to where I am today.
             </Typography>
             <Divider
               sx={{
@@ -294,9 +295,9 @@ export default function About() {
                 mx: "auto",
               }}
             >
-              Throughout my time as a developer, I've had the opportunity to
-              work with a variety of technologies. Below, you'll find some of
-              the ones I'm most familiar with.
+              Throughout my time as a developer, I&apos;ve had the opportunity to
+              work with a variety of technologies. Below, you&apos;ll find some of
+              the ones I&apos;m most familiar with.
             </Typography>
             <Divider
               sx={{
@@ -325,7 +326,7 @@ export default function About() {
                   >
                     <CardOverflow>
                       <AspectRatio ratio="1" sx={{ width: 90 }}>
-                        <img
+                        <Image
                           src={skill.image}
                           loading="lazy"
                           alt={skill.name + " logo"}
@@ -376,8 +377,8 @@ export default function About() {
                 mx: "auto",
               }}
             >
-              As much as I enjoy coding, I'm more than just a developer. Below,
-              you'll find some of the things I enjoy doing in my free time.
+              As much as I enjoy coding, I&apos;m more than just a developer. Below,
+              you&apos;ll find some of the things I enjoy doing in my free time.
             </Typography>
             <Divider
               sx={{
@@ -406,7 +407,7 @@ export default function About() {
                   >
                     <CardOverflow>
                       <AspectRatio ratio="1" sx={{ width: 90 }}>
-                        <img src={item.image} loading="lazy" alt={item.name} />
+                        <Image src={item.image} loading="lazy" alt={item.name} />
                       </AspectRatio>
                     </CardOverflow>
                     <CardContent sx={{ pl: 3 }}>
@@ -453,7 +454,7 @@ export default function About() {
                 mx: "auto",
               }}
             >
-              If you're interested in connecting with me, I'm always on the
+              If you&apos;re interested in connecting with me, I&apos;m always on the
               lookout for new avenues to learn and progress. Please feel free to
               reach out to me through clicking on the cards below.
             </Typography>
@@ -488,7 +489,7 @@ export default function About() {
                   >
                     <CardOverflow>
                       <AspectRatio ratio="1" sx={{ width: 90 }}>
-                        <img
+                        <Image
                           src={socialLink.image}
                           loading="lazy"
                           alt={socialLink.name + " logo"}

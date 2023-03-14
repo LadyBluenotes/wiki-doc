@@ -230,7 +230,7 @@ export default function Documentation() {
           mb: 2,
         }}
       >
-        This site was built using TypeScript with Next.js, and Material UI's Joy
+        This site was built using TypeScript with Next.js, and Material UI&apos;s Joy
         library. This project was intended to be fairly bare-bones to avoid any
         distractions from the content and to allow for a clean and simple
         design. Using Joy UI components allowed me to focus on the content and
@@ -282,7 +282,7 @@ export default function Documentation() {
         }}
       >
         With the amount of documentation I have been reading and the
-        contributions I have been making towards improving the Material UI's
+        contributions I have been making towards improving the Material UI&apos;s
         documentation for Joy UI, I felt that it was a good time to create my
         own version. Having a space to showcase my projects and provide a way
         for others to learn more about them was something I wanted to do for a
@@ -296,7 +296,7 @@ export default function Documentation() {
           mb: 2,
         }}
       >
-        While I could've used something a lot simpler, I have been wanting to
+        While I could&apos;ve used something a lot simpler, I have been wanting to
         learn more about implementing Next.js and Material UI in a project. In
         addition to this, I wanted to see how TypeScript would work alongside
         Material UI. Having used TypeScript in the past for a few projects, I
@@ -335,12 +335,12 @@ export default function Documentation() {
           mb: 2,
         }}
       >
-        While this project wasn't built as a way to showcase my skills directly,
+        While this project wasn&apos;t built as a way to showcase my skills directly,
         I was able to learn about the process of documentation and some of the
         effort that goes into creating this type of content. Documentation is a
         critical part of any project, and I wanted to make sure that I was able
         to provide some of the intention behind the project and the process of
-        creating it. While this isn't necessarily a reflection on what
+        creating it. While this isn&apos;t necessarily a reflection on what
         production documentation looks like, it was a good way to get a feel for
         the process.
       </Typography>

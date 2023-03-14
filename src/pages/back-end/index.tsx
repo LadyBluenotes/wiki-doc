@@ -1,4 +1,5 @@
 import { Card, Divider, Sheet, Typography, AspectRatio, Grid } from "@mui/joy";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function BackEnd() {
@@ -29,8 +30,8 @@ export default function BackEnd() {
           mb: 2,
         }}
       >
-        This is where you'll be able to find all of my back end projects. These
-        projects include anything from simple API's to more complex
+        This is where you&apos;ll be able to find all of my back end projects.
+        These projects include anything from simple API&apos;s to more complex
         applications, all intended to showcase back end development skills.
       </Typography>
       <Typography
@@ -40,7 +41,7 @@ export default function BackEnd() {
           mb: 2,
         }}
       >
-        When you click on a project, you'll be taken to a page with more
+        When you click on a project, you&apos;ll be taken to a page with more
         information about it, as well as a link to the source code.
       </Typography>
       <Divider
@@ -70,7 +71,13 @@ export default function BackEnd() {
               and income.
             </Typography>
             <AspectRatio minHeight="200px" maxHeight="420px" sx={{ mt: 2 }}>
-              <img src="/change.jpg" loading="lazy" alt="" />
+              <Image
+                src="/change.jpg"
+                loading="lazy"
+                width={200}
+                height={420}
+                alt="jar of coins spilled onto tabletop"
+              />
             </AspectRatio>
           </Card>
         </Grid>
@@ -95,7 +102,13 @@ export default function BackEnd() {
               update, and delete tasks.
             </Typography>
             <AspectRatio minHeight="200px" maxHeight="420px" sx={{ mt: 2 }}>
-              <img src="/to-do.jpg" loading="lazy" alt="" />
+              <Image
+                src="/to-do.jpg"
+                loading="lazy"
+                width={200}
+                height={420}
+                alt="notepad and pen with a list of things that need to be done"
+              />
             </AspectRatio>
           </Card>
         </Grid>

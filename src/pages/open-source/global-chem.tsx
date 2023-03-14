@@ -178,7 +178,7 @@ export default function GlobalChem() {
               }}
             />
           </ListItemDecorator>
-          Contributed to the development of the website's front-end
+          Contributed to the development of the website&apos;s front-end
           infrastructure.
         </ListItem>
         <ListItem>

@@ -1,5 +1,6 @@
 import { Card, Divider, Sheet, Typography, AspectRatio, Grid } from "@mui/joy";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export default function FrontEnd() {
   const router = useRouter();
@@ -29,10 +30,10 @@ export default function FrontEnd() {
           mb: 2,
         }}
       >
-        If you're looking for my front end projects, you've come to the right
-        place. Below you'll find a list of all the projects I've worked on.
-        These projects were created at different points in my learning journey,
-        and will display varying levels of skill.
+        If you&apos;re looking for my front end projects, you&apos;ve come to
+        the right place. Below you&apos;ll find a list of all the projects
+        I&apos;ve worked on. These projects were created at different points in
+        my learning journey, and will display varying levels of skill.
       </Typography>
       <Typography
         level="body1"
@@ -41,7 +42,7 @@ export default function FrontEnd() {
           mb: 2,
         }}
       >
-        When you click on a project, you'll be taken to a page with more
+        When you click on a project, you&apos;ll be taken to a page with more
         information about it, as well as a link to the source code.
       </Typography>
       <Divider
@@ -71,11 +72,12 @@ export default function FrontEnd() {
               known Pokemon from the popular franchise.
             </Typography>
             <AspectRatio minHeight="200px" maxHeight="420px" sx={{ mt: 2 }}>
-              <img
-                src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
-                srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+              <Image
+                src="/docsite.jpg"
                 loading="lazy"
-                alt=""
+                width={200}
+                height={420}
+                alt="screen shot of documentation site"
               />
             </AspectRatio>
           </Card>
@@ -101,7 +103,13 @@ export default function FrontEnd() {
               cocktails or find a new favorite.
             </Typography>
             <AspectRatio minHeight="200px" maxHeight="420px" sx={{ mt: 2 }}>
-              <img src="/happy-hour.jpg" loading="lazy" alt="" />
+              <Image
+                src="/happy-hour.jpg"
+                loading="lazy"
+                width={200}
+                height={420}
+                alt="screen shot of happy hour site"
+              />
             </AspectRatio>
           </Card>
         </Grid>
@@ -126,7 +134,13 @@ export default function FrontEnd() {
               known Pokemon from the popular franchise.
             </Typography>
             <AspectRatio minHeight="200px" maxHeight="420px" sx={{ mt: 2 }}>
-              <img src="/pokedex.jpg" loading="lazy" alt="" />
+              <Image
+                src="/pokedex.jpg"
+                loading="lazy"
+                width={200}
+                height={420}
+                alt="screen shot of pokemon site"
+              />
             </AspectRatio>
           </Card>
         </Grid>
@@ -151,7 +165,13 @@ export default function FrontEnd() {
               me, connect, or direct them to seeing my work.
             </Typography>
             <AspectRatio minHeight="200px" maxHeight="420px" sx={{ mt: 2 }}>
-              <img src="/portfolio.jpg" loading="lazy" alt="" />
+              <Image
+                src="/portfolio.jpg"
+                loading="lazy"
+                width={200}
+                height={420}
+                alt="screen shot of personal portfolio site"
+              />
             </AspectRatio>
           </Card>
         </Grid>
@@ -176,7 +196,13 @@ export default function FrontEnd() {
               Day API allowing users to images from NASA.
             </Typography>
             <AspectRatio minHeight="200px" maxHeight="420px" sx={{ mt: 2 }}>
-              <img src="/space.jpg" loading="lazy" alt="" />
+              <Image
+                src="/space.jpg"
+                loading="lazy"
+                width={200}
+                height={420}
+                alt="screen shot of documentation site"
+              />
             </AspectRatio>
           </Card>
         </Grid>
