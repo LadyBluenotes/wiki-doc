@@ -1,3 +1,4 @@
+import * as React from "react";
 import {
   Sheet,
   Typography,
@@ -19,6 +20,12 @@ import Timeline from "@/components/Timeline.jsx";
 
 export default function About() {
   const router = useRouter();
+
+  const [width, setWidth] = React.useState(0);
+
+  React.useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
 
   const skills = [
     {
@@ -98,12 +105,7 @@ export default function About() {
     },
   ];
 
-  const tabNames = [
-    "Background",
-    "Skills",
-    "Hobbies and Interests",
-    "Contact me",
-  ];
+  const tabNames = ["History", "Skills", "Pastimes", "Contact"];
 
   const hobbiesInterests = [
     {
@@ -187,13 +189,25 @@ export default function About() {
         py: 4,
         px: 4,
         m: 3,
+        "@media (max-width: 600px)": {
+          m: 0,
+          p: 2,
+        },
+        "@media (min-width: 600px) and (max-width: 960px)": {
+          m: 2,
+          py: 2,
+          px: 4,
+        },
       }}
     >
       <Typography
         level="display1"
         sx={{
           textAlign: "center",
-          mb: 3,
+          mb: 2,
+          "@media (max-width: 600px)": {
+            fontSize: "3rem",
+          },
         }}
       >
         Hi, I&apos;m Sarah!
@@ -207,22 +221,29 @@ export default function About() {
           mx: "auto",
         }}
       >
-        I&apos;m a software developer based out of Canada! I&apos;m currently working as a
-        freelancer and am currently on the lookout for a full-time position. I&apos;m
-        passionate about learning new things and am always looking for new
-        opportunities to grow and improve. Here, you&apos;ll find a little bit about
-        me, my skills, my hobbies and interests, and how to get in touch with
-        me!
+        I&apos;m a software developer based out of Canada! I&apos;m currently
+        working as a freelancer and am currently on the lookout for a full-time
+        position. I&apos;m passionate about learning new things and am always
+        looking for new opportunities to grow and improve. Here, you&apos;ll
+        find a little bit about me, my skills, my hobbies and interests, and how
+        to get in touch with me!
       </Typography>
       <Tabs
-        aria-label="Basic tabs"
+        aria-label="navigation tabs for about section"
         defaultValue={0}
-        sx={{ borderRadius: "lg" }}
+        sx={{
+          borderRadius: "lg",
+          "@media (max-width: 600px)": {
+            overflow: "scroll",
+          },
+        }}
       >
         <TabList
           sx={{
-            width: "70%",
             mx: "auto",
+            "@media (min-width: 600px) and (max-width: 960px)": {
+              width: "fit-content",
+            },
           }}
         >
           {tabNames.map((tabName, index) => (
@@ -232,7 +253,7 @@ export default function About() {
         <TabPanel value={0} sx={{ p: 2 }}>
           <Sheet
             sx={{
-              p: 3,
+              p: 1,
               borderRadius: "lg",
               boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
               bgcolor: "background.backdrop",
@@ -242,7 +263,13 @@ export default function About() {
               level="display2"
               sx={{
                 textAlign: "center",
-                mb: 3,
+                mb: 2,
+                "@media (max-width: 600px)": {
+                  fontSize: "2.7rem",
+                },
+                "@media (min-width: 600px) and (max-width: 960px)": {
+                  fontSize: "3.3rem",
+                },
               }}
             >
               A little about me
@@ -251,13 +278,14 @@ export default function About() {
               level="body1"
               sx={{
                 textAlign: "center",
-                px: 4,
+                px: 2,
                 mb: 3,
-                maxWidth: "70%",
                 mx: "auto",
               }}
             >
-              My journey to becoming a developer was not a conventional one. Below you&apos;ll find a timeline of my life and how I got to where I am today.
+              My journey to becoming a developer was not a conventional one.
+              Below you&apos;ll find a timeline of my life and how I got to
+              where I am today.
             </Typography>
             <Divider
               sx={{
@@ -270,7 +298,7 @@ export default function About() {
         <TabPanel value={1} sx={{ p: 2 }}>
           <Sheet
             sx={{
-              p: 3,
+              p: 1,
               borderRadius: "lg",
               boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
               bgcolor: "background.backdrop",
@@ -280,7 +308,13 @@ export default function About() {
               level="display2"
               sx={{
                 textAlign: "center",
-                mb: 3,
+                mb: 2,
+                "@media (max-width: 600px)": {
+                  fontSize: "2.7rem",
+                },
+                "@media (min-width: 600px) and (max-width: 960px)": {
+                  fontSize: "3.3rem",
+                },
               }}
             >
               What I know
@@ -295,9 +329,9 @@ export default function About() {
                 mx: "auto",
               }}
             >
-              Throughout my time as a developer, I&apos;ve had the opportunity to
-              work with a variety of technologies. Below, you&apos;ll find some of
-              the ones I&apos;m most familiar with.
+              Throughout my time as a developer, I&apos;ve had the opportunity
+              to work with a variety of technologies. Below, you&apos;ll find
+              some of the ones I&apos;m most familiar with.
             </Typography>
             <Divider
               sx={{
@@ -307,8 +341,9 @@ export default function About() {
             <Grid
               container
               spacing={3}
-              mt={3}
-              mx={3}
+              py={"auto"}
+              mx={2}
+              mb={2}
               sx={{
                 justifyContent: "center",
                 alignItems: "center",
@@ -322,23 +357,53 @@ export default function About() {
                     sx={{
                       width: 280,
                       bgcolor: "background.body",
+                      "@media (max-width: 600px)": {
+                        width: 180,
+                        height: 60,
+                      },
                     }}
                   >
                     <CardOverflow>
-                      <AspectRatio ratio="1" sx={{ width: 90 }}>
+                      <AspectRatio
+                        ratio="1"
+                        sx={{
+                          width: 90,
+                          "@media (max-width: 600px)": {
+                            width: 60,
+                            height: 60,
+                          },
+                        }}
+                      >
                         <Image
                           src={skill.image}
+                          width={90}
+                          height={90}
                           loading="lazy"
                           alt={skill.name + " logo"}
                         />
                       </AspectRatio>
                     </CardOverflow>
-                    <CardContent sx={{ pl: 3 }}>
+                    <CardContent
+                      sx={{
+                        pl: 3,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        "@media (max-width: 600px)": {
+                          pl: 1,
+                        },
+                      }}
+                    >
                       <Typography
                         fontWeight="md"
                         textColor={skill.nameColor}
                         fontSize="1.5rem"
-                        mb={0.5}
+                        my={"auto"}
+                        sx={{
+                          "@media (max-width: 600px)": {
+                            fontSize: "1rem",
+                          },
+                        }}
                       >
                         {skill.name}
                       </Typography>
@@ -352,7 +417,7 @@ export default function About() {
         <TabPanel value={2} sx={{ p: 2 }}>
           <Sheet
             sx={{
-              p: 3,
+              p: 1,
               borderRadius: "lg",
               boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
               bgcolor: "background.backdrop",
@@ -362,7 +427,13 @@ export default function About() {
               level="display2"
               sx={{
                 textAlign: "center",
-                mb: 3,
+                mb: 2,
+                "@media (max-width: 600px)": {
+                  fontSize: "2.7rem",
+                },
+                "@media (min-width: 600px) and (max-width: 960px)": {
+                  fontSize: "3.3rem",
+                },
               }}
             >
               How I spend my free time
@@ -371,14 +442,14 @@ export default function About() {
               level="body1"
               sx={{
                 textAlign: "center",
-                px: 4,
+                px: 2,
                 mb: 3,
-                maxWidth: "70%",
                 mx: "auto",
               }}
             >
-              As much as I enjoy coding, I&apos;m more than just a developer. Below,
-              you&apos;ll find some of the things I enjoy doing in my free time.
+              As much as I enjoy coding, I&apos;m more than just a developer.
+              Below, you&apos;ll find some of the things I enjoy doing in my
+              free time.
             </Typography>
             <Divider
               sx={{
@@ -403,19 +474,53 @@ export default function About() {
                     sx={{
                       width: 280,
                       bgcolor: "background.body",
+                      "@media (max-width: 600px)": {
+                        width: 180,
+                        height: 60,
+                      },
                     }}
                   >
                     <CardOverflow>
-                      <AspectRatio ratio="1" sx={{ width: 90 }}>
-                        <Image src={item.image} loading="lazy" alt={item.name} />
+                      <AspectRatio
+                        ratio="1"
+                        sx={{
+                          width: 90,
+                          "@media (max-width: 600px)": {
+                            width: 60,
+                            height: 60,
+                          },
+                        }}
+                      >
+                        <Image
+                          src={item.image}
+                          loading="lazy"
+                          width={90}
+                          height={90}
+                          alt={item.name}
+                        />
                       </AspectRatio>
                     </CardOverflow>
-                    <CardContent sx={{ pl: 3 }}>
+                    <CardContent
+                      sx={{
+                        pl: 3,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        "@media (max-width: 600px)": {
+                          pl: 1,
+                        },
+                      }}
+                    >
                       <Typography
                         fontWeight="md"
                         textColor={item.nameColor}
                         fontSize="1.5rem"
                         mb={0.5}
+                        sx={{
+                          "@media (max-width: 600px)": {
+                            fontSize: "1rem",
+                          },
+                        }}
                       >
                         {item.name}
                       </Typography>
@@ -429,7 +534,7 @@ export default function About() {
         <TabPanel value={3} sx={{ p: 2 }}>
           <Sheet
             sx={{
-              p: 3,
+              p: 1,
               borderRadius: "lg",
               boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
               bgcolor: "background.backdrop",
@@ -440,6 +545,12 @@ export default function About() {
               sx={{
                 textAlign: "center",
                 mb: 3,
+                "@media (max-width: 600px)": {
+                  fontSize: "2.7rem",
+                },
+                "@media (min-width: 600px) and (max-width: 960px)": {
+                  fontSize: "3.3rem",
+                },
               }}
             >
               Get in touch!
@@ -448,15 +559,14 @@ export default function About() {
               level="body1"
               sx={{
                 textAlign: "center",
-                px: 4,
-                mb: 3,
-                maxWidth: "70%",
+                px: 2,
+                mb: 2,
                 mx: "auto",
               }}
             >
-              If you&apos;re interested in connecting with me, I&apos;m always on the
-              lookout for new avenues to learn and progress. Please feel free to
-              reach out to me through clicking on the cards below.
+              If you&apos;re interested in connecting with me, I&apos;m always
+              on the lookout for new avenues to learn and progress. Please feel
+              free to reach out to me through clicking on the cards below.
             </Typography>
             <Divider
               sx={{
@@ -466,8 +576,9 @@ export default function About() {
             <Grid
               container
               spacing={3}
-              mt={3}
-              mx={3}
+              py={"auto"}
+              mx={2}
+              mb={1}
               sx={{
                 justifyContent: "center",
                 alignItems: "center",
@@ -485,12 +596,27 @@ export default function About() {
                       width: 280,
                       bgcolor: "background.body",
                       "&:hover": { cursor: "pointer" },
+                      "@media (max-width: 600px)": {
+                        width: 180,
+                        height: 60,
+                      },
                     }}
                   >
                     <CardOverflow>
-                      <AspectRatio ratio="1" sx={{ width: 90 }}>
+                      <AspectRatio
+                        ratio="1"
+                        sx={{
+                          width: 90,
+                          "@media (max-width: 600px)": {
+                            width: 60,
+                            height: 60,
+                          },
+                        }}
+                      >
                         <Image
                           src={socialLink.image}
+                          width={90}
+                          height={90}
                           loading="lazy"
                           alt={socialLink.name + " logo"}
                         />
@@ -502,6 +628,11 @@ export default function About() {
                         textColor={socialLink.nameColor}
                         fontSize="1.5rem"
                         mb={0.5}
+                        sx={{
+                          "@media (max-width: 600px)": {
+                            fontSize: "1rem",
+                          },
+                        }}
                       >
                         {socialLink.name}
                       </Typography>

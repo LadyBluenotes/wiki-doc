@@ -70,7 +70,6 @@ const Timeline = () => {
 
     return (
       <div style={{
-        width: "60%",
         height: "fit-content",
         margin: "auto",
       }}>
@@ -82,7 +81,12 @@ const Timeline = () => {
           cardForeColor: '#00153C',
           titleColor: '#054DA7',
           titleColorActive: '#02367D',
-        }} />
+        }}
+        sx={{
+          width: "100%",
+          height: "100%",
+        }}
+        />
       </div>
     )
 };
