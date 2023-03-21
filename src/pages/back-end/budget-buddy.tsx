@@ -27,6 +27,15 @@ export default function BudgetBuddy() {
         py: 4,
         px: 10,
         m: 3,
+        "@media (max-width: 600px)": {
+          m: 0,
+          p: 2,
+        },
+        "@media (min-width: 600px) and (max-width: 960px)": {
+          m: 2,
+          py: 2,
+          px: 4,
+        },
       }}
     >
       <div
@@ -41,6 +50,10 @@ export default function BudgetBuddy() {
           sx={{
             mr: 2,
             mb: 1,
+            "@media (max-width: 600px)": {
+              fontSize: "3rem",
+              textAlign: "center",
+            },
           }}
         >
           Budget Buddy
@@ -93,6 +106,9 @@ export default function BudgetBuddy() {
         component="h2"
         sx={{
           mb: 2,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         I. Overview
@@ -132,6 +148,9 @@ export default function BudgetBuddy() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         II. Getting Started
@@ -142,6 +161,9 @@ export default function BudgetBuddy() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Prerequisites
@@ -163,7 +185,7 @@ export default function BudgetBuddy() {
           <Typography
             level="body1"
             sx={{
-              ml: 2,
+              ml: 0,
             }}
           >
             Node.js
@@ -173,14 +195,7 @@ export default function BudgetBuddy() {
           <ListItemDecorator>
             <ArrowRight />
           </ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
-            MongoDB Account
-          </Typography>
+          <Typography level="body1">MongoDB Account</Typography>
         </ListItem>
       </List>
       <Typography
@@ -189,6 +204,9 @@ export default function BudgetBuddy() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Installation
@@ -201,15 +219,14 @@ export default function BudgetBuddy() {
       >
         How to install and run the application.
       </Typography>
-      <List>
+      <List
+        sx={{
+          overflow: "auto",
+        }}
+      >
         <ListItem>
           <ListItemDecorator>1.</ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
+          <Typography level="body1">
             Clone the repository from GitHub.
             <br />
             <code>git clone https://github.com/LadyBluenotes/budget-buddy</code>
@@ -217,12 +234,7 @@ export default function BudgetBuddy() {
         </ListItem>
         <ListItem>
           <ListItemDecorator>2.</ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
+          <Typography level="body1">
             Install the dependencies.
             <br />
             <code>npm run install</code>
@@ -230,24 +242,14 @@ export default function BudgetBuddy() {
         </ListItem>
         <ListItem>
           <ListItemDecorator>3.</ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
+          <Typography level="body1">
             Copy the contents of the .env.example file into a new file called
             .env and add the appropriate values.
           </Typography>
         </ListItem>
         <ListItem>
           <ListItemDecorator>3.</ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
+          <Typography level="body1">
             Run the application.
             <br />
             <code>npm run start</code>
@@ -265,6 +267,9 @@ export default function BudgetBuddy() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         III. About
@@ -341,6 +346,9 @@ export default function BudgetBuddy() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Built With
@@ -408,6 +416,9 @@ export default function BudgetBuddy() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         IV. Motivation
@@ -422,9 +433,9 @@ export default function BudgetBuddy() {
         The motivation behind this project was to learn how to add user
         authentication to an API. When I had worked on Task It, I had learned
         how to create an API and how to use HTTP methods to perform CRUD
-        operations. Where I could&apos;ve added user authentication to Task It, I
-        wanted to create a new project that would also be of use to me. Where I
-        had previously used Google Sheets to track my expenses and income, I
+        operations. Where I could&apos;ve added user authentication to Task It,
+        I wanted to create a new project that would also be of use to me. Where
+        I had previously used Google Sheets to track my expenses and income, I
         wanted to create an API that would allow me to do the same thing in
         addition to being consumed by a front-end application down the road.
       </Typography>
@@ -450,6 +461,9 @@ export default function BudgetBuddy() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         V. What I Learned
@@ -509,6 +523,9 @@ export default function BudgetBuddy() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VI. Acknowledgements
@@ -532,6 +549,9 @@ export default function BudgetBuddy() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VII. Additional Information
@@ -551,9 +571,11 @@ export default function BudgetBuddy() {
         level="h4"
         component="h3"
         id="issues"
-        className="styling-h3"
         sx={{
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Known issues
@@ -575,9 +597,11 @@ export default function BudgetBuddy() {
         level="h4"
         component="h3"
         id="future"
-        className="styling-h3"
         sx={{
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Future improvements
@@ -588,7 +612,13 @@ export default function BudgetBuddy() {
           ml: 2,
         }}
       >
-        <ListItem>
+        <ListItem
+          sx={{
+            "@media (max-width: 600px)": {
+              ml: 0,
+            },
+          }}
+        >
           <ListItemDecorator>
             <CheckBoxOutlineBlank />
           </ListItemDecorator>

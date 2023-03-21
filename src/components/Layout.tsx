@@ -27,7 +27,6 @@ function Header(props: BoxProps) {
   return (
     <Box
       component="header"
-      className="Header"
       {...props}
       sx={[
         {
@@ -106,7 +105,6 @@ function Main(props: BoxProps) {
   return (
     <Box
       component="main"
-      className="Main"
       {...props}
       sx={[
         {

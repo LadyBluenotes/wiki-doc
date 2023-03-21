@@ -771,7 +771,6 @@ export default function Tutor() {
         level="h4"
         component="h3"
         id="issues"
-        className="styling-h3"
         sx={{
           ml: 1,
            "@media (max-width: 600px)": {
@@ -828,7 +827,6 @@ export default function Tutor() {
         level="h4"
         component="h3"
         id="future"
-        className="styling-h3"
         sx={{
           ml: 1,
            "@media (max-width: 600px)": {

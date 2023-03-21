@@ -442,7 +442,6 @@ export default function PokeDex() {
         level="h4"
         component="h3"
         id="issues"
-        className="styling-h3"
         sx={{
           ml: 1,
         }}
@@ -472,7 +471,6 @@ export default function PokeDex() {
         level="h4"
         component="h3"
         id="future"
-        className="styling-h3"
         sx={{
           ml: 1,
         }}

@@ -27,6 +27,15 @@ export default function TaskIt() {
         py: 4,
         px: 10,
         m: 3,
+        "@media (max-width: 600px)": {
+          m: 0,
+          p: 2,
+        },
+        "@media (min-width: 600px) and (max-width: 960px)": {
+          m: 2,
+          py: 2,
+          px: 4,
+        },
       }}
     >
       <div
@@ -41,6 +50,10 @@ export default function TaskIt() {
           sx={{
             mr: 2,
             mb: 1,
+            "@media (max-width: 600px)": {
+              fontSize: "3rem",
+              textAlign: "center",
+            },
           }}
         >
           Budget Buddy
@@ -94,6 +107,9 @@ export default function TaskIt() {
         component="h2"
         sx={{
           mb: 2,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         I. Overview
@@ -137,6 +153,9 @@ export default function TaskIt() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         II. Getting Started
@@ -147,6 +166,9 @@ export default function TaskIt() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Prerequisites
@@ -165,27 +187,13 @@ export default function TaskIt() {
           <ListItemDecorator>
             <ArrowRight />
           </ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
-            Node.js
-          </Typography>
+          <Typography level="body1">Node.js</Typography>
         </ListItem>
         <ListItem>
           <ListItemDecorator>
             <ArrowRight />
           </ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
-            MongoDB Account
-          </Typography>
+          <Typography level="body1">MongoDB Account</Typography>
         </ListItem>
       </List>
       <Typography
@@ -194,27 +202,26 @@ export default function TaskIt() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Installation
       </Typography>
-      <Typography
-        level="body1"
-        sx={{
-          ml: 2,
-        }}
-      >
+      <Typography level="body1" sx={{
+        ml:2
+      }}>
         How to install and run the application.
       </Typography>
-      <List>
+      <List
+        sx={{
+          overflow: "auto",
+        }}
+      >
         <ListItem>
           <ListItemDecorator>1.</ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
+          <Typography level="body1">
             Clone the repository from GitHub.
             <br />
             <code>git clone https://github.com/LadyBluenotes/budget-buddy</code>
@@ -222,12 +229,7 @@ export default function TaskIt() {
         </ListItem>
         <ListItem>
           <ListItemDecorator>2.</ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
+          <Typography level="body1">
             Install the dependencies.
             <br />
             <code>npm run install</code>
@@ -235,24 +237,14 @@ export default function TaskIt() {
         </ListItem>
         <ListItem>
           <ListItemDecorator>3.</ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
+          <Typography level="body1">
             Copy the contents of the .env.example file into a new file called
             .env and add the appropriate values.
           </Typography>
         </ListItem>
         <ListItem>
           <ListItemDecorator>3.</ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
+          <Typography level="body1">
             Run the application.
             <br />
             <code>npm run start</code>
@@ -270,6 +262,9 @@ export default function TaskIt() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         III. About
@@ -338,6 +333,9 @@ export default function TaskIt() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Built With
@@ -387,6 +385,9 @@ export default function TaskIt() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         IV. Motivation
@@ -426,6 +427,9 @@ export default function TaskIt() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         V. What I Learned
@@ -513,6 +517,9 @@ export default function TaskIt() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VI. Acknowledgements
@@ -524,8 +531,8 @@ export default function TaskIt() {
           mb: 2,
         }}
       >
-        While I didn&apos;t use any tutorials or guides to build this project, I did
-        go back and forth between the documentation for the different
+        While I didn&apos;t use any tutorials or guides to build this project, I
+        did go back and forth between the documentation for the different
         technologies used.
       </Typography>
       <Divider sx={{ my: 2 }} />
@@ -535,6 +542,9 @@ export default function TaskIt() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VII. Additional Information
@@ -553,9 +563,11 @@ export default function TaskIt() {
         level="h4"
         component="h3"
         id="issues"
-        className="styling-h3"
         sx={{
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Known issues
@@ -577,9 +589,11 @@ export default function TaskIt() {
         level="h4"
         component="h3"
         id="future"
-        className="styling-h3"
         sx={{
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Future improvements

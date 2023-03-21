@@ -183,7 +183,6 @@ export default function StyleGuide() {
       </Typography>
       <Typography
         level="h3"
-        className="stlying-h3"
         sx={{
           ml: 1,
           mb: 1,
@@ -287,7 +286,6 @@ export default function StyleGuide() {
       </List>
       <Typography
         level="h3"
-        className="styling-h3"
         sx={{
           ml: 1,
           mb: 1,
@@ -311,7 +309,7 @@ export default function StyleGuide() {
         personal and approachable tone, and allows for a clearer and more direct
         communication.
       </Typography>
-      <Typography level="h3" className="styling-h3" sx={{ mb: 1 }}>
+      <Typography level="h3" sx={{ mb: 1 }}>
         Grammar and punctuation
       </Typography>
       <Typography
@@ -340,7 +338,6 @@ export default function StyleGuide() {
       </Typography>
       <Typography
         level="h3"
-        className="styling-h3"
         sx={{
           ml: 1,
           mb: 1,
@@ -448,7 +445,6 @@ export default function StyleGuide() {
       </Typography>
       <Typography
         level="h3"
-        className="styling-h3"
         sx={{
           ml: 1,
           mb: 1,
@@ -616,7 +612,6 @@ export default function StyleGuide() {
       </Typography>
       <Typography
         level="h3"
-        className="styling-h3"
         sx={{
           ml: 1,
         }}
@@ -748,7 +743,6 @@ export default function StyleGuide() {
       </List>
       <Typography
         level="h3"
-        className="styling-h3"
         sx={{
           ml: 1,
           mb: 1,
