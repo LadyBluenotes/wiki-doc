@@ -26,6 +26,15 @@ export default function Template() {
         py: 4,
         px: 6,
         m: 3,
+        "@media (max-width: 600px)": {
+          m: 0,
+          p: 2,
+        },
+        "@media (min-width: 600px) and (max-width: 960px)": {
+          m: 2,
+          py: 2,
+          px: 4,
+        },
       }}
     >
       <div
@@ -40,6 +49,10 @@ export default function Template() {
           sx={{
             mr: 2,
             mb: 1,
+            "@media (max-width: 600px)": {
+              fontSize: "3rem",
+              textAlign: "center",
+            },
           }}
         >
           Template
@@ -104,6 +117,9 @@ export default function Template() {
         component="h2"
         sx={{
           mb: 2,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         I. Overview
@@ -126,6 +142,9 @@ export default function Template() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         II. Getting Started
@@ -136,6 +155,9 @@ export default function Template() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Prerequisites
@@ -155,6 +177,9 @@ export default function Template() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Installation
@@ -168,7 +193,9 @@ export default function Template() {
         These are steps to explain how to get the development environment
         running.
       </Typography>
-      <List>
+      <List sx={{
+        overflow: "auto",
+      }}>
         <ListItem>
           <ListItemDecorator>1.</ListItemDecorator>
           <Typography
@@ -203,6 +230,9 @@ export default function Template() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         III. About
@@ -223,6 +253,9 @@ export default function Template() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Built With
@@ -248,6 +281,9 @@ export default function Template() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         IV. Motivation
@@ -270,6 +306,9 @@ export default function Template() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         V. What I Learned
@@ -294,6 +333,9 @@ export default function Template() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VI. Acknowledgements
@@ -318,6 +360,9 @@ export default function Template() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VII. Additional Information
@@ -338,6 +383,9 @@ export default function Template() {
         id="issues"
         sx={{
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Known issues
@@ -367,6 +415,9 @@ export default function Template() {
         id="future"
         sx={{
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Future improvements
