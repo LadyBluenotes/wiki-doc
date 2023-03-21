@@ -16,8 +16,17 @@ export default function StyleGuide() {
     <Sheet
       sx={{
         py: 4,
-        px: 4,
+        px: 10,
         m: 3,
+        "@media (max-width: 600px)": {
+          m: 0,
+          p: 3,
+        },
+        "@media (min-width: 600px) and (max-width: 960px)": {
+          m: 2,
+          py: 2,
+          px: 5,
+        },
       }}
     >
       <Typography
@@ -26,6 +35,10 @@ export default function StyleGuide() {
         sx={{
           mr: 2,
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "3rem",
+            textAlign: "center",
+          },
         }}
       >
         Style Guide
@@ -99,6 +112,9 @@ export default function StyleGuide() {
         id="introduction"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         I. Introduction
@@ -177,6 +193,9 @@ export default function StyleGuide() {
         id="writing-guidelines"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         II. Writing guidelines
@@ -186,6 +205,9 @@ export default function StyleGuide() {
         sx={{
           ml: 1,
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Voice and tone
@@ -197,8 +219,8 @@ export default function StyleGuide() {
           mb: 2,
         }}
       >
-        It&apos;s important to establish a consistent voice and tone in all of my
-        communications and content. This helps to create a unified brand
+        It&apos;s important to establish a consistent voice and tone in all of
+        my communications and content. This helps to create a unified brand
         identity, and ensures that all of my content is easy to understand. The
         voice and tone of my content should be professional, friendly, and
         approachable. It should be clear and concise, and should avoid jargon
@@ -232,8 +254,8 @@ export default function StyleGuide() {
           </ListItemDecorator>
           Simple language and explaining any complex concepts in plain terms is
           encouraged to avoid creating barriers. For example, instead of writing
-          &quot;utilize our proprietary algorithm&quot;, write &quot;use our special computer
-          program&quot;.
+          &quot;utilize our proprietary algorithm&quot;, write &quot;use our
+          special computer program&quot;.
         </ListItem>
         <ListItem sx={{ ml: 2 }}>
           <ListItemDecorator>
@@ -244,7 +266,8 @@ export default function StyleGuide() {
             />
           </ListItemDecorator>
           Using active voice instead of passive. For example, instead of writing
-          &quot;the website was created by me&quot;, write &quot;I created the website&quot;.
+          &quot;the website was created by me&quot;, write &quot;I created the
+          website&quot;.
         </ListItem>
         <ListItem sx={{ ml: 2 }}>
           <ListItemDecorator>
@@ -255,9 +278,10 @@ export default function StyleGuide() {
             />
           </ListItemDecorator>
           Avoiding the use of long, complex sentences, use short, simple
-          sentences. For example, instead of writing &quot;I created the website in
-          order to provide a platform for me to share my work and ideas&quot;, write
-          &quot;I created the website to share my work and ideas&quot;.
+          sentences. For example, instead of writing &quot;I created the website
+          in order to provide a platform for me to share my work and
+          ideas&quot;, write &quot;I created the website to share my work and
+          ideas&quot;.
         </ListItem>
         <ListItem sx={{ ml: 2 }}>
           <ListItemDecorator>
@@ -268,9 +292,10 @@ export default function StyleGuide() {
             />
           </ListItemDecorator>
           Instead of using complicated or confusing language, using simple
-          language. For example, instead of writing &quot;the website was created by
-          me, and it is intended to be a platform for me to share my work and
-          ideas&quot;, write &quot;I created the website to share my work and ideas&quot;.
+          language. For example, instead of writing &quot;the website was
+          created by me, and it is intended to be a platform for me to share my
+          work and ideas&quot;, write &quot;I created the website to share my
+          work and ideas&quot;.
         </ListItem>
         <ListItem sx={{ ml: 2 }}>
           <ListItemDecorator>
@@ -289,6 +314,9 @@ export default function StyleGuide() {
         sx={{
           ml: 1,
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Personal-specific terms
@@ -302,14 +330,23 @@ export default function StyleGuide() {
       >
         In order to establish a personal and relatable tone, personal pronouns
         and possessive terms will be used when referring to myself and my
-        website. Specifically, I will use &quot;I&quot; and &quot;me&quot; when referring to myself,
-        instead of more formal or impersonal terms like &quot;one&quot; or &quot;the user.&quot;
-        Similarly, I will use &quot;my website&quot; instead of more generic terms like
-        &quot;this website&quot; or &quot;the website.&quot; This approach helps to create a more
-        personal and approachable tone, and allows for a clearer and more direct
-        communication.
+        website. Specifically, I will use &quot;I&quot; and &quot;me&quot; when
+        referring to myself, instead of more formal or impersonal terms like
+        &quot;one&quot; or &quot;the user.&quot; Similarly, I will use &quot;my
+        website&quot; instead of more generic terms like &quot;this
+        website&quot; or &quot;the website.&quot; This approach helps to create
+        a more personal and approachable tone, and allows for a clearer and more
+        direct communication.
       </Typography>
-      <Typography level="h3" sx={{ mb: 1 }}>
+      <Typography
+        level="h3"
+        sx={{
+          mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
+        }}
+      >
         Grammar and punctuation
       </Typography>
       <Typography
@@ -332,6 +369,9 @@ export default function StyleGuide() {
         id="formatting-guidelines"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         III. Formatting guidelines
@@ -341,6 +381,9 @@ export default function StyleGuide() {
         sx={{
           ml: 1,
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         General formatting
@@ -369,8 +412,8 @@ export default function StyleGuide() {
               />
             </ListItemDecorator>
             Consistent font and font size across all documentation and content.
-            For example, I will use the font &quot;Roboto&quot; for all documentation and
-            content.
+            For example, I will use the font &quot;Roboto&quot; for all
+            documentation and content.
           </ListItem>
           <ListItem sx={{ ml: 2 }}>
             <ListItemDecorator>
@@ -439,6 +482,9 @@ export default function StyleGuide() {
         id="design-guidelines"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         IV. Design guidelines
@@ -448,6 +494,9 @@ export default function StyleGuide() {
         sx={{
           ml: 1,
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Design principles
@@ -543,6 +592,9 @@ export default function StyleGuide() {
         id="references"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         V. References
@@ -606,6 +658,9 @@ export default function StyleGuide() {
         id="appendices"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VI. Appendices
@@ -614,6 +669,9 @@ export default function StyleGuide() {
         level="h3"
         sx={{
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Glossary of terms
@@ -746,6 +804,9 @@ export default function StyleGuide() {
         sx={{
           ml: 1,
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Any feedback?
