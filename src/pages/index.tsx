@@ -12,6 +12,9 @@ export default function Home() {
         maxWidth="lg"
         sx={{
           mt: 9,
+          '@media (max-width: 600px)': {
+            mt: 5,
+          },
         }}
       >
         <Sheet
@@ -20,9 +23,18 @@ export default function Home() {
           width: "fit-content",
           bgcolor: "background.default",
           borderRadius: "10px",
+          '@media (max-width: 600px)': {
+            py: 3,
+            px: 2,
+          },
         }}
         >
-        <Typography level="h2" component="h1">
+        <Typography level="h2" component="h1" sx={{
+          '@media (max-width: 600px)': {
+            fontSize: "1rem",
+            textAlign: "center",
+          },
+        }}>
           Welcome to
         </Typography>
         <Typography
@@ -30,6 +42,10 @@ export default function Home() {
           component="h1"
           sx={{
             fontSize: "5rem",
+            '@media (max-width: 600px)': {
+              fontSize: "3rem",
+              textAlign: "center",
+            },
           }}
         >
           Sarah Gerrard&apos;s
@@ -39,6 +55,10 @@ export default function Home() {
           component="h1"
           sx={{
             fontSize: "3rem",
+            '@media (max-width: 600px)': {
+              fontSize: "2rem",
+              textAlign: "center",
+            },
           }}
         >
           Documentation Site
@@ -46,15 +66,31 @@ export default function Home() {
         <Button variant="outlined"  sx={{
           mr: 2,
           mt: 3,
+          '@media (max-width: 600px)': {
+            fontSize: "0.5rem",
+            p: 1,
+            display: "flex",
+            ml:'auto',
+            mr: 'auto',
+            mt: 1.5
+          },
         }}
         onClick={() =>{
           router.push('/in-progress')
         }}
         >
-          <Typography level="body1">My Current Projects</Typography>
+          <Typography level="body1">Current Projects</Typography>
         </Button>
         <Button color="primary" sx={{
           mt: 3,
+          '@media (max-width: 600px)': {
+            fontSize: "0.5rem",
+            p: 1,
+            display: "flex",
+            ml:'auto',
+            mr: 'auto',
+            mt: 1.5
+          },
         }}
         onClick={() =>{
           router.push('/about')

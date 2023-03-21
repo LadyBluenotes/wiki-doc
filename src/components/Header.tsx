@@ -577,7 +577,14 @@ export default function Header() {
           </ListItem>
         </List>
       </Box>
-      <Box sx={{ display: "flex", flexDirection: "row", gap: 1.5, mr: 4 }}>
+      <Box sx={{ display: "flex", flexDirection: "row", gap: 1.5, mr: 4,
+        "@media (max-width: 600px)": {
+          mr: 0,
+        },
+        "@media (min-width: 601px ) and (max-width: 900px)": {
+          mr: 2,
+        },
+    }}>
         <IconButton
           variant="outlined"
           size="sm"
