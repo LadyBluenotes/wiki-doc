@@ -26,6 +26,15 @@ export default function PortfolioSite() {
         py: 4,
         px: 10,
         m: 3,
+        "@media (max-width: 600px)": {
+          m: 0,
+          p: 2,
+        },
+        "@media (min-width: 600px) and (max-width: 960px)": {
+          m: 2,
+          py: 2,
+          px: 4,
+        },
       }}
     >
       <div
@@ -40,6 +49,10 @@ export default function PortfolioSite() {
           sx={{
             mr: 2,
             mb: 1,
+            "@media (max-width: 600px)": {
+              fontSize: "3rem",
+              textAlign: "center",
+            },
           }}
         >
           Happy Hour Guide
@@ -111,6 +124,9 @@ export default function PortfolioSite() {
         component="h2"
         sx={{
           mb: 2,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         I. Overview
@@ -137,6 +153,9 @@ export default function PortfolioSite() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         II. Getting Started
@@ -147,6 +166,9 @@ export default function PortfolioSite() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Prerequisites
@@ -155,22 +177,17 @@ export default function PortfolioSite() {
         level="body1"
         sx={{
           ml: 2,
-          mb: 2,
+          mb: 1,
         }}
       >
         The following must be installed on your machine:
       </Typography>
       <List>
         <ListItem>
-          <ListItemDecorator>1.</ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
-            Node.js
-          </Typography>
+          <ListItemDecorator>
+            <ArrowRight />
+          </ListItemDecorator>
+          <Typography level="body1">Node.js</Typography>
         </ListItem>
       </List>
       <Typography
@@ -179,6 +196,9 @@ export default function PortfolioSite() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Installation
@@ -191,15 +211,14 @@ export default function PortfolioSite() {
       >
         How to install and run the application.
       </Typography>
-      <List>
+      <List
+        sx={{
+          overflow: "auto",
+        }}
+      >
         <ListItem>
           <ListItemDecorator>1.</ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
+          <Typography level="body1">
             Clone the repository from GitHub.
             <br />
             <code>
@@ -209,12 +228,7 @@ export default function PortfolioSite() {
         </ListItem>
         <ListItem>
           <ListItemDecorator>2.</ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
+          <Typography level="body1">
             Start the application
             <br />
             <code>npm run start</code>
@@ -232,6 +246,9 @@ export default function PortfolioSite() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         III. About
@@ -266,6 +283,9 @@ export default function PortfolioSite() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Built With
@@ -285,6 +305,9 @@ export default function PortfolioSite() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         IV. Motivation
@@ -324,6 +347,9 @@ export default function PortfolioSite() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         V. What I Learned
@@ -341,9 +367,10 @@ export default function PortfolioSite() {
         addition to just adding a file to the pages folder, I learned that you
         can also add a folder to the pages folder and it will create a nested
         route. For example, if I wanted to create a route for a page called
-        &quot;about&quot;, I could create a folder called &quot;about&quot; and add an index.js file
-        to that folder. While I didn&apos;t use this feature in this project, I can
-        see how it would be useful in a larger project.
+        &quot;about&quot;, I could create a folder called &quot;about&quot; and
+        add an index.js file to that folder. While I didn&apos;t use this
+        feature in this project, I can see how it would be useful in a larger
+        project.
       </Typography>
       <Typography
         level="body1"
@@ -382,6 +409,9 @@ export default function PortfolioSite() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VI. Acknowledgements
@@ -398,9 +428,9 @@ export default function PortfolioSite() {
         learn about the framework and how to use it. I also used the Framer
         Motion documentation to learn how to use the library. The background
         animation was created from another developer, and I used it as a
-        reference to create my own animation. While I can&apos;t remember the exact
-        source at this time, I will update this section with the link once I
-        find it.
+        reference to create my own animation. While I can&apos;t remember the
+        exact source at this time, I will update this section with the link once
+        I find it.
       </Typography>
       <Divider sx={{ my: 2 }} />
       <Typography
@@ -409,6 +439,9 @@ export default function PortfolioSite() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VII. Additional Information
@@ -419,6 +452,9 @@ export default function PortfolioSite() {
         id="issues"
         sx={{
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Known issues
@@ -448,6 +484,9 @@ export default function PortfolioSite() {
         id="future"
         sx={{
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Future improvements

@@ -26,6 +26,15 @@ export default function HappyHour() {
         py: 4,
         px: 10,
         m: 3,
+        "@media (max-width: 600px)": {
+          m: 0,
+          p: 2,
+        },
+        "@media (min-width: 600px) and (max-width: 960px)": {
+          m: 2,
+          py: 2,
+          px: 4,
+        },
       }}
     >
       <div
@@ -40,6 +49,10 @@ export default function HappyHour() {
           sx={{
             mr: 2,
             mb: 1,
+            "@media (max-width: 600px)": {
+              fontSize: "3rem",
+              textAlign: "center",
+            },
           }}
         >
           Happy Hour Guide
@@ -110,6 +123,9 @@ export default function HappyHour() {
         component="h2"
         sx={{
           mb: 2,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         I. Overview
@@ -139,6 +155,9 @@ export default function HappyHour() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         II. Getting Started
@@ -149,6 +168,9 @@ export default function HappyHour() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Prerequisites
@@ -160,7 +182,7 @@ export default function HappyHour() {
           mb: 2,
         }}
       >
-        Other than an internet browser and IDE, there is no other requirements
+        Other than an internet browser and IDE, there are no other requirements
         to run this application.
       </Typography>
       <Typography
@@ -169,6 +191,9 @@ export default function HappyHour() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Installation
@@ -181,15 +206,14 @@ export default function HappyHour() {
       >
         How to install and run the application.
       </Typography>
-      <List>
+      <List
+        sx={{
+          overflow: "auto",
+        }}
+      >
         <ListItem>
           <ListItemDecorator>1.</ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
+          <Typography level="body1">
             Clone the repository from GitHub.
             <br />
             <code>
@@ -199,12 +223,7 @@ export default function HappyHour() {
         </ListItem>
         <ListItem>
           <ListItemDecorator>2.</ListItemDecorator>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
+          <Typography level="body1">
             Start the application
             <br />
             <code>open index.html</code>
@@ -222,6 +241,9 @@ export default function HappyHour() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         III. About
@@ -255,6 +277,9 @@ export default function HappyHour() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Built With
@@ -292,6 +317,9 @@ export default function HappyHour() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         IV. Motivation
@@ -331,6 +359,9 @@ export default function HappyHour() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         V. What I Learned
@@ -385,6 +416,9 @@ export default function HappyHour() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VI. Acknowledgements
@@ -423,6 +457,9 @@ export default function HappyHour() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VII. Additional Information
@@ -433,6 +470,9 @@ export default function HappyHour() {
         id="issues"
         sx={{
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Known issues
@@ -486,6 +526,9 @@ export default function HappyHour() {
         id="future"
         sx={{
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Future improvements

@@ -26,6 +26,15 @@ export default function Documentation() {
         py: 4,
         px: 10,
         m: 3,
+        "@media (max-width: 600px)": {
+          m: 0,
+          p: 2,
+        },
+        "@media (min-width: 600px) and (max-width: 960px)": {
+          m: 2,
+          py: 2,
+          px: 4,
+        },
       }}
     >
       <div
@@ -40,6 +49,10 @@ export default function Documentation() {
           sx={{
             mr: 2,
             mb: 1,
+            "@media (max-width: 600px)": {
+              fontSize: "2rem",
+              textAlign: "center",
+            },
           }}
         >
           Documentation Site
@@ -110,6 +123,9 @@ export default function Documentation() {
         component="h2"
         sx={{
           mb: 2,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         I. Overview
@@ -138,6 +154,9 @@ export default function Documentation() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         II. Getting Started
@@ -148,6 +167,9 @@ export default function Documentation() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Prerequisites
@@ -159,7 +181,7 @@ export default function Documentation() {
           mb: 2,
         }}
       >
-        Other than an internet browser and IDE, there is no other requirements
+        Other than an internet browser and IDE, there are no other requirements
         to run this application.
       </Typography>
       <Typography
@@ -168,6 +190,9 @@ export default function Documentation() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Installation
@@ -180,7 +205,9 @@ export default function Documentation() {
       >
         How to install and run the application.
       </Typography>
-      <List>
+      <List sx={{
+        overflow: "auto",
+      }}>
         <ListItem>
           <ListItemDecorator>1.</ListItemDecorator>
           <Typography
@@ -219,6 +246,9 @@ export default function Documentation() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         III. About
@@ -230,14 +260,14 @@ export default function Documentation() {
           mb: 2,
         }}
       >
-        This site was built using TypeScript with Next.js, and Material UI&apos;s Joy
-        library. This project was intended to be fairly bare-bones to avoid any
-        distractions from the content and to allow for a clean and simple
-        design. Using Joy UI components allowed me to focus on the content and
-        not have to worry about the design, which was a huge plus. It also has a
-        built-in dark mode, which is a feature I love and wanted to include in
-        my project. This would ensure that users could toggle their preference,
-        based on their needs.
+        This site was built using TypeScript with Next.js, and Material
+        UI&apos;s Joy library. This project was intended to be fairly bare-bones
+        to avoid any distractions from the content and to allow for a clean and
+        simple design. Using Joy UI components allowed me to focus on the
+        content and not have to worry about the design, which was a huge plus.
+        It also has a built-in dark mode, which is a feature I love and wanted
+        to include in my project. This would ensure that users could toggle
+        their preference, based on their needs.
       </Typography>
       <Typography
         id="builtWith"
@@ -245,6 +275,9 @@ export default function Documentation() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Built With
@@ -270,6 +303,9 @@ export default function Documentation() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         IV. Motivation
@@ -282,12 +318,13 @@ export default function Documentation() {
         }}
       >
         With the amount of documentation I have been reading and the
-        contributions I have been making towards improving the Material UI&apos;s
-        documentation for Joy UI, I felt that it was a good time to create my
-        own version. Having a space to showcase my projects and provide a way
-        for others to learn more about them was something I wanted to do for a
-        while. This, in addition to the fact I wanted to utilize the familiarity
-        I have with Material UI, was the motivation behind this project.
+        contributions I have been making towards improving the Material
+        UI&apos;s documentation for Joy UI, I felt that it was a good time to
+        create my own version. Having a space to showcase my projects and
+        provide a way for others to learn more about them was something I wanted
+        to do for a while. This, in addition to the fact I wanted to utilize the
+        familiarity I have with Material UI, was the motivation behind this
+        project.
       </Typography>
       <Typography
         level="body1"
@@ -296,9 +333,9 @@ export default function Documentation() {
           mb: 2,
         }}
       >
-        While I could&apos;ve used something a lot simpler, I have been wanting to
-        learn more about implementing Next.js and Material UI in a project. In
-        addition to this, I wanted to see how TypeScript would work alongside
+        While I could&apos;ve used something a lot simpler, I have been wanting
+        to learn more about implementing Next.js and Material UI in a project.
+        In addition to this, I wanted to see how TypeScript would work alongside
         Material UI. Having used TypeScript in the past for a few projects, I
         wanted to avoid adding a new language to the mix.
       </Typography>
@@ -309,6 +346,9 @@ export default function Documentation() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         V. What I Learned
@@ -335,14 +375,14 @@ export default function Documentation() {
           mb: 2,
         }}
       >
-        While this project wasn&apos;t built as a way to showcase my skills directly,
-        I was able to learn about the process of documentation and some of the
-        effort that goes into creating this type of content. Documentation is a
-        critical part of any project, and I wanted to make sure that I was able
-        to provide some of the intention behind the project and the process of
-        creating it. While this isn&apos;t necessarily a reflection on what
-        production documentation looks like, it was a good way to get a feel for
-        the process.
+        While this project wasn&apos;t built as a way to showcase my skills
+        directly, I was able to learn about the process of documentation and
+        some of the effort that goes into creating this type of content.
+        Documentation is a critical part of any project, and I wanted to make
+        sure that I was able to provide some of the intention behind the project
+        and the process of creating it. While this isn&apos;t necessarily a
+        reflection on what production documentation looks like, it was a good
+        way to get a feel for the process.
       </Typography>
       <Divider sx={{ my: 2 }} />
       <Typography
@@ -351,6 +391,9 @@ export default function Documentation() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VI. Acknowledgements
@@ -372,6 +415,9 @@ export default function Documentation() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VII. Additional Information
@@ -392,6 +438,9 @@ export default function Documentation() {
         id="issues"
         sx={{
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Known issues
@@ -415,6 +464,9 @@ export default function Documentation() {
         id="future"
         sx={{
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Future improvements

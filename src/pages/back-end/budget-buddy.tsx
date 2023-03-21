@@ -612,13 +612,7 @@ export default function BudgetBuddy() {
           ml: 2,
         }}
       >
-        <ListItem
-          sx={{
-            "@media (max-width: 600px)": {
-              ml: 0,
-            },
-          }}
-        >
+        <ListItem>
           <ListItemDecorator>
             <CheckBoxOutlineBlank />
           </ListItemDecorator>

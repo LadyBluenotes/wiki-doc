@@ -11,6 +11,10 @@ export default function FrontEnd() {
         py: 4,
         px: 10,
         m: 3,
+        "@media (max-width: 600px)": {
+          m: 1,
+          p: 2,
+        },
       }}
     >
       <Typography
@@ -19,6 +23,10 @@ export default function FrontEnd() {
         sx={{
           mr: 2,
           mb: 2,
+          "@media (max-width: 600px)": {
+            fontSize: "3rem",
+            textAlign: "center",
+          },
         }}
       >
         Front End Projects
@@ -55,7 +63,6 @@ export default function FrontEnd() {
           <Card
             variant="outlined"
             sx={{
-              minWidth: 280,
               maxwidth: 280,
               minheight: 360,
               maxheight: 360,
@@ -86,7 +93,6 @@ export default function FrontEnd() {
           <Card
             variant="outlined"
             sx={{
-              minWidth: 280,
               maxwidth: 280,
               minheight: 360,
               maxheight: 360,
@@ -117,7 +123,6 @@ export default function FrontEnd() {
           <Card
             variant="outlined"
             sx={{
-              minWidth: 280,
               maxwidth: 280,
               minheight: 360,
               maxheight: 360,
@@ -148,7 +153,6 @@ export default function FrontEnd() {
           <Card
             variant="outlined"
             sx={{
-              minWidth: 280,
               maxwidth: 280,
               minheight: 330,
               maxheight: 330,
@@ -179,7 +183,6 @@ export default function FrontEnd() {
           <Card
             variant="outlined"
             sx={{
-              minWidth: 240,
               maxwidth: 240,
               minheight: 350,
               maxheight: 400,
