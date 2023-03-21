@@ -14,6 +14,8 @@ export default function Home() {
           mt: 9,
           '@media (max-width: 600px)': {
             mt: 5,
+            ml: 'auto',
+            mr: 'auto',
           },
         }}
       >

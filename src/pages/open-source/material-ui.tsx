@@ -21,6 +21,15 @@ export default function MaterialUI() {
         py: 4,
         px: 10,
         m: 3,
+        "@media (max-width: 600px)": {
+          m: 2,
+          p: 2,
+        },
+        "@media (min-width: 600px) and (max-width: 960px)": {
+          m: 2,
+          py: 2,
+          px: 4,
+        },
       }}
     >
       <div
@@ -35,6 +44,10 @@ export default function MaterialUI() {
           sx={{
             mr: 2,
             mb: 2,
+            "@media (max-width: 600px)": {
+              fontSize: "3rem",
+              textAlign: "center",
+            },
           }}
         >
           Material UI
@@ -88,6 +101,9 @@ export default function MaterialUI() {
         sx={{
           fontWeight: 700,
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         Project details
@@ -113,11 +129,23 @@ export default function MaterialUI() {
         sx={{
           fontWeight: 700,
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         Contribution Summary
       </Typography>
-      <Typography level="h3" sx={{ fontWeight: 700, ml: 1 }}>
+      <Typography
+        level="h3"
+        sx={{
+          fontWeight: 700,
+          ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
+        }}
+      >
         Role:
         <Typography>
           <Chip
@@ -133,7 +161,16 @@ export default function MaterialUI() {
           </Chip>
         </Typography>
       </Typography>
-      <Typography level="h3" sx={{ fontWeight: 700, ml: 1 }}>
+      <Typography
+        level="h3"
+        sx={{
+          fontWeight: 700,
+          ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
+        }}
+      >
         Duration:
         <Typography>
           <Chip
@@ -149,7 +186,17 @@ export default function MaterialUI() {
           </Chip>
         </Typography>
       </Typography>
-      <Typography level="h3" sx={{ fontWeight: 700, mb: 1, ml: 1 }}>
+      <Typography
+        level="h3"
+        sx={{
+          fontWeight: 700,
+          mb: 1,
+          ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
+        }}
+      >
         Responsibilities:
       </Typography>
       <Typography level="body1" sx={{ ml: 2 }}>
@@ -192,7 +239,17 @@ export default function MaterialUI() {
           framework, to supplement the articles.
         </ListItem>
       </List>
-      <Typography level="h3" sx={{ fontWeight: 700, mb: 1, ml: 1 }}>
+      <Typography
+        level="h3"
+        sx={{
+          fontWeight: 700,
+          mb: 1,
+          ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
+        }}
+      >
         Technologies:
       </Typography>
       <Typography level="body1" sx={{ ml: 2 }}>
