@@ -28,6 +28,10 @@ export default function TrackMyFunds() {
         py: 4,
         px: 10,
         m: 3,
+        "@media (max-width: 600px)": {
+          m: 0,
+          p: 2,
+        },
       }}
     >
       <div
@@ -42,9 +46,13 @@ export default function TrackMyFunds() {
           sx={{
             mr: 2,
             mb: 1,
+            "@media (max-width: 600px)": {
+              fontSize: "3rem",
+              textAlign: "center",
+            },
           }}
         >
-          TrackMyFunds
+          Track My Funds
           <IconButton
             onClick={() => {
               router.push("https://github.com/LadyBluenotes/track-my-funds");
@@ -115,6 +123,9 @@ export default function TrackMyFunds() {
         component="h2"
         sx={{
           mb: 2,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         I. Overview
@@ -141,6 +152,9 @@ export default function TrackMyFunds() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         II. Getting Started
@@ -151,6 +165,9 @@ export default function TrackMyFunds() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Prerequisites
@@ -201,6 +218,9 @@ export default function TrackMyFunds() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Installation
@@ -265,6 +285,9 @@ export default function TrackMyFunds() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         III. About
@@ -313,6 +336,9 @@ export default function TrackMyFunds() {
         sx={{
           mb: 1,
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Built With
@@ -350,6 +376,9 @@ export default function TrackMyFunds() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         IV. Motivation
@@ -395,6 +424,9 @@ export default function TrackMyFunds() {
         component="h2"
         sx={{
           mb: 1,
+           "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         V. What I Learned
@@ -432,6 +464,9 @@ export default function TrackMyFunds() {
         component="h2"
         sx={{
           mb: 1,
+           "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VI. Acknowledgements
@@ -460,6 +495,9 @@ export default function TrackMyFunds() {
         component="h2"
         sx={{
           mb: 1,
+           "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VII. Additional Information
@@ -482,6 +520,9 @@ export default function TrackMyFunds() {
         className="styling-h3"
         sx={{
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Features to be implemented
@@ -537,6 +578,9 @@ export default function TrackMyFunds() {
         className="styling-h3"
         sx={{
           ml: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Features that have been added

@@ -13,9 +13,10 @@ export default function Home() {
         sx={{
           mt: 9,
           '@media (max-width: 600px)': {
-            mt: 5,
+            mt: 3,
             ml: 'auto',
             mr: 'auto',
+            px:0
           },
         }}
       >
@@ -27,7 +28,7 @@ export default function Home() {
           borderRadius: "10px",
           '@media (max-width: 600px)': {
             py: 3,
-            px: 2,
+            px: 1,
           },
         }}
         >

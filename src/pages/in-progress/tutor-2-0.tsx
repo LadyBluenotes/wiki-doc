@@ -29,6 +29,10 @@ export default function Tutor() {
         py: 4,
         px: 10,
         m: 3,
+        "@media (max-width: 600px)": {
+          m: 0,
+          p: 2,
+        },
       }}
     >
       <div
@@ -43,9 +47,13 @@ export default function Tutor() {
           sx={{
             mr: 2,
             mb: 1,
+            "@media (max-width: 600px)": {
+              fontSize: "3rem",
+              textAlign: "center",
+            },
           }}
         >
-          TrackMyFunds
+          Tutor 2.0
           <IconButton
             onClick={() => {
               router.push("https://github.com/Tutor2-0");
@@ -92,11 +100,7 @@ export default function Tutor() {
           ml: 1,
         }}
       >
-        Track My Funds is a personal finance application that allows users to
-        track their income, expenses, and what remains at the end of the month.
-        It is a full stack application that uses Next.js, TypeScript, MongoDB,
-        Tailwind CSS, and Next-Auth. The application is currently in development
-        and is not yet available for demo or use.
+        Tutor 2.0 will be a web application that utilizes the power of AI to build unique learning experiences for the users.
       </Typography>
       <Divider
         sx={{
@@ -116,6 +120,9 @@ export default function Tutor() {
         component="h2"
         sx={{
           mb: 2,
+          '@media (max-width: 600px)': {
+            fontSize: '2rem',
+          }
         }}
       >
         Overview
@@ -164,10 +171,23 @@ export default function Tutor() {
           ml: 2,
         }}
       >
-        <ListItem>
+        <ListItem sx={{
+          '@media (max-width: 600px)': {
+            px: 0,
+          }
+        }}>
           <ListItemDecorator>
             <ArrowRight />
           </ListItemDecorator>
+          <Typography
+            level="body1"
+            sx={{
+              ml: 0,
+              p:0
+            }}
+          >
+            Aaron Tandem
+          </Typography>
           <IconButton
             onClick={() => {
               router.push("https://github.com/abiever");
@@ -178,6 +198,10 @@ export default function Tutor() {
               bgcolor: "neutral.100",
               "&:hover": {
                 bgcolor: "neutral.300",
+              },
+              '@media (max-width: 600px)': {
+                ml: 0,
+                mr: 1,
               },
             }}
           >
@@ -205,19 +229,23 @@ export default function Tutor() {
               }}
             />
           </IconButton>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
-            Aaron Tandem
-          </Typography>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{
+          '@media (max-width: 600px)': {
+            px: 0,
+          }
+        }}>
           <ListItemDecorator>
             <ArrowRight />
           </ListItemDecorator>
+          <Typography
+            level="body1"
+            sx={{
+              ml: 0,
+            }}
+          >
+            Christopher Miller
+          </Typography>
           <IconButton
             onClick={() => {
               router.push("https://github.com/ccmiller2018");
@@ -229,6 +257,10 @@ export default function Tutor() {
               "&:hover": {
                 bgcolor: "neutral.300",
               },
+              '@media (max-width: 600px)': {
+                ml: 1,
+                mr: 1,
+              }
             }}
           >
             <GitHub
@@ -247,6 +279,10 @@ export default function Tutor() {
               "&:hover": {
                 bgcolor: "primary.800",
               },
+              '@media (max-width: 600px)': {
+                ml: 0,
+                p: 0
+              }
             }}
           >
             <Twitter
@@ -255,19 +291,23 @@ export default function Tutor() {
               }}
             />
           </IconButton>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
-            Christopher Miller
-          </Typography>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{
+          '@media (max-width: 600px)': {
+            px: 0,
+          }
+        }}>
           <ListItemDecorator>
             <ArrowRight />
           </ListItemDecorator>
+          <Typography
+            level="body1"
+            sx={{
+              ml: 0,
+            }}
+          >
+            Lucas Winkler
+          </Typography>
           <IconButton
             onClick={() => {
               router.push("https://github.com/LucasMERN");
@@ -279,11 +319,17 @@ export default function Tutor() {
               "&:hover": {
                 bgcolor: "neutral.300",
               },
+              '@media (max-width: 600px)': {
+                ml: 1,
+              }
             }}
           >
             <GitHub
               sx={{
                 color: "neutral.900",
+                '@media (max-width: 600px)': {
+                  p:0
+                }
               }}
             />
           </IconButton>
@@ -305,19 +351,23 @@ export default function Tutor() {
               }}
             />
           </IconButton>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
-            Lucas Winkler
-          </Typography>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{
+          '@media (max-width: 600px)': {
+            px: 0,
+          }
+        }}>
           <ListItemDecorator>
             <ArrowRight />
           </ListItemDecorator>
+          <Typography
+            level="body1"
+            sx={{
+              ml: 0,
+            }}
+          >
+            Trevor Johnson
+          </Typography>
           <IconButton
             onClick={() => {
               router.push("https://github.com/tJohnsonAce");
@@ -355,14 +405,6 @@ export default function Tutor() {
               }}
             />
           </IconButton>
-          <Typography
-            level="body1"
-            sx={{
-              ml: 2,
-            }}
-          >
-            Trevor Johnson
-          </Typography>
         </ListItem>
       </List>
       {/* <Typography
@@ -371,6 +413,9 @@ export default function Tutor() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         II. Getting Started
@@ -381,6 +426,9 @@ export default function Tutor() {
         sx={{
           mb: 1,
           ml: 1,
+           "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Prerequisites
@@ -431,6 +479,9 @@ export default function Tutor() {
         sx={{
           mb: 1,
           ml: 1,
+           "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Installation
@@ -495,6 +546,9 @@ export default function Tutor() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         III. About
@@ -541,6 +595,9 @@ export default function Tutor() {
         sx={{
           mb: 1,
           ml: 1,
+           "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Built With
@@ -578,6 +635,9 @@ export default function Tutor() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         IV. Motivation
@@ -622,6 +682,9 @@ export default function Tutor() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         V. What I Learned
@@ -658,6 +721,9 @@ export default function Tutor() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VI. Acknowledgements
@@ -685,6 +751,9 @@ export default function Tutor() {
         component="h2"
         sx={{
           mb: 1,
+          "@media (max-width: 600px)": {
+            fontSize: "1.7rem",
+          },
         }}
       >
         VII. Additional Information
@@ -705,6 +774,9 @@ export default function Tutor() {
         className="styling-h3"
         sx={{
           ml: 1,
+           "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Features to be implemented
@@ -759,6 +831,9 @@ export default function Tutor() {
         className="styling-h3"
         sx={{
           ml: 1,
+           "@media (max-width: 600px)": {
+            fontSize: "1.2rem",
+          },
         }}
       >
         Features that have been added

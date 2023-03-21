@@ -22,7 +22,7 @@ export default function MaterialUI() {
         px: 10,
         m: 3,
         "@media (max-width: 600px)": {
-          m: 2,
+          m: 0,
           p: 2,
         },
         "@media (min-width: 600px) and (max-width: 960px)": {
@@ -182,7 +182,7 @@ export default function MaterialUI() {
               my: 2,
             }}
           >
-            January 2023 - present
+            Jan 2023 - present
           </Chip>
         </Typography>
       </Typography>

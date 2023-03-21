@@ -11,6 +11,10 @@ export default function InProgress() {
         py: 4,
         px: 6,
         m: 3,
+        "@media (max-width: 600px)": {
+          m: 1,
+          p: 2,
+        },
       }}
     >
       <Typography
@@ -19,6 +23,10 @@ export default function InProgress() {
         sx={{
           mr: 2,
           mb: 2,
+          "@media (max-width: 600px)": {
+            fontSize: "3rem",
+            textAlign: "center",
+          },
         }}
       >
         In Progress
@@ -54,7 +62,6 @@ export default function InProgress() {
           <Card
             variant="outlined"
             sx={{
-              minWidth: 280,
               maxwidth: 280,
               minheight: 360,
               maxheight: 360,
@@ -85,7 +92,6 @@ export default function InProgress() {
           <Card
             variant="outlined"
             sx={{
-              minWidth: 280,
               maxwidth: 280,
               minheight: 360,
               maxheight: 360,
