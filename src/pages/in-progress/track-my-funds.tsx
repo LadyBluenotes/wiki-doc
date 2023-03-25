@@ -539,35 +539,36 @@ export default function TrackMyFunds() {
           In dashboard, based on month display total income and expenses and
           what is left over.
         </ListItem>
+        
         <ListItem>
           <ListItemDecorator>
             <CheckBoxOutlineBlank />
           </ListItemDecorator>
-          Update selected incomes and expenses.
-        </ListItem>
-        <ListItem>
-          <ListItemDecorator>
-            <CheckBoxOutlineBlank />
-          </ListItemDecorator>
-          Remove selected incomes and expenses.
-        </ListItem>
-        <ListItem>
-          <ListItemDecorator>
-            <CheckBoxOutlineBlank />
-          </ListItemDecorator>
-          Assign user identification to incomes and expenses.
-        </ListItem>
-        <ListItem>
-          <ListItemDecorator>
-            <CheckBoxOutlineBlank />
-          </ListItemDecorator>
-          Sort through incomes and expenses.
+          Let user sort based on month, year, category, etc.
         </ListItem>
         <ListItem>
           <ListItemDecorator>
             <CheckBoxOutlineBlank />
           </ListItemDecorator>
           Creating an account using email (credentials in Next-Auth).
+        </ListItem>
+        <ListItem>
+          <ListItemDecorator>
+            <CheckBoxOutlineBlank />
+          </ListItemDecorator>
+          Graphs to show income and expense trends, averages, etc.
+        </ListItem>
+        <ListItem>
+          <ListItemDecorator>
+            <CheckBoxOutlineBlank />
+          </ListItemDecorator>
+          Track savings - savings goals, savings progress, etc.
+        </ListItem>
+        <ListItem>
+          <ListItemDecorator>
+            <CheckBoxOutlineBlank />
+          </ListItemDecorator>
+          Paginate data.
         </ListItem>
       </List>
       <Typography
@@ -589,6 +590,24 @@ export default function TrackMyFunds() {
           ml: 2,
         }}
       >
+        <ListItem>
+          <ListItemDecorator>
+          <Done />
+          </ListItemDecorator>
+          Update selected incomes and expenses.
+        </ListItem>
+        <ListItem>
+          <ListItemDecorator>
+          <Done />
+          </ListItemDecorator>
+          Remove selected incomes and expenses.
+        </ListItem>
+        <ListItem>
+          <ListItemDecorator>
+          <Done />
+          </ListItemDecorator>
+          Assign user identification to incomes and expenses.
+        </ListItem>
         <ListItem>
           <ListItemDecorator>
             <Done />
