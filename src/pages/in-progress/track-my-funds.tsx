@@ -19,6 +19,8 @@ import {
 import { useRouter } from "next/router";
 import TableOfContents from "@/components/TableOfContents";
 
+import Readme from "@/components/ReadMe";
+
 export default function TrackMyFunds() {
   const router = useRouter();
 
