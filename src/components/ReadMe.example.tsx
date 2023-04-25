@@ -7,7 +7,11 @@ interface Props {
 }
 
 export default function Readme({ repository }: Props) {
-    
+
+    const token = process.env.TOKEN; // your github token
+    const owner = process.env.REPO_OWNER; // owner of the repo you'd like to get the readme from
+    const repo = repository; // repo name of where you'd like to get the readme from
+
   const [markdownContent, setMarkdownContent] = useState("");
 
   const md = new MarkdownIt();
@@ -20,10 +24,10 @@ export default function Readme({ repository }: Props) {
     async function fetchReadme() {
       try {
         const response = await octokit.request(
-          `GET /repos/{OWNER}/${repository}/readme`,
+          `GET /repos/{OWNER}/${repo}/readme`,
           {
-            owner: "LadyBluenotes",
-            repo: `${repository}`,
+            owner: `${owner}`,
+            repo: `${repo}`,
             headers: {
               "X-GitHub-Api-Version": "2022-11-28",
             },
